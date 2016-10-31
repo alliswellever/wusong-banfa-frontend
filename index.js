@@ -11,9 +11,8 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
-      <Route path="/repos" component={Repos}>
-        <Route path="/repos/:userName/:repoName" component={Repo}/>
-      </Route>
+      <Route path="/repos" component={Repos}></Route>
+      <Route path="/repos/:userName/:repoName" component={Repo}/>
       <Route path="/about" component={About}/>
     </Route>
   </Router>

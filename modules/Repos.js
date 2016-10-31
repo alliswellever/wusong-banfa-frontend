@@ -1,41 +1,25 @@
 import React from 'react'
 import NavLink from './NavLink'
-import { browserHistory } from 'react-router'
-
 
 export default React.createClass({
     contextTypes: {
         router: React.PropTypes.object
     },
 
-    handleSubmit(event) {
-        event.preventDefault()
-        const userName = event.target.elements[0].value
-        const repo = event.target.elements[1].value
-        const path = `/repos/${userName}/${repo}`
-        // browserHistory.push(path)
-
-        this.context.router.push(path)
-        console.log(path)
-    },
-
   render() {
     return (
       <div>
-        <h2>Repos</h2>
+        <h2>线上服务</h2>
         <ul>
-          <li><NavLink to="/repos/reactjs/react-router">React Router</NavLink></li>
-          <li><NavLink to="/repos/facebook/react">React</NavLink></li>
-
-            <li>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="userName"/> / {' '}
-                    <input type="text" placeholder="repo"/>{' '}
-                    <button type="submit">Go</button>
-                </form>
-            </li>
+          <li><NavLink to="/repos/reactjs/react-router">合同审查</NavLink></li>
+          <li><NavLink to="/repos/facebook/react">合同起草</NavLink></li>
         </ul>
-        {this.props.children}
+
+          <h2>线下服务</h2>
+          <ul>
+              <li><NavLink to="/repos/reactjs/react-router">法律咨询</NavLink></li>
+              <li><NavLink to="/repos/facebook/react">催收函</NavLink></li>
+          </ul>
       </div>
     )
   }

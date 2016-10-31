@@ -2,6 +2,6 @@ import React from 'react'
 
 export default React.createClass({
   render() {
-    return <div>Home</div>
+    return <div>我的账户</div>
   }
 })
