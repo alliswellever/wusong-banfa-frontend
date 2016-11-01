@@ -1,0 +1,112 @@
+@import './common';
+
+
+.active {
+  color: green;
+}
+
+header{
+  min-height: 80px;
+  font-size: 20px;
+  color: white;
+  background-color: $color-primary;
+
+  .logo{
+    display: inline-block;
+    height: 80px;
+    background-color: #01c5e8;
+    width: 180px;
+    font-size: 14px;
+    line-height: 80px;
+
+    img{
+      vertical-align: middle;
+      margin-left: 10px;
+      box-shadow: 0 0 5px #166270;
+      border-radius: 4px;
+    }
+
+    .slogan{
+      display: inline-block;
+      margin-left: 10px;
+      line-height: 24px;
+    }
+
+  }
+
+  .balance{
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 40px;
+    background-color: #282b33;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 10px;
+  }
+
+  .btn{
+    display: inline-block;
+    float: right;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background-color: $button-color-secondary;
+    cursor: pointer;
+
+    &:hover{
+      background-color: $button-color-secondary-hover;
+    }
+  }
+
+  .adviser{
+    background: $button-color-secondary url("/logo.png") no-repeat 0 center;
+    background-size: 40px;
+    margin-right: 20px;
+    border-radius: 4px;
+    position: relative;
+    top: 20px;
+    padding-left: 40px;
+
+    .name{
+      padding: 0 10px;
+    }
+
+
+
+  }
+
+  .login-out{
+    padding: 0 10px;
+    margin-right: 60px;
+    border-radius: 4px;
+    position: relative;
+    top: 20px;
+  }
+}
+
+
+
+
+
+.main{
+  min-height: 100%;
+  float: left;
+  width: 100%;
+
+  .main-inner{
+    margin-left: 180px;
+  }
+}
+
+
+
+
+.left{
+  background-color: $color-primary;
+  min-height: 100%;
+  width: 180px;
+  float: left;
+  margin-left: -100%;
+
+  color: #fff;
+}

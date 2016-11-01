@@ -1,0 +1,40 @@
+/* Variables */
+
+// Color Variables
+$color-primary: #343843;//主题颜色
+
+// Button Variables
+$button-color-primary: #4f6584;
+$button-color-primary-hover: #505666;
+$button-color-secondary: #505666;
+$button-color-secondary-hover: #282b33;
+
+// Background Variables
+$background-color-primary: #edeef2;
+
+// Border Variables
+$border-color-primary: $background-color-primary;
+
+// Text Variables
+$text-color-primary: #222;//主要文本
+$text-color-tip: #808080;//提示
+$text-color-placeholder: #b3b3b3;//输入框默认提示文字
+$text-color-highlighted: #4f6584;//突出显示性文字
+$text-color-error: #ff3333;//错误提示
+
+
+
+/* Styles */
+body {
+    margin: 0;
+    font: 14px "Heiti SC", "Helvetica  Neue", Arial, "Microsoft YaHei", "微软雅黑", "STHeiti", SimSun, sans-serif;
+    color: $text-color-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    background-color: $background-color-primary;
+}
+
+ul{
+    list-style: none;
+}
