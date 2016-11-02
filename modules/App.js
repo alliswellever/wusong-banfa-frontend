@@ -14,11 +14,11 @@ export default React.createClass({
                 {this.props.children}
             </div>
         </div>
-          <div className="left">
+          <div className="navigator">
               <ul role="nav">
-                  <li><NavLink to="/about">订单列表</NavLink></li>
-                  <li><NavLink to="/repos">服务列表</NavLink></li>
-                  <li><NavLink to="/" onlyActiveOnIndex>我的</NavLink></li>
+                  <li><NavLink to="/orders" onlyActiveOnIndex>服务订单</NavLink></li>
+                  <li><NavLink to="/requirements">发起需求</NavLink></li>
+                  <li><NavLink to="/profile">我的</NavLink></li>
               </ul>
           </div>
       </div>

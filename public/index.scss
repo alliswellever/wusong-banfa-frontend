@@ -1,9 +1,8 @@
 @import './common';
 
 
-.active {
-  color: green;
-}
+
+
 
 header{
   min-height: 80px;
@@ -11,15 +10,29 @@ header{
   color: white;
   background-color: $color-primary;
 
+  &:before{
+    content: ' ';
+    vertical-align: middle;
+    height: 100%;
+  }
+
   .logo{
     display: inline-block;
     height: 80px;
-    background-color: #01c5e8;
+    background-color: $color-secondary;
     width: 180px;
     font-size: 14px;
     line-height: 80px;
 
+    &:before{
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+
     img{
+      display: inline-block;
       vertical-align: middle;
       margin-left: 10px;
       box-shadow: 0 0 5px #166270;
@@ -28,6 +41,7 @@ header{
 
     .slogan{
       display: inline-block;
+      vertical-align: middle;
       margin-left: 10px;
       line-height: 24px;
     }
@@ -42,9 +56,10 @@ header{
     font-size: 16px;
     color: #fff;
     padding: 0 10px;
+    vertical-align: middle;
   }
 
-  .btn{
+  .button{
     display: inline-block;
     float: right;
     line-height: 40px;
@@ -52,6 +67,7 @@ header{
     color: #fff;
     background-color: $button-color-secondary;
     cursor: pointer;
+    vertical-align: middle;
 
     &:hover{
       background-color: $button-color-secondary-hover;
@@ -70,9 +86,6 @@ header{
     .name{
       padding: 0 10px;
     }
-
-
-
   }
 
   .login-out{
@@ -101,12 +114,39 @@ header{
 
 
 
-.left{
+.navigator{
   background-color: $color-primary;
   min-height: 100%;
   width: 180px;
   float: left;
   margin-left: -100%;
-
+  font-size: 16px;
   color: #fff;
+  padding-top: 10px;
+
+  ul{
+    padding-left: 0;
+
+    li{
+
+      a{
+        display: inline-block;
+        line-height: 50px;
+        color: #aaacb2;
+        width: 100%;
+        text-decoration: none;
+        padding-left: 40px;
+      }
+
+      a.active {
+        color: #fff;
+        background-color: $button-color-primary-hover;
+        border-left: 4px $color-secondary solid;
+        padding-left: 36px;
+      }
+    }
+  }
+
+
+
 }
