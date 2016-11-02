@@ -2,16 +2,18 @@
 
 // Color Variables
 $color-primary: #343843;//主题颜色
-$color-secondary: #01c5e8;//点缀颜色
+$color-secondary: #4f6584;//次要颜色
+$color-ornament: #01c5e8;//点缀颜色
 
 // Button Variables
-$button-color-primary: #4f6584;
+$button-color-primary: $color-secondary;
 $button-color-primary-hover: #505666;
 $button-color-secondary: #505666;
 $button-color-secondary-hover: #282b33;
 
 // Background Variables
 $background-color-primary: #edeef2;
+$background-color-secondary: #e0e3ed;
 
 // Border Variables
 $border-color-primary: $background-color-primary;
@@ -20,7 +22,7 @@ $border-color-primary: $background-color-primary;
 $text-color-primary: #222;//主要文本
 $text-color-tip: #808080;//提示
 $text-color-placeholder: #b3b3b3;//输入框默认提示文字
-$text-color-highlighted: #4f6584;//突出显示性文字
+$text-color-highlighted: $color-secondary;//突出显示性文字
 $text-color-error: #ff3333;//错误提示
 
 

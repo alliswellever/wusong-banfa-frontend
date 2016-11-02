@@ -20,7 +20,7 @@ header{
   .logo{
     display: inline-block;
     height: 80px;
-    background-color: $color-secondary;
+    background-color: $color-ornament;
     width: 180px;
     font-size: 14px;
     line-height: 80px;
@@ -144,7 +144,7 @@ header{
       a.active {
         color: #fff;
         background-color: $button-color-primary-hover;
-        border-left: 4px $color-secondary solid;
+        border-left: 4px $color-ornament solid;
         padding-left: 36px;
       }
     }
