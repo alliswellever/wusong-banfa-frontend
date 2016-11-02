@@ -5,6 +5,7 @@
 
 
 header{
+  min-width: 1200px;
   min-height: 80px;
   font-size: 20px;
   color: white;
@@ -102,12 +103,14 @@ header{
 
 
 .main{
-  min-height: 100%;
+  min-height: calc(100vh - 80px);
   float: left;
   width: 100%;
 
   .main-inner{
     margin-left: 180px;
+    max-width: 80%;
+    min-width: 1200px;
   }
 }
 
@@ -116,7 +119,7 @@ header{
 
 .navigator{
   background-color: $color-primary;
-  min-height: 100%;
+  min-height: calc(100vh - 80px);
   width: 180px;
   float: left;
   margin-left: -100%;

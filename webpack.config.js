@@ -18,8 +18,8 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' },
-      {test: /\.scss$/, loader: 'style?isertAt=top!css!sass'},
+      { test: /(\.js|\.jsx)$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' },
+      {test: /\.scss$/, loader: 'style!css!sass'},
       // {test: /(\.css|\.scss)$/, loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')}
     ]
   }

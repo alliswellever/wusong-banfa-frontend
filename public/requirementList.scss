@@ -1,0 +1,35 @@
+@import './common';
+
+.requirement-list{
+  margin-top: 25px;
+
+  .title{
+    font-size: 20px;
+    color: $text-color-primary;
+    .balance{
+      font-size: 14px;
+      color: $text-color-highlighted;
+      margin-left: 15px;
+    }
+  }
+
+  .list{
+    margin-top: 13px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+
+    .requirement{
+      border-bottom: 1px $border-color-primary solid;
+
+      &:last-of-type{
+        border: none;
+      }
+
+      &:hover{
+        background-color: $background-color-primary;
+      }
+
+    }
+  }
+}
