@@ -5,6 +5,7 @@
   border-left: 4px $color-secondary solid;
   padding: 10px 10px 10px 16px;
   margin-top: 20px;
+  margin-bottom: 25px;
 
   .category-name{
     font-size: 20px;
@@ -19,10 +20,10 @@
   }
 }
 
-.legal-service-box{
+.legal-service-table{
   margin-bottom: 25px;
 
-  .title{
+  .box-title{
     font-size: 20px;
     color: $text-color-primary;
     margin-bottom: 13px;
@@ -35,12 +36,12 @@
 }
 
 
-.legal-service-list{
+.legal-service-rows{
   background-color: #fff;
   padding: 10px;
   border-radius: 4px;
 
-  .legal-service{
+  .legal-service-row{
     border-bottom: 1px $border-color-primary solid;
 
     &:last-of-type{
@@ -53,7 +54,7 @@
   }
 }
 
-.legal-service{
+.legal-service-row{
   padding: 20px 10px;
   position: relative;
 
@@ -79,27 +80,16 @@
   .desc{
     font-size: 14px;
     color: $text-color-tip;
-    margin-top: 13px;
+    line-height: 22px;
+    margin-top: 5px;
+    margin-right: 200px;
   }
 
-  button{
+  .button{
     position: absolute;
     top: 20px;
     right: 10px;
-    vertical-align: middle;
-    background-color: $button-color-primary;
-    color: #fff;
-    font-size: 16px;
-    line-height: 40px;
-    min-width: 120px;
-    text-align: center;
-    border-radius: 4px;
-    border: none;
-    outline: none;
 
-    &:hover{
-      background-color: $button-color-primary-hover;
-    }
   }
 
 }

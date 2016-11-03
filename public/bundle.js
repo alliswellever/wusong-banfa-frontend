@@ -84,10 +84,10 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _LegalServiceOrders2.default }),
+	    _react2.default.createElement(_reactRouter.IndexRedirect, { to: '/requirements' }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/orders', component: _LegalServiceOrders2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/requirements', component: _LegalServiceRequirementList2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/requirements/requirement/:requirementName', component: _LegalServiceRequirement2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/requirements/:requirementName', component: _LegalServiceRequirement2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default })
 	  )
 	), document.getElementById('app'));
@@ -127,7 +127,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\nheader {\n  min-width: 1200px;\n  min-height: 80px;\n  font-size: 20px;\n  color: white;\n  background-color: #343843; }\n  header:before {\n    content: ' ';\n    vertical-align: middle;\n    height: 100%; }\n  header .logo {\n    display: inline-block;\n    height: 80px;\n    background-color: #01c5e8;\n    width: 180px;\n    font-size: 14px;\n    line-height: 80px; }\n    header .logo:before {\n      content: ' ';\n      display: inline-block;\n      vertical-align: middle;\n      height: 100%; }\n    header .logo img {\n      display: inline-block;\n      vertical-align: middle;\n      margin-left: 10px;\n      box-shadow: 0 0 5px #166270;\n      border-radius: 4px; }\n    header .logo .slogan {\n      display: inline-block;\n      vertical-align: middle;\n      margin-left: 10px;\n      line-height: 24px; }\n  header .balance {\n    display: inline-block;\n    margin-left: 30px;\n    line-height: 40px;\n    background-color: #282b33;\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px;\n    vertical-align: middle; }\n  header .button {\n    display: inline-block;\n    float: right;\n    line-height: 40px;\n    font-size: 16px;\n    color: #fff;\n    background-color: #505666;\n    cursor: pointer;\n    vertical-align: middle; }\n    header .button:hover {\n      background-color: #282b33; }\n  header .adviser {\n    background: #505666 url(\"/logo.png\") no-repeat 0 center;\n    background-size: 40px;\n    margin-right: 20px;\n    border-radius: 4px;\n    position: relative;\n    top: 20px;\n    padding-left: 40px; }\n    header .adviser .name {\n      padding: 0 10px; }\n  header .login-out {\n    padding: 0 10px;\n    margin-right: 60px;\n    border-radius: 4px;\n    position: relative;\n    top: 20px; }\n\n.main {\n  min-height: calc(100vh - 80px);\n  float: left;\n  width: 100%; }\n  .main .main-inner {\n    margin-left: 180px;\n    max-width: 80%;\n    min-width: 1200px; }\n\n.navigator {\n  background-color: #343843;\n  min-height: calc(100vh - 80px);\n  width: 180px;\n  float: left;\n  margin-left: -100%;\n  font-size: 16px;\n  color: #fff;\n  padding-top: 10px; }\n  .navigator ul {\n    padding-left: 0; }\n    .navigator ul li a {\n      display: inline-block;\n      line-height: 50px;\n      color: #aaacb2;\n      width: 100%;\n      text-decoration: none;\n      padding-left: 40px; }\n    .navigator ul li a.active {\n      color: #fff;\n      background-color: #505666;\n      border-left: 4px #01c5e8 solid;\n      padding-left: 36px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover {\n    text-decoration: none; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  background-color: #4f6584;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none;\n    background-color: #505666; }\n\nheader {\n  min-width: 1200px;\n  min-height: 80px;\n  font-size: 20px;\n  color: white;\n  background-color: #343843; }\n  header:before {\n    content: ' ';\n    vertical-align: middle;\n    height: 100%; }\n  header .logo {\n    display: inline-block;\n    height: 80px;\n    background-color: #01c5e8;\n    width: 180px;\n    font-size: 14px;\n    line-height: 80px; }\n    header .logo:before {\n      content: ' ';\n      display: inline-block;\n      vertical-align: middle;\n      height: 100%; }\n    header .logo img {\n      display: inline-block;\n      vertical-align: middle;\n      margin-left: 10px;\n      box-shadow: 0 0 5px #166270;\n      border-radius: 4px; }\n    header .logo .slogan {\n      display: inline-block;\n      vertical-align: middle;\n      margin-left: 10px;\n      line-height: 24px; }\n  header .balance {\n    display: inline-block;\n    margin-left: 30px;\n    line-height: 40px;\n    background-color: #282b33;\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px;\n    vertical-align: middle; }\n  header .button {\n    display: inline-block;\n    float: right;\n    line-height: 40px;\n    font-size: 16px;\n    color: #fff;\n    background-color: #505666;\n    cursor: pointer;\n    vertical-align: middle; }\n    header .button:hover {\n      background-color: #282b33; }\n  header .adviser {\n    background: #505666 url(\"/logo.png\") no-repeat 0 center;\n    background-size: 40px;\n    margin-right: 20px;\n    border-radius: 4px;\n    position: relative;\n    top: 20px;\n    padding-left: 40px; }\n    header .adviser .name {\n      padding: 0 10px; }\n  header .login-out {\n    padding: 0 10px;\n    margin-right: 60px;\n    border-radius: 4px;\n    position: relative;\n    top: 20px; }\n\n.main {\n  height: calc(100vh - 80px);\n  float: left;\n  width: 100%;\n  overflow-y: scroll; }\n  .main .main-inner {\n    margin-left: 180px;\n    max-width: 80%;\n    min-width: 1200px; }\n\n.navigator {\n  background-color: #343843;\n  min-height: calc(100vh - 80px);\n  width: 180px;\n  float: left;\n  margin-left: -100%;\n  font-size: 16px;\n  color: #fff;\n  padding-top: 10px; }\n  .navigator ul {\n    padding-left: 0; }\n    .navigator ul li a {\n      display: inline-block;\n      line-height: 50px;\n      color: #aaacb2;\n      width: 100%;\n      text-decoration: none;\n      padding-left: 40px; }\n    .navigator ul li a.active {\n      color: #fff;\n      background-color: #505666;\n      border-left: 4px #01c5e8 solid;\n      padding-left: 36px; }\n", ""]);
 
 	// exports
 
@@ -25996,8 +25996,10 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	__webpack_require__(237);
 
@@ -26013,30 +26015,98 @@
 
 	var _LegalServiceCategory2 = _interopRequireDefault(_LegalServiceCategory);
 
-	var _LegalServiceBox = __webpack_require__(241);
+	var _LegalServiceTable = __webpack_require__(246);
 
-	var _LegalServiceBox2 = _interopRequireDefault(_LegalServiceBox);
+	var _LegalServiceTable2 = _interopRequireDefault(_LegalServiceTable);
 
-	var _LegalServiceList = __webpack_require__(243);
+	var _LegalServiceRows = __webpack_require__(247);
 
-	var _LegalServiceList2 = _interopRequireDefault(_LegalServiceList);
+	var _LegalServiceRows2 = _interopRequireDefault(_LegalServiceRows);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = _react2.default.createClass({
-	  displayName: 'LegalServiceRequirementList',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'requirements' },
-	      _react2.default.createElement(_LegalServiceCategory2.default, null),
-	      _react2.default.createElement(_LegalServiceBox2.default, null),
-	      _react2.default.createElement(_LegalServiceBox2.default, null),
-	      _react2.default.createElement(_LegalServiceCategory2.default, null),
-	      _react2.default.createElement(_LegalServiceList2.default, null)
-	    );
-	  }
-	});
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LegalServiceRequirementList = function (_React$Component) {
+	    _inherits(LegalServiceRequirementList, _React$Component);
+
+	    function LegalServiceRequirementList(props) {
+	        _classCallCheck(this, LegalServiceRequirementList);
+
+	        var _this = _possibleConstructorReturn(this, (LegalServiceRequirementList.__proto__ || Object.getPrototypeOf(LegalServiceRequirementList)).call(this, props));
+
+	        _this.state = {
+	            onlineServices: {
+	                name: '线上服务',
+	                balance: 38,
+	                services: [{
+	                    name: '合同审查',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }, {
+	                    name: '合同起草',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }, {
+	                    name: '法律咨询',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }, {
+	                    name: '律师函',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }, {
+	                    name: '催收函',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }]
+	            },
+	            offlineServices: {
+	                name: '线下服务',
+	                balance: 8,
+	                services: [{
+	                    name: '上门培训',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }, {
+	                    name: '陪同谈判',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }, {
+	                    name: '法律见证',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }, {
+	                    name: '面对面咨询',
+	                    description: '最快的速度帮你审查合同，帮助企业规避风险。'
+	                }]
+	            },
+	            adviserServices: {
+	                services: [{
+	                    name: '不清楚，让顾问帮我选择',
+	                    description: '服务内容不限，如请律师打官司、股权设计方案、书屋方案设计、匹配律师、寻找服务机构最快的速度帮你审查合同，帮助企业规避风险。协助分析问题、匹配律师、寻找服务机构并监督服务完成，但各项服务成本需由企业另行承担。'
+	                }]
+	            }
+	        };
+
+	        return _this;
+	    }
+
+	    _createClass(LegalServiceRequirementList, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'requirements' },
+	                _react2.default.createElement(_LegalServiceCategory2.default, { name: '\u5957\u9910\u5185\u8BA1\u6B21\u670D\u52A1', desc: '\u8BF7\u586B\u5199\u9700\u6C42\u5355\uFF0C\u8BF4\u660E\u60A8\u7684\u9700\u6C42\uFF0C\u65E0\u8BBC\u987E\u95EE\u5BF9\u63A5\u5408\u9002\u7684\u5F8B\u5E08\u4E3A\u60A8\u670D\u52A1\u3002' }),
+	                _react2.default.createElement(_LegalServiceTable2.default, { services: this.state.onlineServices }),
+	                _react2.default.createElement(_LegalServiceTable2.default, { services: this.state.offlineServices }),
+	                _react2.default.createElement(_LegalServiceCategory2.default, { name: '\u65E0\u8BBC\u987E\u95EE\u7BA1\u5BB6\u670D\u52A1', desc: '\u65E0\u8BBC\u987E\u95EE\u4F5C\u4E3A\u4F01\u4E1A\u6CD5\u52A1\u5168\u80FD\u7BA1\u5BB6\uFF0C\u4E0D\u9650\u6B21\u6570\u5BF9\u63A5\u4F01\u4E1A\u5404\u9879\u6CD5\u5F8B\u9700\u6C42\uFF0C\u534F\u52A9\u5206\u6790\u95EE\u9898\u3001\u5339\u914D\u5F8B\u5E08\u3001\u5BFB\u627E\u670D\u52A1\u673A\u6784\u5E76\u76D1\u7763\u670D\u52A1\u5B8C\u6210\uFF0C\u4F46\u5404\u9879\u670D\u52A1\u6210\u672C\u9700\u7531\u4F01\u4E1A\u53E6\u884C\u627F\u62C5\u3002' }),
+	                _react2.default.createElement(_LegalServiceTable2.default, { services: this.state.adviserServices })
+	            );
+	        }
+	    }]);
+
+	    return LegalServiceRequirementList;
+	}(_react2.default.Component);
+
+	exports.default = LegalServiceRequirementList;
 
 /***/ },
 /* 231 */,
@@ -26074,7 +26144,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\n.legal-service-category {\n  background-color: #e0e3ed;\n  border-left: 4px #4f6584 solid;\n  padding: 10px 10px 10px 16px;\n  margin-top: 20px; }\n  .legal-service-category .category-name {\n    font-size: 20px;\n    color: #222;\n    line-height: 30px; }\n  .legal-service-category .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 24px; }\n\n.legal-service-box {\n  margin-bottom: 25px; }\n  .legal-service-box .title {\n    font-size: 20px;\n    color: #222;\n    margin-bottom: 13px; }\n    .legal-service-box .title .balance {\n      font-size: 14px;\n      color: #4f6584;\n      margin-left: 15px; }\n\n.legal-service-list {\n  background-color: #fff;\n  padding: 10px;\n  border-radius: 4px; }\n  .legal-service-list .legal-service {\n    border-bottom: 1px #edeef2 solid; }\n    .legal-service-list .legal-service:last-of-type {\n      border: none; }\n    .legal-service-list .legal-service:hover {\n      background-color: #edeef2; }\n\n.legal-service {\n  padding: 20px 10px;\n  position: relative; }\n  .legal-service .title {\n    font-size: 18px;\n    color: #222; }\n    .legal-service .title .icon {\n      display: inline-block;\n      height: 5px;\n      width: 5px;\n      background-color: #4f6584;\n      transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      /* Internet Explorer */\n      -moz-transform: rotate(45deg);\n      /* Firefox */\n      -webkit-transform: rotate(45deg);\n      /* Safari 和 Chrome */\n      -o-transform: rotate(45deg);\n      /* Opera */\n      margin-right: 5px;\n      margin-bottom: 4px; }\n  .legal-service .desc {\n    font-size: 14px;\n    color: #808080;\n    margin-top: 13px; }\n  .legal-service button {\n    position: absolute;\n    top: 20px;\n    right: 10px;\n    vertical-align: middle;\n    background-color: #4f6584;\n    color: #fff;\n    font-size: 16px;\n    line-height: 40px;\n    min-width: 120px;\n    text-align: center;\n    border-radius: 4px;\n    border: none;\n    outline: none; }\n    .legal-service button:hover {\n      background-color: #505666; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover {\n    text-decoration: none; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  background-color: #4f6584;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none;\n    background-color: #505666; }\n\n.legal-service-category {\n  background-color: #e0e3ed;\n  border-left: 4px #4f6584 solid;\n  padding: 10px 10px 10px 16px;\n  margin-top: 20px;\n  margin-bottom: 25px; }\n  .legal-service-category .category-name {\n    font-size: 20px;\n    color: #222;\n    line-height: 30px; }\n  .legal-service-category .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 24px; }\n\n.legal-service-table {\n  margin-bottom: 25px; }\n  .legal-service-table .box-title {\n    font-size: 20px;\n    color: #222;\n    margin-bottom: 13px; }\n    .legal-service-table .box-title .balance {\n      font-size: 14px;\n      color: #4f6584;\n      margin-left: 15px; }\n\n.legal-service-rows {\n  background-color: #fff;\n  padding: 10px;\n  border-radius: 4px; }\n  .legal-service-rows .legal-service-row {\n    border-bottom: 1px #edeef2 solid; }\n    .legal-service-rows .legal-service-row:last-of-type {\n      border: none; }\n    .legal-service-rows .legal-service-row:hover {\n      background-color: #edeef2; }\n\n.legal-service-row {\n  padding: 20px 10px;\n  position: relative; }\n  .legal-service-row .title {\n    font-size: 18px;\n    color: #222; }\n    .legal-service-row .title .icon {\n      display: inline-block;\n      height: 5px;\n      width: 5px;\n      background-color: #4f6584;\n      transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      /* Internet Explorer */\n      -moz-transform: rotate(45deg);\n      /* Firefox */\n      -webkit-transform: rotate(45deg);\n      /* Safari 和 Chrome */\n      -o-transform: rotate(45deg);\n      /* Opera */\n      margin-right: 5px;\n      margin-bottom: 4px; }\n  .legal-service-row .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 22px;\n    margin-top: 5px;\n    margin-right: 200px; }\n  .legal-service-row .button {\n    position: absolute;\n    top: 20px;\n    right: 10px; }\n", ""]);
 
 	// exports
 
@@ -26185,257 +26255,10 @@
 /***/ },
 /* 239 */,
 /* 240 */,
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	__webpack_require__(232);
-
-	var _react = __webpack_require__(5);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _LegalServiceSummary = __webpack_require__(242);
-
-	var _LegalServiceSummary2 = _interopRequireDefault(_LegalServiceSummary);
-
-	var _LegalServiceList = __webpack_require__(243);
-
-	var _LegalServiceList2 = _interopRequireDefault(_LegalServiceList);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/2.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var LegalServiceBox = function (_React$Component) {
-	    _inherits(LegalServiceBox, _React$Component);
-
-	    function LegalServiceBox() {
-	        _classCallCheck(this, LegalServiceBox);
-
-	        return _possibleConstructorReturn(this, (LegalServiceBox.__proto__ || Object.getPrototypeOf(LegalServiceBox)).apply(this, arguments));
-	    }
-
-	    _createClass(LegalServiceBox, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'legal-service-box' },
-	                _react2.default.createElement(_LegalServiceSummary2.default, null),
-	                _react2.default.createElement(_LegalServiceList2.default, null)
-	            );
-	        }
-	    }]);
-
-	    return LegalServiceBox;
-	}(_react2.default.Component);
-
-	exports.default = LegalServiceBox;
-
-/***/ },
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(5);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/2.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var LegalServiceSummary = function (_React$Component) {
-	    _inherits(LegalServiceSummary, _React$Component);
-
-	    function LegalServiceSummary() {
-	        _classCallCheck(this, LegalServiceSummary);
-
-	        return _possibleConstructorReturn(this, (LegalServiceSummary.__proto__ || Object.getPrototypeOf(LegalServiceSummary)).apply(this, arguments));
-	    }
-
-	    _createClass(LegalServiceSummary, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "title" },
-	                _react2.default.createElement(
-	                    "span",
-	                    null,
-	                    "\u7EBF\u4E0A\u670D\u52A1"
-	                ),
-	                _react2.default.createElement(
-	                    "span",
-	                    { className: "balance" },
-	                    "\u670D\u52A1\u4F59\u989D\uFF1A38\u6B21"
-	                )
-	            );
-	        }
-	    }]);
-
-	    return LegalServiceSummary;
-	}(_react2.default.Component);
-
-	exports.default = LegalServiceSummary;
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(5);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _LegalService = __webpack_require__(244);
-
-	var _LegalService2 = _interopRequireDefault(_LegalService);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/2.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var LegalServiceList = function (_React$Component) {
-	    _inherits(LegalServiceList, _React$Component);
-
-	    function LegalServiceList() {
-	        _classCallCheck(this, LegalServiceList);
-
-	        return _possibleConstructorReturn(this, (LegalServiceList.__proto__ || Object.getPrototypeOf(LegalServiceList)).apply(this, arguments));
-	    }
-
-	    _createClass(LegalServiceList, [{
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'legal-service-list' },
-	                _react2.default.createElement(_LegalService2.default, null),
-	                _react2.default.createElement(_LegalService2.default, null),
-	                _react2.default.createElement(_LegalService2.default, null),
-	                _react2.default.createElement(_LegalService2.default, null),
-	                _react2.default.createElement(_LegalService2.default, null)
-	            );
-	        }
-	    }]);
-
-	    return LegalServiceList;
-	}(_react2.default.Component);
-
-	exports.default = LegalServiceList;
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(5);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/2.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var LegalService = function (_React$Component) {
-	    _inherits(LegalService, _React$Component);
-
-	    function LegalService() {
-	        _classCallCheck(this, LegalService);
-
-	        return _possibleConstructorReturn(this, (LegalService.__proto__ || Object.getPrototypeOf(LegalService)).apply(this, arguments));
-	    }
-
-	    _createClass(LegalService, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "legal-service" },
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "title" },
-	                    _react2.default.createElement("span", { className: "icon" }),
-	                    "\u5408\u540C\u5BA1\u67E5"
-	                ),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "desc" },
-	                    "\u670D\u52A1\u5185\u5BB9\uFF1A\u975E\u5E38\u725B\u903C\uFF01"
-	                ),
-	                _react2.default.createElement(
-	                    "button",
-	                    null,
-	                    "\u53D1\u5E03\u9700\u6C42"
-	                )
-	            );
-	        }
-	    }]);
-
-	    return LegalService;
-	}(_react2.default.Component);
-
-	exports.default = LegalService;
-
-/***/ },
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
 /* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -26480,12 +26303,12 @@
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "category-name" },
-	                    "\u5957\u9910\u5185\u8BA1\u6B21\u670D\u52A1"
+	                    this.props.name
 	                ),
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "desc" },
-	                    "\u8BF7\u586B\u5199\u9700\u6C42\u5355\uFF0C\u8BF4\u660E\u60A8\u7684\u9700\u6C42\uFF0C\u65E0\u8BBC\u987E\u95EE\u5BF9\u63A5\u5408\u9002\u7684\u5F8B\u5E08\u4E3A\u60A8\u670D\u52A1\u3002"
+	                    this.props.desc
 	                )
 	            );
 	        }
@@ -26495,6 +26318,265 @@
 	}(_react2.default.Component);
 
 	exports.default = LegalServiceCategory;
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(232);
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _LegalServiceRows = __webpack_require__(247);
+
+	var _LegalServiceRows2 = _interopRequireDefault(_LegalServiceRows);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/2.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var LegalServiceBox = function (_React$Component) {
+	    _inherits(LegalServiceBox, _React$Component);
+
+	    function LegalServiceBox() {
+	        _classCallCheck(this, LegalServiceBox);
+
+	        return _possibleConstructorReturn(this, (LegalServiceBox.__proto__ || Object.getPrototypeOf(LegalServiceBox)).apply(this, arguments));
+	    }
+
+	    _createClass(LegalServiceBox, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'legal-service-table' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'box-title' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        this.props.services.name
+	                    ),
+	                    this.props.services.balance ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'balance' },
+	                        '\u670D\u52A1\u5269\u4F59\uFF1A',
+	                        this.props.services.balance,
+	                        '\u6B21'
+	                    ) : ''
+	                ),
+	                _react2.default.createElement(_LegalServiceRows2.default, { services: this.props.services.services })
+	            );
+	        }
+	    }]);
+
+	    return LegalServiceBox;
+	}(_react2.default.Component);
+
+	exports.default = LegalServiceBox;
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _LegalServiceRow = __webpack_require__(248);
+
+	var _LegalServiceRow2 = _interopRequireDefault(_LegalServiceRow);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/2.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var LegalServiceList = function (_React$Component) {
+	    _inherits(LegalServiceList, _React$Component);
+
+	    function LegalServiceList() {
+	        _classCallCheck(this, LegalServiceList);
+
+	        return _possibleConstructorReturn(this, (LegalServiceList.__proto__ || Object.getPrototypeOf(LegalServiceList)).apply(this, arguments));
+	    }
+
+	    _createClass(LegalServiceList, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'legal-service-rows' },
+	                Array.isArray(this.props.services) ? this.props.services.map(function (service, index) {
+	                    return _react2.default.createElement(_LegalServiceRow2.default, _extends({ key: index }, service));
+	                }) : _react2.default.createElement(_LegalServiceRow2.default, this.props.services)
+	            );
+	        }
+	    }]);
+
+	    return LegalServiceList;
+	}(_react2.default.Component);
+
+	exports.default = LegalServiceList;
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ButtonLink = __webpack_require__(249);
+
+	var _ButtonLink2 = _interopRequireDefault(_ButtonLink);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/2.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var LegalService = function (_React$Component) {
+	    _inherits(LegalService, _React$Component);
+
+	    function LegalService() {
+	        _classCallCheck(this, LegalService);
+
+	        return _possibleConstructorReturn(this, (LegalService.__proto__ || Object.getPrototypeOf(LegalService)).apply(this, arguments));
+	    }
+
+	    _createClass(LegalService, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'legal-service-row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'title' },
+	                    _react2.default.createElement('span', { className: 'icon' }),
+	                    this.props.name
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'desc' },
+	                    this.props.description
+	                ),
+	                _react2.default.createElement(
+	                    _ButtonLink2.default,
+	                    { className: 'button', link: '/requirements/contractReview' },
+	                    '\u53D1\u5E03\u9700\u6C42'
+	                )
+	            );
+	        }
+	    }]);
+
+	    return LegalService;
+	}(_react2.default.Component);
+
+	exports.default = LegalService;
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(163);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/3.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var ButtonLink = function (_React$Component) {
+	    _inherits(ButtonLink, _React$Component);
+
+	    function ButtonLink() {
+	        _classCallCheck(this, ButtonLink);
+
+	        return _possibleConstructorReturn(this, (ButtonLink.__proto__ || Object.getPrototypeOf(ButtonLink)).apply(this, arguments));
+	    }
+
+	    _createClass(ButtonLink, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: this.props.link, className: this.props.className + ' button-link' },
+	                this.props.children
+	            );
+	        }
+	    }]);
+
+	    return ButtonLink;
+	}(_react2.default.Component);
+
+	exports.default = ButtonLink;
 
 /***/ }
 /******/ ]);
