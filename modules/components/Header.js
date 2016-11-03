@@ -1,7 +1,10 @@
 /**
  * Created by yuyongyu on 2016/10/31.
  */
+import '../../public/css/components.scss'
+
 import React from 'react'
+import Adviser from './Adviser'
 
 export default React.createClass({
     render() {
@@ -17,10 +20,7 @@ export default React.createClass({
                     服务余额：40次／剩余时间：10天
                 </div>
                 <div className="button login-out">退出登录</div>
-                <div className="button adviser">
-                    <span className="name">联系顾问：王英</span>
-                </div>
-
+                <Adviser info={{avatar:'/img/adviser.jpeg',name:'于永雨'}}/>
             </header>
         );
     }

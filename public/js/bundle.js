@@ -127,7 +127,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\nheader {\n  min-width: 1200px;\n  min-height: 80px;\n  font-size: 20px;\n  color: white;\n  background-color: #343843; }\n  header:before {\n    content: ' ';\n    vertical-align: middle;\n    height: 100%; }\n  header .logo {\n    display: inline-block;\n    height: 80px;\n    background-color: #01c5e8;\n    width: 180px;\n    font-size: 14px;\n    line-height: 80px; }\n    header .logo:before {\n      content: ' ';\n      display: inline-block;\n      vertical-align: middle;\n      height: 100%; }\n    header .logo img {\n      display: inline-block;\n      vertical-align: middle;\n      margin-left: 10px;\n      box-shadow: 0 0 5px #166270;\n      border-radius: 8px; }\n    header .logo .slogan {\n      display: inline-block;\n      vertical-align: middle;\n      margin-left: 10px;\n      line-height: 24px; }\n  header .balance {\n    display: inline-block;\n    margin-left: 30px;\n    line-height: 40px;\n    background-color: #282b33;\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px;\n    vertical-align: middle; }\n  header .button {\n    display: inline-block;\n    float: right;\n    line-height: 40px;\n    font-size: 16px;\n    color: #fff;\n    background-color: #505666;\n    cursor: pointer;\n    vertical-align: middle; }\n    header .button:hover {\n      background-color: #282b33; }\n  header .adviser {\n    background: #505666 url(\"/img/logo.png\") no-repeat 0 center;\n    background-size: 40px;\n    margin-right: 20px;\n    border-radius: 4px;\n    position: relative;\n    top: 20px;\n    padding-left: 40px; }\n    header .adviser .name {\n      padding: 0 10px; }\n  header .login-out {\n    padding: 0 10px;\n    margin-right: 60px;\n    border-radius: 4px;\n    position: relative;\n    top: 20px; }\n\n.main {\n  min-height: calc(100vh - 80px);\n  float: left;\n  width: 100%; }\n  .main .main-inner {\n    margin-left: 180px;\n    max-width: 80%;\n    min-width: 1200px; }\n\n.navigator {\n  background-color: #343843;\n  min-height: calc(100vh - 80px);\n  width: 180px;\n  float: left;\n  margin-left: -100%;\n  font-size: 16px;\n  color: #fff;\n  padding-top: 10px; }\n  .navigator ul {\n    padding-left: 0; }\n    .navigator ul li a {\n      display: inline-block;\n      line-height: 50px;\n      color: #aaacb2;\n      width: 100%;\n      text-decoration: none;\n      padding-left: 40px; }\n    .navigator ul li a.active {\n      color: #fff;\n      background-color: #505666;\n      border-left: 4px #01c5e8 solid;\n      padding-left: 36px; }\n  .navigator .button {\n    position: absolute;\n    bottom: 50px;\n    text-align: center;\n    width: 180px; }\n    .navigator .button a {\n      background-color: #505666; }\n      .navigator .button a:hover {\n        background-color: #4f6584; }\n      .navigator .button a:focus {\n        color: #fff;\n        text-decoration: none; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\nheader {\n  min-width: 1200px;\n  min-height: 80px;\n  font-size: 20px;\n  color: white;\n  background-color: #343843; }\n  header:before {\n    content: ' ';\n    vertical-align: middle;\n    height: 100%; }\n  header .logo {\n    display: inline-block;\n    height: 80px;\n    background-color: #01c5e8;\n    width: 180px;\n    font-size: 14px;\n    line-height: 80px; }\n    header .logo:before {\n      content: ' ';\n      display: inline-block;\n      vertical-align: middle;\n      height: 100%; }\n    header .logo img {\n      display: inline-block;\n      height: 60px;\n      width: 60px;\n      vertical-align: middle;\n      margin-left: 10px;\n      box-shadow: 0 0 5px #166270;\n      border-radius: 8px; }\n    header .logo .slogan {\n      display: inline-block;\n      vertical-align: middle;\n      margin-left: 10px;\n      line-height: 24px; }\n  header .balance {\n    display: inline-block;\n    margin-left: 30px;\n    line-height: 40px;\n    background-color: #282b33;\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px;\n    vertical-align: middle; }\n  header .adviser {\n    float: right;\n    margin-right: 20px;\n    position: relative;\n    top: 20px; }\n  header .button {\n    display: inline-block;\n    float: right;\n    line-height: 40px;\n    font-size: 16px;\n    color: #fff;\n    background-color: #505666;\n    cursor: pointer;\n    vertical-align: middle; }\n    header .button:hover {\n      background-color: #282b33; }\n  header .login-out {\n    padding: 0 10px;\n    margin-right: 60px;\n    border-radius: 4px;\n    position: relative;\n    top: 20px; }\n\n.main {\n  min-height: calc(100vh - 80px);\n  float: left;\n  width: 100%; }\n  .main .main-inner {\n    margin-left: 180px;\n    max-width: 80%;\n    min-width: 1200px; }\n\n.navigator {\n  background-color: #343843;\n  min-height: calc(100vh - 80px);\n  width: 180px;\n  float: left;\n  margin-left: -100%;\n  font-size: 16px;\n  color: #fff;\n  padding-top: 10px; }\n  .navigator ul {\n    padding-left: 0; }\n    .navigator ul li a {\n      display: inline-block;\n      line-height: 50px;\n      color: #aaacb2;\n      width: 100%;\n      text-decoration: none;\n      padding-left: 40px; }\n    .navigator ul li a.active {\n      color: #fff;\n      background-color: #505666;\n      border-left: 4px #01c5e8 solid;\n      padding-left: 36px; }\n  .navigator .button {\n    position: absolute;\n    bottom: 50px;\n    text-align: center;\n    width: 180px; }\n    .navigator .button a {\n      background-color: #505666; }\n      .navigator .button a:hover {\n        background-color: #4f6584; }\n      .navigator .button a:focus {\n        color: #fff;\n        text-decoration: none; }\n", ""]);
 
 	// exports
 
@@ -25798,6 +25798,8 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	__webpack_require__(260);
+
 	var _react = __webpack_require__(5);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -25820,7 +25822,9 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/10/31.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 	var Layout = function (_React$Component) {
 	    _inherits(Layout, _React$Component);
@@ -25900,55 +25904,53 @@
 /* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 
+	__webpack_require__(260);
+
 	var _react = __webpack_require__(5);
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Adviser = __webpack_require__(259);
+
+	var _Adviser2 = _interopRequireDefault(_Adviser);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	    displayName: "Header",
+	    displayName: 'Header',
 	    render: function render() {
 	        return _react2.default.createElement(
-	            "header",
+	            'header',
 	            null,
 	            _react2.default.createElement(
-	                "div",
-	                { className: "logo" },
-	                _react2.default.createElement("img", { src: "/img/logo.png" }),
+	                'div',
+	                { className: 'logo' },
+	                _react2.default.createElement('img', { src: '/img/logo.png' }),
 	                _react2.default.createElement(
-	                    "span",
-	                    { className: "slogan" },
-	                    "\u4F01\u4E1A\u6CD5\u52A1\u4E8B\u52A1",
-	                    _react2.default.createElement("br", null),
-	                    "\u5168\u80FD\u7BA1\u5BB6"
+	                    'span',
+	                    { className: 'slogan' },
+	                    '\u4F01\u4E1A\u6CD5\u52A1\u4E8B\u52A1',
+	                    _react2.default.createElement('br', null),
+	                    '\u5168\u80FD\u7BA1\u5BB6'
 	                )
 	            ),
 	            _react2.default.createElement(
-	                "div",
-	                { className: "balance" },
-	                "\u670D\u52A1\u4F59\u989D\uFF1A40\u6B21\uFF0F\u5269\u4F59\u65F6\u95F4\uFF1A10\u5929"
+	                'div',
+	                { className: 'balance' },
+	                '\u670D\u52A1\u4F59\u989D\uFF1A40\u6B21\uFF0F\u5269\u4F59\u65F6\u95F4\uFF1A10\u5929'
 	            ),
 	            _react2.default.createElement(
-	                "div",
-	                { className: "button login-out" },
-	                "\u9000\u51FA\u767B\u5F55"
+	                'div',
+	                { className: 'button login-out' },
+	                '\u9000\u51FA\u767B\u5F55'
 	            ),
-	            _react2.default.createElement(
-	                "div",
-	                { className: "button adviser" },
-	                _react2.default.createElement(
-	                    "span",
-	                    { className: "name" },
-	                    "\u8054\u7CFB\u987E\u95EE\uFF1A\u738B\u82F1"
-	                )
-	            )
+	            _react2.default.createElement(_Adviser2.default, { info: { avatar: '/img/adviser.jpeg', name: '于永雨' } })
 	        );
 	    }
 	}); /**
@@ -26022,7 +26024,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.requirements {\n  margin: 20px 0 0 30px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.requirements {\n  margin: 20px 0 0 30px; }\n", ""]);
 
 	// exports
 
@@ -26064,7 +26066,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.legal-service-category {\n  background-color: #e0e3ed;\n  border-left: 4px #4f6584 solid;\n  padding: 10px 10px 10px 16px;\n  margin-top: 20px;\n  margin-bottom: 25px; }\n  .legal-service-category .category-name {\n    font-size: 20px;\n    color: #222;\n    line-height: 30px; }\n  .legal-service-category .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 24px; }\n\n.legal-service-table {\n  margin-bottom: 25px; }\n  .legal-service-table .box-title {\n    font-size: 20px;\n    color: #222;\n    margin-bottom: 13px; }\n    .legal-service-table .box-title .balance {\n      font-size: 14px;\n      color: #4f6584;\n      margin-left: 15px; }\n\n.legal-service-rows {\n  background-color: #fff;\n  padding: 10px;\n  border-radius: 4px; }\n  .legal-service-rows .legal-service-row {\n    border-bottom: 1px #edeef2 solid; }\n    .legal-service-rows .legal-service-row:last-of-type {\n      border: none; }\n    .legal-service-rows .legal-service-row:hover {\n      background-color: #edeef2; }\n\n.legal-service-row {\n  padding: 20px 10px;\n  position: relative; }\n  .legal-service-row .title {\n    font-size: 18px;\n    color: #222; }\n    .legal-service-row .title .icon {\n      display: inline-block;\n      height: 5px;\n      width: 5px;\n      background-color: #4f6584;\n      transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      /* Internet Explorer */\n      -moz-transform: rotate(45deg);\n      /* Firefox */\n      -webkit-transform: rotate(45deg);\n      /* Safari 和 Chrome */\n      -o-transform: rotate(45deg);\n      /* Opera */\n      margin-right: 5px;\n      margin-bottom: 4px; }\n  .legal-service-row .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 22px;\n    margin-top: 5px;\n    margin-right: 200px; }\n  .legal-service-row .button {\n    position: absolute;\n    top: 20px;\n    right: 10px;\n    background-color: #4f6584; }\n    .legal-service-row .button:hover {\n      background-color: #505666; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.legal-service-category {\n  background-color: #e0e3ed;\n  border-left: 4px #4f6584 solid;\n  padding: 10px 10px 10px 16px;\n  margin-top: 20px;\n  margin-bottom: 25px; }\n  .legal-service-category .category-name {\n    font-size: 20px;\n    color: #222;\n    line-height: 30px; }\n  .legal-service-category .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 24px; }\n\n.legal-service-table {\n  margin-bottom: 25px; }\n  .legal-service-table .box-title {\n    font-size: 20px;\n    color: #222;\n    margin-bottom: 13px; }\n    .legal-service-table .box-title .balance {\n      font-size: 14px;\n      color: #4f6584;\n      margin-left: 15px; }\n\n.legal-service-rows {\n  background-color: #fff;\n  padding: 10px;\n  border-radius: 4px; }\n  .legal-service-rows .legal-service-row {\n    border-bottom: 1px #edeef2 solid; }\n    .legal-service-rows .legal-service-row:last-of-type {\n      border: none; }\n    .legal-service-rows .legal-service-row:hover {\n      background-color: #edeef2; }\n\n.legal-service-row {\n  padding: 20px 10px;\n  position: relative; }\n  .legal-service-row .title {\n    font-size: 18px;\n    color: #222; }\n    .legal-service-row .title .icon {\n      display: inline-block;\n      height: 5px;\n      width: 5px;\n      background-color: #4f6584;\n      transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      /* Internet Explorer */\n      -moz-transform: rotate(45deg);\n      /* Firefox */\n      -webkit-transform: rotate(45deg);\n      /* Safari 和 Chrome */\n      -o-transform: rotate(45deg);\n      /* Opera */\n      margin-right: 5px;\n      margin-bottom: 4px; }\n  .legal-service-row .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 22px;\n    margin-top: 5px;\n    margin-right: 200px; }\n  .legal-service-row .button {\n    position: absolute;\n    top: 20px;\n    right: 10px;\n    background-color: #4f6584; }\n    .legal-service-row .button:hover {\n      background-color: #505666; }\n", ""]);
 
 	// exports
 
@@ -26196,6 +26198,8 @@
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	__webpack_require__(260);
 
 	__webpack_require__(231);
 
@@ -26667,7 +26671,6 @@
 	      };
 	      var offlineServiceTypes = ['201', '202', '203', '204', '301'];
 
-	      //TODO 如果requirementType非法，作出判断！！！！
 	      var serviceForm = void 0;
 	      var serviceName = serviceTypeNameMap[this.props.params.requirementType];
 
@@ -26683,6 +26686,9 @@
 	        serviceForm = _react2.default.createElement(_LawyerLetterForm2.default, null);
 	      } else if (offlineServiceTypes.indexOf(this.props.params.requirementType) !== -1) {
 	        serviceForm = _react2.default.createElement(_OfflineServiceForm2.default, null);
+	      } else {
+	        //TODO 判断requirementType非法的情况！！！
+
 	      }
 
 	      return _react2.default.createElement(
@@ -26741,7 +26747,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .requirement-detail .form-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .requirement-detail .form-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
 
 	// exports
 
@@ -27082,6 +27088,104 @@
 	}(_react2.default.Component);
 
 	exports.default = OfflineService;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/3.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var Adviser = function (_React$Component) {
+	    _inherits(Adviser, _React$Component);
+
+	    function Adviser() {
+	        _classCallCheck(this, Adviser);
+
+	        return _possibleConstructorReturn(this, (Adviser.__proto__ || Object.getPrototypeOf(Adviser)).apply(this, arguments));
+	    }
+
+	    _createClass(Adviser, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "adviser" },
+	                _react2.default.createElement("img", { className: "avatar", src: this.props.info.avatar }),
+	                _react2.default.createElement(
+	                    "span",
+	                    { className: "name" },
+	                    "\u8054\u7CFB\u987E\u95EE\uFF1A",
+	                    this.props.info.name
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Adviser;
+	}(_react2.default.Component);
+
+	exports.default = Adviser;
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(261);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./components.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./components.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.adviser {\n  display: inline-block;\n  border-radius: 4px;\n  height: 40px;\n  background-color: #505666;\n  cursor: pointer; }\n  .adviser .avatar {\n    height: 100%;\n    width: 40px;\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px; }\n  .adviser .name {\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px; }\n  .adviser:hover {\n    background-color: #282b33; }\n", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);

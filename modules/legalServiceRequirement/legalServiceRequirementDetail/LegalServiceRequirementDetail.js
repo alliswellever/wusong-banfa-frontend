@@ -12,8 +12,8 @@ import OfflineServiceForm from './OfflineServiceForm'
 
 class LegalServiceRequirementDetail extends React.Component{
   constructor(props){
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(){
@@ -35,9 +35,7 @@ class LegalServiceRequirementDetail extends React.Component{
     };
     const offlineServiceTypes = ['201', '202', '203', '204', '301']
 
-
-    //TODO 如果requirementType非法，作出判断！！！！
-    let serviceForm ;
+    let serviceForm
     const serviceName = serviceTypeNameMap[this.props.params.requirementType]
 
     if(this.props.params.requirementType === '101'){
@@ -52,8 +50,10 @@ class LegalServiceRequirementDetail extends React.Component{
       serviceForm = <LawyerLetterForm/>
     }else if(offlineServiceTypes.indexOf(this.props.params.requirementType) !== -1){
       serviceForm = <OfflineServiceForm/>
-    }
+    }else{
+      //TODO 判断requirementType非法的情况！！！
 
+    }
 
     return (
       <div className="requirement-detail">

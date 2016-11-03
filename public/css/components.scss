@@ -1,0 +1,43 @@
+@import 'common';
+
+.button-link{
+  display: inline-block;
+  line-height: 40px;
+  min-width: 120px;
+  padding: 0 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.adviser{
+  display: inline-block;
+  border-radius: 4px;
+  height: 40px;
+  background-color: #505666;
+  cursor: pointer;
+
+  .avatar{
+    height: 100%;
+    width: 40px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .name{
+    font-size: 16px;
+    color: #fff;
+    padding: 0 10px;
+  }
+
+  &:hover{
+    background-color: $button-color-secondary-hover;
+  }
+}

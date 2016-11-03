@@ -1,3 +1,4 @@
+import '../../../public/css/components.scss'
 import '../../../public/css/legalServiceRequirementList.scss'
 
 import React from 'react'

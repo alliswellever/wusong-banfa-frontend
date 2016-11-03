@@ -50,19 +50,3 @@ a{
     }
 }
 
-.button-link{
-    display: inline-block;
-    line-height: 40px;
-    min-width: 120px;
-    padding: 0 10px;
-    text-align: center;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-
-    &:hover{
-        color: #fff;
-        text-decoration: none;
-    }
-}
