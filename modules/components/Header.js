@@ -8,7 +8,7 @@ export default React.createClass({
         return (
             <header>
                 <div className="logo">
-                    <img src="logo.png"/>
+                    <img src="img/logo.png"/>
                     <span className="slogan">
                         企业法务事务<br/>全能管家
                     </span>

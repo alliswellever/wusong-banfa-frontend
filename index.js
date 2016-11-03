@@ -1,10 +1,10 @@
-import './public/index.scss'
+import './public/css/layout.scss'
 
 
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, browserHistory,IndexRedirect } from 'react-router'
-import App from './modules/App'
+import Layout from './modules/Layout'
 import Profile from './modules/Profile'
 import LegalServiceRequirementList from './modules/legalServiceRequirement/LegalServiceRequirementList'
 import LegalServiceRequirement from './modules/legalServiceRequirement/LegalServiceRequirement'
@@ -12,7 +12,7 @@ import LegalServiceOrders from './modules/LegalServiceOrders'
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route path="/" component={Layout}>
       <IndexRedirect to="/requirements"/>
       <Route path="/orders" component={LegalServiceOrders}/>
       <Route path="/requirements" component={LegalServiceRequirementList}></Route>

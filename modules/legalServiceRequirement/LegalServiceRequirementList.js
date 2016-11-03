@@ -1,4 +1,4 @@
-import '../../public/legalServiceRequirementList.scss'
+import '../../public/css/legalServiceRequirementList.scss'
 
 import React from 'react'
 import NavLink from '../NavLink'

@@ -1,4 +1,4 @@
-@import './common';
+@import 'common';
 
 .legal-service-category{
   background-color: $background-color-secondary;
@@ -89,7 +89,11 @@
     position: absolute;
     top: 20px;
     right: 10px;
+    background-color: $button-color-primary;
 
+    &:hover{
+      background-color: $button-color-primary-hover;
+    }
   }
 
 }

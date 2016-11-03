@@ -45,7 +45,7 @@ ul{
 a{
     text-decoration: none;
 
-    &:hover{
+    &:hover,&:visited,a:focus{
         text-decoration: none;
     }
 }
@@ -54,16 +54,15 @@ a{
     display: inline-block;
     line-height: 40px;
     min-width: 120px;
+    padding: 0 10px;
     text-align: center;
     color: #fff;
     font-size: 16px;
-    background-color: $button-color-primary;
     border-radius: 4px;
     cursor: pointer;
 
     &:hover{
         color: #fff;
         text-decoration: none;
-        background-color: $button-color-primary-hover;
     }
 }

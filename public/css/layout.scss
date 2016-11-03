@@ -1,4 +1,4 @@
-@import './common';
+@import 'common';
 
 
 header{
@@ -73,7 +73,7 @@ header{
   }
 
   .adviser{
-    background: $button-color-secondary url("/logo.png") no-repeat 0 center;
+    background: $button-color-secondary url("/img/logo.png") no-repeat 0 center;
     background-size: 40px;
     margin-right: 20px;
     border-radius: 4px;
@@ -100,10 +100,10 @@ header{
 
 
 .main{
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   float: left;
   width: 100%;
-  overflow-y: scroll;
+  //overflow-y: scroll;
 
   .main-inner{
     margin-left: 180px;
@@ -138,13 +138,32 @@ header{
 
       a.active {
         color: #fff;
-        background-color: $button-color-primary-hover;
+        background-color: $button-color-secondary;
         border-left: 4px $color-ornament solid;
         padding-left: 36px;
       }
     }
   }
 
+  .button{
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 180px;
 
+    a{
+      background-color: $button-color-secondary;
+
+      &:hover{
+        background-color: $button-color-primary;
+      }
+
+      &:focus{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+  }
 
 }
