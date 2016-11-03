@@ -1,7 +1,7 @@
-import '../../public/css/legalServiceRequirementList.scss'
+import '../../../public/css/legalServiceRequirementList.scss'
 
 import React from 'react'
-import NavLink from '../NavLink'
+import NavLink from '../../components/NavLink'
 
 import LegalServiceCategory from './components/LegalServiceCategory'
 import LegalServiceTable from './components/LegalServiceTable'
@@ -17,25 +17,31 @@ class LegalServiceRequirementList extends React.Component{
               balance: 38,
               services: [
                   {
+                      type: 101,
                       name: '合同审查',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   },
                   {
+                      type: 102,
                       name: '合同起草',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   },
                   {
+                      type: 103,
                       name: '法律咨询',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   },
                   {
-                      name: '律师函',
+                      type: 104,
+                      name: '催收函',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   },
                   {
-                      name: '催收函',
+                      type: 105,
+                      name: '律师函',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   }
+
               ]
           },
           offlineServices:{
@@ -43,18 +49,22 @@ class LegalServiceRequirementList extends React.Component{
               balance: 8,
               services: [
                   {
+                      type: 201,
                       name: '上门培训',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   },
                   {
+                      type: 202,
                       name: '陪同谈判',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   },
                   {
+                      type: 203,
                       name: '法律见证',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   },
                   {
+                      type: 204,
                       name: '面对面咨询',
                       description: '最快的速度帮你审查合同，帮助企业规避风险。'
                   }
@@ -63,6 +73,7 @@ class LegalServiceRequirementList extends React.Component{
           adviserServices: {
               services:[
                   {
+                      type: 301,
                       name: '不清楚，让顾问帮我选择',
                       description: '服务内容不限，如请律师打官司、股权设计方案、书屋方案设计、匹配律师、寻找服务机构最快的速度帮你审查合同，帮助企业规避风险。协助分析问题、匹配律师、寻找服务机构并监督服务完成，但各项服务成本需由企业另行承担。'
                   }

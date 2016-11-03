@@ -1,7 +1,7 @@
 /**
  * Created by yuyongyu on 2016/11/2.
  */
-import '../../../public/css/requirementList.scss'
+import '../../../../public/css/requirementList.scss'
 
 
 import React from 'react';

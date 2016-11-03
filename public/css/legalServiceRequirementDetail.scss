@@ -1,0 +1,51 @@
+@import "common";
+
+
+.requirement-detail{
+  margin: 30px 0 0 30px;
+  background-color: #fff;
+  border-radius: 4px;
+
+  .form-header{
+    padding: 20px;
+    font-size: 20px;
+    color: $text-color-primary;
+    border-bottom: 1px $border-color-primary solid;
+  }
+}
+
+.form-close {
+  cursor: pointer;
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+
+  &::before,&::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: $button-color-primary;
+    border-radius: 5px;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+
+  &::after{
+    transform: rotate(-45deg);
+  }
+
+  &:hover{
+    &::before,&::after {
+      background-color: $color-ornament;
+    }
+  }
+}

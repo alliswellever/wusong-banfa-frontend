@@ -1,6 +1,6 @@
 
 import React from 'react'
-import NavLink from './NavLink'
+import NavLink from './components/NavLink'
 import Header from './components/Header'
 import ButtonLink from './components/ButtonLink'
 

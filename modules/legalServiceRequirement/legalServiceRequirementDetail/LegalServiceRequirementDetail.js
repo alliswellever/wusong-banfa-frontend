@@ -1,0 +1,70 @@
+import '../../../public/css/legalServiceRequirementDetail.scss'
+
+import React from 'react'
+import { browserHistory } from 'react-router'
+import ContractReviewForm from './ContractReviewForm'
+import ContractCreationForm from './ContractCreationForm'
+import LegalConsultationForm from './LegalConsultationForm'
+import CollectionLetterForm from './CollectionLetterForm'
+import LawyerLetterForm from './LawyerLetterForm'
+import OfflineServiceForm from './OfflineServiceForm'
+
+
+class LegalServiceRequirementDetail extends React.Component{
+  constructor(props){
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(){
+    browserHistory.push('/requirements')
+  }
+
+  render() {
+    const serviceTypeNameMap = {
+      '101':'合同审查',
+      '102':'合同起草',
+      '103':'法律咨询',
+      '104':'催收函',
+      '105':'律师函',
+      '201':'上门服务',
+      '202':'陪同谈判',
+      '203':'法律见证',
+      '204':'面对面咨询',
+      '301':'顾问管家服务'
+    };
+    const offlineServiceTypes = ['201', '202', '203', '204', '301']
+
+
+    //TODO 如果requirementType非法，作出判断！！！！
+    let serviceForm ;
+    const serviceName = serviceTypeNameMap[this.props.params.requirementType]
+
+    if(this.props.params.requirementType === '101'){
+      serviceForm = <ContractReviewForm/>
+    }else if(this.props.params.requirementType === '102'){
+      serviceForm = <ContractCreationForm/>
+    }else if(this.props.params.requirementType === '103'){
+      serviceForm = <LegalConsultationForm/>
+    }else if(this.props.params.requirementType === '104'){
+      serviceForm = <CollectionLetterForm/>
+    }else if(this.props.params.requirementType === '105'){
+      serviceForm = <LawyerLetterForm/>
+    }else if(offlineServiceTypes.indexOf(this.props.params.requirementType) !== -1){
+      serviceForm = <OfflineServiceForm/>
+    }
+
+
+    return (
+      <div className="requirement-detail">
+        <div className="form-header">
+          发起需求：{serviceName} <span className="form-close" onClick={this.handleClick}></span>
+        </div>
+        {serviceForm}
+      </div>
+    )
+  }
+
+}
+
+export default LegalServiceRequirementDetail

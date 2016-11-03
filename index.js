@@ -6,8 +6,8 @@ import { render } from 'react-dom'
 import { Router, Route, browserHistory,IndexRedirect } from 'react-router'
 import Layout from './modules/Layout'
 import Profile from './modules/Profile'
-import LegalServiceRequirementList from './modules/legalServiceRequirement/LegalServiceRequirementList'
-import LegalServiceRequirement from './modules/legalServiceRequirement/LegalServiceRequirement'
+import LegalServiceRequirementList from './modules/legalServiceRequirement/legalServiceRequirementList/LegalServiceRequirementList'
+import LegalServiceRequirementDetail from './modules/legalServiceRequirement/legalServiceRequirementDetail/LegalServiceRequirementDetail'
 import LegalServiceOrders from './modules/LegalServiceOrders'
 
 render((
@@ -16,7 +16,7 @@ render((
       <IndexRedirect to="/requirements"/>
       <Route path="/orders" component={LegalServiceOrders}/>
       <Route path="/requirements" component={LegalServiceRequirementList}></Route>
-      <Route path="/requirements/:requirementName" component={LegalServiceRequirement}/>
+      <Route path="/requirements/requirement/:requirementType" component={LegalServiceRequirementDetail}/>
       <Route path="/profile" component={Profile}/>
     </Route>
   </Router>
