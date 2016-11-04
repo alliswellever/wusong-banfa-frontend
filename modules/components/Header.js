@@ -19,8 +19,8 @@ export default React.createClass({
                 <div className="balance">
                     服务余额：40次／剩余时间：10天
                 </div>
-                <div className="button login-out">退出登录</div>
                 <Adviser info={{avatar:'/img/adviser.jpeg',name:'于永雨'}}/>
+                <div className="button login-out">退出登录</div>
             </header>
         );
     }
