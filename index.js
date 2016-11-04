@@ -1,6 +1,3 @@
-import './public/css/layout.scss'
-
-
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, browserHistory,IndexRedirect } from 'react-router'

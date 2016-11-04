@@ -1,5 +1,15 @@
 @import 'common';
 
+
+.nav-link{
+  &.active {
+    color: #fff;
+    background-color: $button-color-secondary;
+    border-left: 4px $color-ornament solid;
+    padding-left: 36px;
+  }
+}
+
 .button-link{
   display: inline-block;
   line-height: 40px;

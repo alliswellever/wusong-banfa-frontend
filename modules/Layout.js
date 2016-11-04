@@ -1,8 +1,9 @@
 /**
  * Created by yuyongyu on 2016/10/31.
  */
-
 import '../public/css/components.scss'
+import '../public/css/layout.scss'
+
 
 import React from 'react'
 import NavLink from './components/NavLink'

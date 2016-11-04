@@ -2,12 +2,8 @@ import '../../../public/css/components.scss'
 import '../../../public/css/legalServiceRequirementList.scss'
 
 import React from 'react'
-import NavLink from '../../components/NavLink'
-
 import LegalServiceCategory from './components/LegalServiceCategory'
 import LegalServiceTable from './components/LegalServiceTable'
-import LegalServiceRows from './components/LegalServiceRows'
-
 
 class LegalServiceRequirementList extends React.Component{
   constructor(props){
