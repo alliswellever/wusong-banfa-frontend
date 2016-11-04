@@ -95,23 +95,23 @@ header{
 
 
 .main{
-  min-height: calc(100vh - 80px);
   float: left;
-  width: 100%;
-  //overflow-y: scroll;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 180px);
+  margin-left: 180px;
+  overflow-y: scroll;
 
   .main-inner{
-    margin-left: 180px;
     max-width: 80%;
     min-width: 1200px;
   }
 }
 
 .navigator{
-  background-color: $color-primary;
-  min-height: calc(100vh - 80px);
-  width: 180px;
   float: left;
+  height: calc(100vh - 80px);
+  width: 180px;
+  background-color: $color-primary;
   margin-left: -100%;
   font-size: 16px;
   color: #fff;
