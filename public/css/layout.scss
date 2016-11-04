@@ -4,7 +4,7 @@
 header{
   position: relative;
   height: 80px;
-  min-width: 1200px;
+  min-width: 1380px;
   overflow-x: scroll;
   font-size: 20px;
   color: white;
@@ -41,9 +41,10 @@ header{
     .slogan{
       @extend .vertical-middile;
       display: inline-block;
-      vertical-align: middle;
       margin-left: 10px;
-      line-height: 24px;
+      line-height: 20px;
+      height: 40px;
+      left: 70px;
     }
 
   }
@@ -90,28 +91,34 @@ header{
 }
 
 
-
+.body{
+  min-width: 1380px;
+  overflow-x: scroll;
+  position: relative;
+}
 
 
 .main{
-  float: left;
+  display: inline-block;
   height: calc(100vh - 80px);
   width: calc(100vw - 180px);
-  margin-left: 180px;
+  min-width: 1200px;
   overflow-y: scroll;
+  margin-left: 180px;
 
   .main-inner{
-    max-width: 80%;
-    min-width: 1200px;
+    margin-right: 10%;
   }
 }
 
 .navigator{
-  float: left;
+  position: absolute;
+  top:0;
+  left: 0;
+  display: inline-block;
   height: calc(100vh - 80px);
   width: 180px;
   background-color: $color-primary;
-  margin-left: -100%;
   font-size: 16px;
   color: #fff;
   padding-top: 10px;
