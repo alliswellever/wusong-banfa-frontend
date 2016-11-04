@@ -26740,7 +26740,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .requirement-detail .form-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .requirement-detail .form-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n  .requirement-detail .requirement-form {\n    min-width: 800px;\n    max-width: 1000px;\n    margin: 0 auto; }\n    .requirement-detail .requirement-form .workflow {\n      margin: 30px auto;\n      width: 800px;\n      border-top: 1px #edeef2 solid;\n      text-align: center; }\n      .requirement-detail .requirement-form .workflow .node {\n        display: inline-block;\n        font-size: 16px;\n        color: #808080;\n        margin-top: -17px; }\n        .requirement-detail .requirement-form .workflow .node img {\n          width: 34px;\n          height: 34px;\n          margin-bottom: 15px; }\n      .requirement-detail .requirement-form .workflow .edit {\n        float: left;\n        margin-left: -43px; }\n      .requirement-detail .requirement-form .workflow .complete {\n        float: right;\n        margin-right: -43px; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
 
 	// exports
 
@@ -26750,7 +26750,7 @@
 /* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -26761,6 +26761,22 @@
 	var _react = __webpack_require__(5);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _Workflow = __webpack_require__(262);
+
+	var _Workflow2 = _interopRequireDefault(_Workflow);
+
+	var _SponsorInfo = __webpack_require__(263);
+
+	var _SponsorInfo2 = _interopRequireDefault(_SponsorInfo);
+
+	var _RequirementForm = __webpack_require__(264);
+
+	var _RequirementForm2 = _interopRequireDefault(_RequirementForm);
+
+	var _SubmitBox = __webpack_require__(265);
+
+	var _SubmitBox2 = _interopRequireDefault(_SubmitBox);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26783,16 +26799,19 @@
 	    }
 
 	    _createClass(ContractReviewForm, [{
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "legal-service-row" },
+	                'div',
+	                { className: 'requirement-form' },
+	                _react2.default.createElement(_Workflow2.default, null),
+	                _react2.default.createElement(_SponsorInfo2.default, null),
 	                _react2.default.createElement(
-	                    "h1",
+	                    _RequirementForm2.default,
 	                    null,
-	                    "\u5408\u540C\u5BA1\u67E5\u8868\u5355"
-	                )
+	                    '\u5408\u540C\u5BA1\u67E5'
+	                ),
+	                _react2.default.createElement(_SubmitBox2.default, null)
 	            );
 	        }
 	    }]);
@@ -27179,6 +27198,260 @@
 
 	// exports
 
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/4.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var Workflow = function (_React$Component) {
+	    _inherits(Workflow, _React$Component);
+
+	    function Workflow() {
+	        _classCallCheck(this, Workflow);
+
+	        return _possibleConstructorReturn(this, (Workflow.__proto__ || Object.getPrototypeOf(Workflow)).apply(this, arguments));
+	    }
+
+	    _createClass(Workflow, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "workflow" },
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "node edit" },
+	                    _react2.default.createElement("img", { src: "/img/edit.png" }),
+	                    _react2.default.createElement(
+	                        "div",
+	                        null,
+	                        "1\u5206\u949F\u586B\u5199\u9700\u6C42"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "node communicate" },
+	                    _react2.default.createElement("img", { src: "/img/communicate.png" }),
+	                    _react2.default.createElement(
+	                        "div",
+	                        null,
+	                        "\u987E\u95EE\u63A5\u6D3D\u3001\u6C9F\u901A"
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "node complete" },
+	                    _react2.default.createElement("img", { src: "/img/complete.png" }),
+	                    _react2.default.createElement(
+	                        "div",
+	                        null,
+	                        "\u5F8B\u5E08\u5B8C\u6210\u5DE5\u4F5C"
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Workflow;
+	}(_react2.default.Component);
+
+	exports.default = Workflow;
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/4.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var SponsorInfo = function (_React$Component) {
+	    _inherits(SponsorInfo, _React$Component);
+
+	    function SponsorInfo() {
+	        _classCallCheck(this, SponsorInfo);
+
+	        return _possibleConstructorReturn(this, (SponsorInfo.__proto__ || Object.getPrototypeOf(SponsorInfo)).apply(this, arguments));
+	    }
+
+	    _createClass(SponsorInfo, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "legal-service-row" },
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "\u53D1\u8D77\u4EBA\u4FE1\u606F"
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SponsorInfo;
+	}(_react2.default.Component);
+
+	exports.default = SponsorInfo;
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/4.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var RequirementForm = function (_React$Component) {
+	    _inherits(RequirementForm, _React$Component);
+
+	    function RequirementForm() {
+	        _classCallCheck(this, RequirementForm);
+
+	        return _possibleConstructorReturn(this, (RequirementForm.__proto__ || Object.getPrototypeOf(RequirementForm)).apply(this, arguments));
+	    }
+
+	    _createClass(RequirementForm, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "legal-service-row" },
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "\u9700\u6C42\u8868\u5355"
+	                ),
+	                _react2.default.createElement(
+	                    "h3",
+	                    null,
+	                    this.props.children
+	                )
+	            );
+	        }
+	    }]);
+
+	    return RequirementForm;
+	}(_react2.default.Component);
+
+	exports.default = RequirementForm;
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(5);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/4.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var SubmitBox = function (_React$Component) {
+	    _inherits(SubmitBox, _React$Component);
+
+	    function SubmitBox() {
+	        _classCallCheck(this, SubmitBox);
+
+	        return _possibleConstructorReturn(this, (SubmitBox.__proto__ || Object.getPrototypeOf(SubmitBox)).apply(this, arguments));
+	    }
+
+	    _createClass(SubmitBox, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "legal-service-row" },
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "\u63D0\u4EA4\u533A\u57DF"
+	                )
+	            );
+	        }
+	    }]);
+
+	    return SubmitBox;
+	}(_react2.default.Component);
+
+	exports.default = SubmitBox;
 
 /***/ }
 /******/ ]);
