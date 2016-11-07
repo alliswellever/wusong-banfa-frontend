@@ -6,6 +6,7 @@ import Workflow from './components/Workflow'
 import SponsorInfo from './components/SponsorInfo'
 import RequirementForm from './components/RequirementForm'
 import SubmitBox from './components/SubmitBox'
+import { browserHistory } from 'react-router'
 
 class ContractReviewForm extends React.Component{
     constructor(props){
@@ -34,9 +35,10 @@ class ContractReviewForm extends React.Component{
         self.changeAgreeProtocol(false)
 
         setTimeout(function () {
-            alert('提交');
             self.changeAgreeProtocol(true)
+            browserHistory.push('/orders')
         },3000)
+
     }
 
 

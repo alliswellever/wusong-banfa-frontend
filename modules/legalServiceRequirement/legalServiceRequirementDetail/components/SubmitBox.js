@@ -2,16 +2,22 @@
  * Created by yuyongyu on 2016/11/4.
  */
 import React from 'react'
-
-import {Button, ButtonToolbar, Checkbox} from 'react-bootstrap'
+import {Button, ButtonToolbar, Checkbox, Modal} from 'react-bootstrap'
+import { browserHistory } from 'react-router'
 
 class SubmitBox extends React.Component{
     constructor(props){
         super(props)
         this.handleChangeCheckbox = this.handleChangeCheckbox.bind(this)
+        this.toggleShowCancleModel = this.toggleShowCancleModel.bind(this)
+        this.toggleShowSubmitModel = this.toggleShowSubmitModel.bind(this)
+        this.cancle = this.cancle.bind(this)
+        this.submit = this.submit.bind(this)
 
         this.state = {
-            agreeProtocol: this.props.agreeProtocol
+            agreeProtocol: this.props.agreeProtocol,
+            showCancleModal: false,
+            showSubmitModal: false
         }
     }
 
@@ -21,6 +27,30 @@ class SubmitBox extends React.Component{
         })
     }
 
+    toggleShowCancleModel(show){
+        this.setState({
+            showCancleModal: show
+        })
+    }
+
+    toggleShowSubmitModel(show){
+        this.setState({
+            showSubmitModal: show
+        })
+    }
+
+    cancle(){
+        browserHistory.push('/requirements')
+    }
+
+    submit(){
+        this.toggleShowSubmitModel(false);
+
+        this.props.clickSubmitButton();
+    }
+
+
+
 
     render(){
         return (
@@ -28,9 +58,37 @@ class SubmitBox extends React.Component{
                 <Checkbox inline defaultChecked={this.state.agreeProtocol} onChange={this.handleChangeCheckbox}>我同意<a href="" target="_blank">《无讼办法法无服务用户协议》</a></Checkbox>
 
                 <ButtonToolbar>
-                    <Button onClick={this.props.clickCancleButton}>取消</Button>
-                    <Button type="submit" disabled={!this.props.agreeProtocol || !this.state.agreeProtocol} onClick={this.props.clickSubmitButton}>{this.props.agreeProtocol ? '提交' : '提交中...'}</Button>
+                    <Button onClick={() => this.toggleShowCancleModel(true)}>取消</Button>
+                    <Button type="submit" disabled={!this.props.agreeProtocol || !this.state.agreeProtocol} onClick={() => this.toggleShowSubmitModel(true)}>{this.props.agreeProtocol ? '提交' : '提交中...'}</Button>
                 </ButtonToolbar>
+
+                {/*取消弹框*/}
+                <Modal show={this.state.showCancleModal} backdrop='static'>
+                    <Modal.Header closeButton onHide={() => this.toggleShowCancleModel(false)}>
+                        <Modal.Title>取消需求</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        确认要放弃此次需求吗？
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={this.cancle}>确认取消</Button>
+                        <Button type="submit" onClick={() => this.toggleShowCancleModel(false)}>再想想</Button>
+                    </Modal.Footer>
+                </Modal>
+
+                {/*确认弹框*/}
+                <Modal show={this.state.showSubmitModal} backdrop='static'>
+                    <Modal.Header closeButton  onHide={() => this.toggleShowSubmitModel(false)}>
+                        <Modal.Title>提交</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        无讼顾问稍后会与您确认，该需求在确认后消耗1次线上机会！
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={() => this.toggleShowSubmitModel(false)}>再想想</Button>
+                        <Button type="submit" onClick={this.submit}>确认提交</Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         )
     }

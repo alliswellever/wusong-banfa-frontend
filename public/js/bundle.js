@@ -26778,6 +26778,8 @@
 
 	var _SubmitBox2 = _interopRequireDefault(_SubmitBox);
 
+	var _reactRouter = __webpack_require__(163);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26825,8 +26827,8 @@
 	            self.changeAgreeProtocol(false);
 
 	            setTimeout(function () {
-	                alert('提交');
 	                self.changeAgreeProtocol(true);
+	                _reactRouter.browserHistory.push('/orders');
 	            }, 3000);
 	        }
 	    }, {
@@ -27225,7 +27227,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.nav-link.active {\n  color: #fff;\n  background-color: #505666;\n  border-left: 4px #01c5e8 solid;\n  padding-left: 36px; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.adviser {\n  display: inline-block;\n  border-radius: 4px;\n  height: 40px;\n  background-color: #505666;\n  cursor: pointer; }\n  .adviser .avatar {\n    height: 100%;\n    width: 40px;\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px; }\n  .adviser .name {\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px; }\n  .adviser:hover {\n    background-color: #282b33; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.nav-link.active {\n  color: #fff;\n  background-color: #505666;\n  border-left: 4px #01c5e8 solid;\n  padding-left: 36px; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.adviser {\n  display: inline-block;\n  border-radius: 4px;\n  height: 40px;\n  background-color: #505666;\n  cursor: pointer; }\n  .adviser .avatar {\n    height: 100%;\n    width: 40px;\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px; }\n  .adviser .name {\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px; }\n  .adviser:hover {\n    background-color: #282b33; }\n\n.modal-dialog {\n  margin: 10% auto; }\n  .modal-dialog .modal-header {\n    border-bottom: none;\n    text-align: center; }\n  .modal-dialog .modal-body {\n    text-align: center;\n    font-size: 16px; }\n  .modal-dialog .modal-footer {\n    border-top: none;\n    text-align: center; }\n    .modal-dialog .modal-footer .btn {\n      min-width: 100px;\n      line-height: 1.5;\n      border: none;\n      font-size: 16px;\n      float: none; }\n    .modal-dialog .modal-footer button[type=button] {\n      color: #4f6584;\n      background-color: #edeef2;\n      margin-right: 70px; }\n      .modal-dialog .modal-footer button[type=button]:hover {\n        background-color: #e0e3ed; }\n    .modal-dialog .modal-footer button[type=submit] {\n      color: #fff;\n      background-color: #4f6584; }\n      .modal-dialog .modal-footer button[type=submit]:hover {\n        background-color: #505666; }\n", ""]);
 
 	// exports
 
@@ -27446,6 +27448,8 @@
 
 	var _reactBootstrap = __webpack_require__(266);
 
+	var _reactRouter = __webpack_require__(163);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27466,9 +27470,15 @@
 	        var _this = _possibleConstructorReturn(this, (SubmitBox.__proto__ || Object.getPrototypeOf(SubmitBox)).call(this, props));
 
 	        _this.handleChangeCheckbox = _this.handleChangeCheckbox.bind(_this);
+	        _this.toggleShowCancleModel = _this.toggleShowCancleModel.bind(_this);
+	        _this.toggleShowSubmitModel = _this.toggleShowSubmitModel.bind(_this);
+	        _this.cancle = _this.cancle.bind(_this);
+	        _this.submit = _this.submit.bind(_this);
 
 	        _this.state = {
-	            agreeProtocol: _this.props.agreeProtocol
+	            agreeProtocol: _this.props.agreeProtocol,
+	            showCancleModal: false,
+	            showSubmitModal: false
 	        };
 	        return _this;
 	    }
@@ -27481,8 +27491,36 @@
 	            });
 	        }
 	    }, {
+	        key: 'toggleShowCancleModel',
+	        value: function toggleShowCancleModel(show) {
+	            this.setState({
+	                showCancleModal: show
+	            });
+	        }
+	    }, {
+	        key: 'toggleShowSubmitModel',
+	        value: function toggleShowSubmitModel(show) {
+	            this.setState({
+	                showSubmitModal: show
+	            });
+	        }
+	    }, {
+	        key: 'cancle',
+	        value: function cancle() {
+	            _reactRouter.browserHistory.push('/requirements');
+	        }
+	    }, {
+	        key: 'submit',
+	        value: function submit() {
+	            this.toggleShowSubmitModel(false);
+
+	            this.props.clickSubmitButton();
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'submit-box' },
@@ -27501,13 +27539,89 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Button,
-	                        { onClick: this.props.clickCancleButton },
+	                        { onClick: function onClick() {
+	                                return _this2.toggleShowCancleModel(true);
+	                            } },
 	                        '\u53D6\u6D88'
 	                    ),
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Button,
-	                        { type: 'submit', disabled: !this.props.agreeProtocol || !this.state.agreeProtocol, onClick: this.props.clickSubmitButton },
+	                        { type: 'submit', disabled: !this.props.agreeProtocol || !this.state.agreeProtocol, onClick: function onClick() {
+	                                return _this2.toggleShowSubmitModel(true);
+	                            } },
 	                        this.props.agreeProtocol ? '提交' : '提交中...'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    _reactBootstrap.Modal,
+	                    { show: this.state.showCancleModal, backdrop: 'static' },
+	                    _react2.default.createElement(
+	                        _reactBootstrap.Modal.Header,
+	                        { closeButton: true, onHide: function onHide() {
+	                                return _this2.toggleShowCancleModel(false);
+	                            } },
+	                        _react2.default.createElement(
+	                            _reactBootstrap.Modal.Title,
+	                            null,
+	                            '\u53D6\u6D88\u9700\u6C42'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.Modal.Body,
+	                        null,
+	                        '\u786E\u8BA4\u8981\u653E\u5F03\u6B64\u6B21\u9700\u6C42\u5417\uFF1F'
+	                    ),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.Modal.Footer,
+	                        null,
+	                        _react2.default.createElement(
+	                            _reactBootstrap.Button,
+	                            { onClick: this.cancle },
+	                            '\u786E\u8BA4\u53D6\u6D88'
+	                        ),
+	                        _react2.default.createElement(
+	                            _reactBootstrap.Button,
+	                            { type: 'submit', onClick: function onClick() {
+	                                    return _this2.toggleShowCancleModel(false);
+	                                } },
+	                            '\u518D\u60F3\u60F3'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    _reactBootstrap.Modal,
+	                    { show: this.state.showSubmitModal, backdrop: 'static' },
+	                    _react2.default.createElement(
+	                        _reactBootstrap.Modal.Header,
+	                        { closeButton: true, onHide: function onHide() {
+	                                return _this2.toggleShowSubmitModel(false);
+	                            } },
+	                        _react2.default.createElement(
+	                            _reactBootstrap.Modal.Title,
+	                            null,
+	                            '\u63D0\u4EA4'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.Modal.Body,
+	                        null,
+	                        '\u65E0\u8BBC\u987E\u95EE\u7A0D\u540E\u4F1A\u4E0E\u60A8\u786E\u8BA4\uFF0C\u8BE5\u9700\u6C42\u5728\u786E\u8BA4\u540E\u6D88\u80171\u6B21\u7EBF\u4E0A\u673A\u4F1A\uFF01'
+	                    ),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.Modal.Footer,
+	                        null,
+	                        _react2.default.createElement(
+	                            _reactBootstrap.Button,
+	                            { onClick: function onClick() {
+	                                    return _this2.toggleShowSubmitModel(false);
+	                                } },
+	                            '\u518D\u60F3\u60F3'
+	                        ),
+	                        _react2.default.createElement(
+	                            _reactBootstrap.Button,
+	                            { type: 'submit', onClick: this.submit },
+	                            '\u786E\u8BA4\u63D0\u4EA4'
+	                        )
 	                    )
 	                )
 	            );
