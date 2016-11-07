@@ -17,6 +17,9 @@
     min-width: 800px;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 30px 0;
+    border: 1px blue solid;
+
 
 
     .workflow{
@@ -49,9 +52,60 @@
       }
     }
 
+    .submit-box{
+      border: 1px red solid;
+      .checkbox-inline{
+        margin: 25px 0;
+        font-size: 16px;
+        color: $text-color-tip;
+
+        input[type=checkbox]{
+          margin-top: 0;
+        }
+
+        a{
+          color: $color-secondary;
+
+          &:hover{
+            color: $color-ornament;
+          }
+        }
+      }
+
+      .btn-toolbar{
+        margin: 25px 0;
+        text-align: center;
+
+        .btn{
+          min-width: 100px;
+          line-height: 1.9;
+          border: none;
+          font-size: 16px;
+          float: none;
+        }
+
+        button[type=button]{
+          color: $button-color-primary;
+          background-color: $button-color-cancle;
+          margin-right: 70px;
+          &:hover{
+            background-color: $button-color-cancle-hover;
+          }
+        }
+
+        button[type=submit]{
+          color: #fff;
+          background-color: $button-color-primary;
+          &:hover{
+            background-color: $button-color-primary-hover;
+          }
+        }
+
+
+      }
+    }
+
   }
-
-
 }
 
 .form-close {

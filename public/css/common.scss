@@ -10,6 +10,8 @@ $button-color-primary: $color-secondary;
 $button-color-primary-hover: #505666;
 $button-color-secondary: #505666;
 $button-color-secondary-hover: #282b33;
+$button-color-cancle: #edeef2;
+$button-color-cancle-hover: #e0e3ed;
 
 // Background Variables
 $background-color-primary: #edeef2;
@@ -50,3 +52,9 @@ a{
     }
 }
 
+.btn{
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+}
