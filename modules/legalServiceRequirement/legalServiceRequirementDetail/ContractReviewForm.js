@@ -11,11 +11,12 @@ import { browserHistory } from 'react-router'
 class ContractReviewForm extends React.Component{
     constructor(props){
         super(props)
-        this.handleCancleButtonClick = this.handleCancleButtonClick.bind(this)
         this.handleSubmitButtonClick = this.handleSubmitButtonClick.bind(this)
 
         this.state = {
-            agreeProtocol: true
+            agreeProtocol: true,
+            sponsorName: '于永雨',
+            phoneName: '13020072525'
         }
     }
 
@@ -25,10 +26,6 @@ class ContractReviewForm extends React.Component{
         })
     }
 
-
-    handleCancleButtonClick(){
-        alert('取消');
-    }
 
     handleSubmitButtonClick(){
         var self = this;
@@ -46,11 +43,11 @@ class ContractReviewForm extends React.Component{
         return (
             <div className="requirement-form">
                 <Workflow/>
-                <SponsorInfo/>
+                <SponsorInfo sponsorName={this.state.sponsorName} phoneNumber={this.state.phoneName}/>
                 <RequirementForm>
                     合同审查
                 </RequirementForm>
-                <SubmitBox clickCancleButton={this.handleCancleButtonClick} clickSubmitButton={this.handleSubmitButtonClick} agreeProtocol={this.state.agreeProtocol}/>
+                <SubmitBox clickSubmitButton={this.handleSubmitButtonClick} agreeProtocol={this.state.agreeProtocol}/>
             </div>
         )
     }

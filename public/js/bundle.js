@@ -26740,7 +26740,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .requirement-detail .form-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n  .requirement-detail .requirement-form {\n    min-width: 800px;\n    max-width: 1000px;\n    margin: 0 auto;\n    padding: 30px 0;\n    border: 1px blue solid; }\n    .requirement-detail .requirement-form .workflow {\n      margin: 30px auto;\n      width: 800px;\n      border-top: 1px #edeef2 solid;\n      text-align: center; }\n      .requirement-detail .requirement-form .workflow .node {\n        display: inline-block;\n        font-size: 16px;\n        color: #808080;\n        margin-top: -17px; }\n        .requirement-detail .requirement-form .workflow .node img {\n          width: 34px;\n          height: 34px;\n          margin-bottom: 15px; }\n      .requirement-detail .requirement-form .workflow .edit {\n        float: left;\n        margin-left: -43px; }\n      .requirement-detail .requirement-form .workflow .complete {\n        float: right;\n        margin-right: -43px; }\n    .requirement-detail .requirement-form .submit-box {\n      border: 1px red solid; }\n      .requirement-detail .requirement-form .submit-box .checkbox-inline {\n        margin: 25px 0;\n        font-size: 16px;\n        color: #808080; }\n        .requirement-detail .requirement-form .submit-box .checkbox-inline input[type=checkbox] {\n          margin-top: 0; }\n        .requirement-detail .requirement-form .submit-box .checkbox-inline a {\n          color: #4f6584; }\n          .requirement-detail .requirement-form .submit-box .checkbox-inline a:hover {\n            color: #01c5e8; }\n      .requirement-detail .requirement-form .submit-box .btn-toolbar {\n        margin: 25px 0;\n        text-align: center; }\n        .requirement-detail .requirement-form .submit-box .btn-toolbar .btn {\n          min-width: 100px;\n          line-height: 1.9;\n          border: none;\n          font-size: 16px;\n          float: none; }\n        .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=button] {\n          color: #4f6584;\n          background-color: #edeef2;\n          margin-right: 70px; }\n          .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=button]:hover {\n            background-color: #e0e3ed; }\n        .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=submit] {\n          color: #fff;\n          background-color: #4f6584; }\n          .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=submit]:hover {\n            background-color: #505666; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .requirement-detail .form-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n  .requirement-detail .requirement-form {\n    min-width: 800px;\n    max-width: 1000px;\n    margin: 0 auto;\n    padding: 30px 0; }\n    .requirement-detail .requirement-form .workflow {\n      margin: 30px auto;\n      width: 800px;\n      border-top: 1px #edeef2 solid;\n      text-align: center; }\n      .requirement-detail .requirement-form .workflow .node {\n        display: inline-block;\n        font-size: 16px;\n        color: #808080;\n        margin-top: -17px; }\n        .requirement-detail .requirement-form .workflow .node img {\n          width: 34px;\n          height: 34px;\n          margin-bottom: 15px; }\n      .requirement-detail .requirement-form .workflow .edit {\n        float: left;\n        margin-left: -43px; }\n      .requirement-detail .requirement-form .workflow .complete {\n        float: right;\n        margin-right: -43px; }\n    .requirement-detail .requirement-form .sponsor-info .control-label {\n      font-size: 16px;\n      color: #222;\n      margin-bottom: 10px; }\n      .requirement-detail .requirement-form .sponsor-info .control-label .required {\n        color: red; }\n      .requirement-detail .requirement-form .sponsor-info .control-label .tip {\n        font-size: 12px;\n        color: #808080;\n        margin-left: 10px; }\n    .requirement-detail .requirement-form .sponsor-info .form-control {\n      height: auto;\n      line-height: 1.65;\n      font-size: 16px; }\n    .requirement-detail .requirement-form .submit-box .checkbox-inline {\n      margin: 25px 0;\n      font-size: 16px;\n      color: #808080; }\n      .requirement-detail .requirement-form .submit-box .checkbox-inline input[type=checkbox] {\n        margin-top: 0; }\n      .requirement-detail .requirement-form .submit-box .checkbox-inline a {\n        color: #4f6584; }\n        .requirement-detail .requirement-form .submit-box .checkbox-inline a:hover {\n          color: #01c5e8; }\n    .requirement-detail .requirement-form .submit-box .btn-toolbar {\n      margin: 25px 0;\n      text-align: center; }\n      .requirement-detail .requirement-form .submit-box .btn-toolbar .btn {\n        min-width: 100px;\n        line-height: 1.9;\n        border: none;\n        font-size: 16px;\n        float: none; }\n      .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=button] {\n        color: #4f6584;\n        background-color: #edeef2;\n        margin-right: 70px; }\n        .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=button]:hover {\n          background-color: #e0e3ed; }\n      .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=submit] {\n        color: #fff;\n        background-color: #4f6584; }\n        .requirement-detail .requirement-form .submit-box .btn-toolbar button[type=submit]:hover {\n          background-color: #505666; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
 
 	// exports
 
@@ -26799,11 +26799,12 @@
 
 	        var _this = _possibleConstructorReturn(this, (ContractReviewForm.__proto__ || Object.getPrototypeOf(ContractReviewForm)).call(this, props));
 
-	        _this.handleCancleButtonClick = _this.handleCancleButtonClick.bind(_this);
 	        _this.handleSubmitButtonClick = _this.handleSubmitButtonClick.bind(_this);
 
 	        _this.state = {
-	            agreeProtocol: true
+	            agreeProtocol: true,
+	            sponsorName: '于永雨',
+	            phoneName: '13020072525'
 	        };
 	        return _this;
 	    }
@@ -26814,11 +26815,6 @@
 	            this.setState({
 	                agreeProtocol: agree
 	            });
-	        }
-	    }, {
-	        key: 'handleCancleButtonClick',
-	        value: function handleCancleButtonClick() {
-	            alert('取消');
 	        }
 	    }, {
 	        key: 'handleSubmitButtonClick',
@@ -26838,13 +26834,13 @@
 	                'div',
 	                { className: 'requirement-form' },
 	                _react2.default.createElement(_Workflow2.default, null),
-	                _react2.default.createElement(_SponsorInfo2.default, null),
+	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneName }),
 	                _react2.default.createElement(
 	                    _RequirementForm2.default,
 	                    null,
 	                    '\u5408\u540C\u5BA1\u67E5'
 	                ),
-	                _react2.default.createElement(_SubmitBox2.default, { clickCancleButton: this.handleCancleButtonClick, clickSubmitButton: this.handleSubmitButtonClick, agreeProtocol: this.state.agreeProtocol })
+	                _react2.default.createElement(_SubmitBox2.default, { clickSubmitButton: this.handleSubmitButtonClick, agreeProtocol: this.state.agreeProtocol })
 	            );
 	        }
 	    }]);
@@ -27317,7 +27313,7 @@
 /* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -27328,6 +27324,8 @@
 	var _react = __webpack_require__(5);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(266);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27343,22 +27341,126 @@
 	var SponsorInfo = function (_React$Component) {
 	    _inherits(SponsorInfo, _React$Component);
 
-	    function SponsorInfo() {
+	    function SponsorInfo(props) {
 	        _classCallCheck(this, SponsorInfo);
 
-	        return _possibleConstructorReturn(this, (SponsorInfo.__proto__ || Object.getPrototypeOf(SponsorInfo)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (SponsorInfo.__proto__ || Object.getPrototypeOf(SponsorInfo)).call(this, props));
+
+	        _this.handleSponsorNameChange = _this.handleSponsorNameChange.bind(_this);
+	        _this.handlePhoneNumberChange = _this.handlePhoneNumberChange.bind(_this);
+
+	        _this.state = {
+	            sponsorName: _this.props.sponsorName,
+	            phoneNumber: _this.props.phoneNumber,
+	            sponsorNameValidationState: 'success',
+	            phoneNumberValidationState: 'success'
+	        };
+
+	        return _this;
 	    }
 
 	    _createClass(SponsorInfo, [{
-	        key: "render",
+	        key: 'handleSponsorNameChange',
+	        value: function handleSponsorNameChange(e) {
+	            this.setState({
+	                sponsorName: e.target.value
+	            });
+
+	            var length = this.state.sponsorName.length;
+	            if (1 < length && length <= 20) {
+	                this.setState({
+	                    sponsorNameValidationState: 'success'
+	                });
+	            } else {
+	                this.setState({
+	                    sponsorNameValidationState: 'error'
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'handlePhoneNumberChange',
+	        value: function handlePhoneNumberChange(e) {
+	            var newPhoneNumber = e.target.value;
+	            var reg = /^1[3|4|5|8][0-9]\d{8}$/;
+	            if (reg.test(newPhoneNumber)) {
+	                this.setState({
+	                    phoneNumberValidationState: 'success'
+	                });
+	            } else {
+	                this.setState({
+	                    phoneNumberValidationState: 'error'
+	                });
+	            }
+
+	            this.setState({
+	                phoneNumber: newPhoneNumber
+	            });
+	        }
+	    }, {
+	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "legal-service-row" },
+	                'div',
+	                { className: 'sponsor-info' },
 	                _react2.default.createElement(
-	                    "h1",
-	                    null,
-	                    "\u53D1\u8D77\u4EBA\u4FE1\u606F"
+	                    _reactBootstrap.FormGroup,
+	                    { controlId: 'sponsorName', validationState: this.state.sponsorNameValidationState },
+	                    _react2.default.createElement(
+	                        _reactBootstrap.ControlLabel,
+	                        null,
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'required' },
+	                            '*'
+	                        ),
+	                        '\u53D1\u8D77\u4EBA\u79F0\u547C',
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tip' },
+	                            '\u9700\u8981\u4E86\u89E3\u66F4\u591A\u80CC\u666F\u8D44\u6599\u65F6\uFF0C\u987E\u95EE\u9700\u8981\u548C\u60A8\u8054\u7CFB\u3002'
+	                        )
+	                    ),
+	                    _react2.default.createElement(_reactBootstrap.FormControl, {
+	                        type: 'text',
+	                        value: this.state.sponsorName,
+	                        placeholder: '\u8BF7\u8F93\u5165\u8054\u7CFB\u4EBA\u59D3\u540D',
+	                        onChange: this.handleSponsorNameChange
+	                    }),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.HelpBlock,
+	                        null,
+	                        this.state.sponsorNameValidationState === 'error' ? '联系人姓名为必填项，且长度不超过20位！' : ''
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    _reactBootstrap.FormGroup,
+	                    { controlId: 'phoneNumber', validationState: this.state.phoneNumberValidationState },
+	                    _react2.default.createElement(
+	                        _reactBootstrap.ControlLabel,
+	                        null,
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'required' },
+	                            '*'
+	                        ),
+	                        '\u53D1\u8D77\u4EBA\u624B\u673A\u53F7',
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tip' },
+	                            '\u4E00\u6B21\u8BA9\u60A8\u6EE1\u610F\u7684\u6CD5\u5F8B\u670D\u52A1\u53EF\u80FD\u9700\u8981\u591A\u6B21\u6C9F\u901A\uFF0C\u8BF7\u7559\u4E0B\u7535\u8BDD\u5E76\u4FDD\u6301\u7535\u8BDD\u7545\u901A\u3002'
+	                        )
+	                    ),
+	                    _react2.default.createElement(_reactBootstrap.FormControl, {
+	                        type: 'text',
+	                        value: this.state.phoneNumber,
+	                        placeholder: '\u8BF7\u8F93\u5165\u8054\u7CFB\u4EBA\u624B\u673A\u53F7',
+	                        onChange: this.handlePhoneNumberChange
+	                    }),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.HelpBlock,
+	                        null,
+	                        this.state.phoneNumberValidationState === 'error' ? '手机号必须为11位数字！' : ''
+	                    )
 	                )
 	            );
 	        }
