@@ -56,8 +56,8 @@ class LegalServiceRequirementDetail extends React.Component{
     }
 
     return (
-      <div className="requirement-detail">
-        <div className="form-header">
+      <div className="service-requirement-detail">
+        <div className="requirement-header">
           发起需求：{serviceName} <span className="form-close" onClick={this.handleClick}></span>
         </div>
         {serviceForm}

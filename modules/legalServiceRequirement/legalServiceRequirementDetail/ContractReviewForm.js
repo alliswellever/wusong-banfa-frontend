@@ -45,7 +45,7 @@ class ContractReviewForm extends React.Component{
 
     render(){
         return (
-            <div className="requirement-form">
+            <div className="requirement-detail">
                 <Workflow/>
                 <SponsorInfo sponsorName={this.state.sponsorName} phoneNumber={this.state.phoneName} onSponsorInfoChange={(infoName, value) => this.handleSponsorInfoChange(infoName, value)}/>
                 <RequirementForm>
