@@ -26782,6 +26782,8 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -26799,6 +26801,7 @@
 
 	        var _this = _possibleConstructorReturn(this, (ContractReviewForm.__proto__ || Object.getPrototypeOf(ContractReviewForm)).call(this, props));
 
+	        _this.handleSponsorInfoChange = _this.handleSponsorInfoChange.bind(_this);
 	        _this.handleSubmitButtonClick = _this.handleSubmitButtonClick.bind(_this);
 
 	        _this.state = {
@@ -26810,37 +26813,50 @@
 	    }
 
 	    _createClass(ContractReviewForm, [{
-	        key: 'changeAgreeProtocol',
-	        value: function changeAgreeProtocol(agree) {
-	            this.setState({
-	                agreeProtocol: agree
-	            });
+	        key: 'handleStateChange',
+	        value: function handleStateChange(key, value) {
+	            this.setState(_defineProperty({}, key, value));
+	        }
+	    }, {
+	        key: 'handleSponsorInfoChange',
+	        value: function handleSponsorInfoChange(infoName, value) {
+	            this.handleStateChange(infoName, value);
 	        }
 	    }, {
 	        key: 'handleSubmitButtonClick',
 	        value: function handleSubmitButtonClick() {
-	            var self = this;
-	            self.changeAgreeProtocol(false);
+	            this.handleStateChange('agreeProtocol', false);
 
+	            alert("提交数据：" + JSON.stringify(this.state) + this.state.agreeProtocol);
 	            setTimeout(function () {
-	                self.changeAgreeProtocol(true);
+	                var _this2 = this;
+
+	                (function () {
+	                    return _this2.handleStateChange('agreeProtocol', true);
+	                }); //箭头函数将this指向引用函数的上下文
 	                _reactRouter.browserHistory.push('/orders');
 	            }, 3000);
 	        }
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this3 = this;
+
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'requirement-form' },
 	                _react2.default.createElement(_Workflow2.default, null),
-	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneName }),
+	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneName, onSponsorInfoChange: function onSponsorInfoChange(infoName, value) {
+	                        return _this3.handleSponsorInfoChange(infoName, value);
+	                    } }),
 	                _react2.default.createElement(
 	                    _RequirementForm2.default,
 	                    null,
 	                    '\u5408\u540C\u5BA1\u67E5'
 	                ),
-	                _react2.default.createElement(_SubmitBox2.default, { clickSubmitButton: this.handleSubmitButtonClick, agreeProtocol: this.state.agreeProtocol })
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, onSubmitButtonClick: function onSubmitButtonClick() {
+	                        return _this3.handleSubmitButtonClick();
+	                    } })
 	            );
 	        }
 	    }]);
@@ -27350,8 +27366,6 @@
 	        _this.handlePhoneNumberChange = _this.handlePhoneNumberChange.bind(_this);
 
 	        _this.state = {
-	            sponsorName: _this.props.sponsorName,
-	            phoneNumber: _this.props.phoneNumber,
 	            sponsorNameValidationState: 'success',
 	            phoneNumberValidationState: 'success'
 	        };
@@ -27362,11 +27376,8 @@
 	    _createClass(SponsorInfo, [{
 	        key: 'handleSponsorNameChange',
 	        value: function handleSponsorNameChange(e) {
-	            this.setState({
-	                sponsorName: e.target.value
-	            });
-
-	            var length = this.state.sponsorName.length;
+	            var newSponsorName = e.target.value;
+	            var length = newSponsorName.length;
 	            if (1 < length && length <= 20) {
 	                this.setState({
 	                    sponsorNameValidationState: 'success'
@@ -27376,6 +27387,8 @@
 	                    sponsorNameValidationState: 'error'
 	                });
 	            }
+
+	            this.props.onSponsorInfoChange('sponsorName', newSponsorName);
 	        }
 	    }, {
 	        key: 'handlePhoneNumberChange',
@@ -27392,9 +27405,7 @@
 	                });
 	            }
 
-	            this.setState({
-	                phoneNumber: newPhoneNumber
-	            });
+	            this.props.onSponsorInfoChange('phoneName', newPhoneNumber);
 	        }
 	    }, {
 	        key: 'render',
@@ -27422,7 +27433,7 @@
 	                    ),
 	                    _react2.default.createElement(_reactBootstrap.FormControl, {
 	                        type: 'text',
-	                        value: this.state.sponsorName,
+	                        value: this.props.sponsorName,
 	                        placeholder: '\u8BF7\u8F93\u5165\u8054\u7CFB\u4EBA\u59D3\u540D',
 	                        onChange: this.handleSponsorNameChange
 	                    }),
@@ -27452,7 +27463,7 @@
 	                    ),
 	                    _react2.default.createElement(_reactBootstrap.FormControl, {
 	                        type: 'text',
-	                        value: this.state.phoneNumber,
+	                        value: this.props.phoneNumber,
 	                        placeholder: '\u8BF7\u8F93\u5165\u8054\u7CFB\u4EBA\u624B\u673A\u53F7',
 	                        onChange: this.handlePhoneNumberChange
 	                    }),
@@ -27616,7 +27627,7 @@
 	        value: function submit() {
 	            this.toggleShowSubmitModel(false);
 
-	            this.props.clickSubmitButton();
+	            this.props.onSubmitButtonClick();
 	        }
 	    }, {
 	        key: 'render',

@@ -46,7 +46,7 @@ class SubmitBox extends React.Component{
     submit(){
         this.toggleShowSubmitModel(false);
 
-        this.props.clickSubmitButton();
+        this.props.onSubmitButtonClick();
     }
 
 

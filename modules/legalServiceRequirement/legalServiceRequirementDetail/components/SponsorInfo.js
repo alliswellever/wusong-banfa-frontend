@@ -11,8 +11,6 @@ class SponsorInfo extends React.Component{
         this.handlePhoneNumberChange = this.handlePhoneNumberChange.bind(this)
 
         this.state = {
-            sponsorName: this.props.sponsorName,
-            phoneNumber: this.props.phoneNumber,
             sponsorNameValidationState: 'success',
             phoneNumberValidationState: 'success'
         }
@@ -20,11 +18,8 @@ class SponsorInfo extends React.Component{
     }
 
     handleSponsorNameChange(e) {
-        this.setState({
-            sponsorName: e.target.value
-        });
-        
-        const length = this.state.sponsorName.length;
+        const newSponsorName = e.target.value
+        const length = newSponsorName.length;
         if(1 < length && length <= 20 ){
             this.setState({
                 sponsorNameValidationState: 'success'
@@ -34,6 +29,8 @@ class SponsorInfo extends React.Component{
                 sponsorNameValidationState: 'error'
             });
         }
+
+        this.props.onSponsorInfoChange('sponsorName', newSponsorName);
     }
 
     handlePhoneNumberChange(e) {
@@ -49,10 +46,7 @@ class SponsorInfo extends React.Component{
             });
         }
 
-        this.setState({
-            phoneNumber: newPhoneNumber
-        });
-
+        this.props.onSponsorInfoChange('phoneName', newPhoneNumber);
     }
 
 
@@ -65,7 +59,7 @@ class SponsorInfo extends React.Component{
                     </ControlLabel>
                     <FormControl
                         type="text"
-                        value={this.state.sponsorName}
+                        value={this.props.sponsorName}
                         placeholder="请输入联系人姓名"
                         onChange={this.handleSponsorNameChange}
                     />
@@ -77,7 +71,7 @@ class SponsorInfo extends React.Component{
                     </ControlLabel>
                     <FormControl
                         type="text"
-                        value={this.state.phoneNumber}
+                        value={this.props.phoneNumber}
                         placeholder="请输入联系人手机号"
                         onChange={this.handlePhoneNumberChange}
                     />
