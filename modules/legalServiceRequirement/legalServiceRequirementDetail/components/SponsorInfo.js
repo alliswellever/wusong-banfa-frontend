@@ -23,14 +23,15 @@ class SponsorInfo extends React.Component{
     handleSponsorNameChange(e) {
         const newSponsorName = e.target.value
         const validationFailedInfo = Validator.validateSponsorName(newSponsorName)
-        if(!validationFailedInfo){
-            this.setState({
-                sponsorNameValidationState: 'success'
-            });
-        }else{
+        if(validationFailedInfo && validationFailedInfo.length > 0){
             this.setState({
                 sponsorNameValidationState: 'error',
                 sponsorNameValidationFailedInfo: validationFailedInfo
+            });
+        }else{
+            this.setState({
+                sponsorNameValidationState: 'success',
+                sponsorNameValidationFailedInfo: ''
             });
         }
 
@@ -41,14 +42,15 @@ class SponsorInfo extends React.Component{
         const newPhoneNumber = e.target.value
 
         const validationFailedInfo = Validator.validatePhoneNumber(newPhoneNumber)
-        if(!validationFailedInfo){
-            this.setState({
-                phoneNumberValidationState: 'success'
-            });
-        }else {
+        if(validationFailedInfo && validationFailedInfo.length > 0){
             this.setState({
                 phoneNumberValidationState: 'error',
                 phoneNumberValidationFailedInfo: validationFailedInfo
+            });
+        }else {
+            this.setState({
+                phoneNumberValidationState: 'success',
+                phoneNumberValidationFailedInfo: ''
             });
         }
 

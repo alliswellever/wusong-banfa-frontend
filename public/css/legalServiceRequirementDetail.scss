@@ -76,6 +76,21 @@
 
       .form-detail{
         margin-top: 25px;
+
+        .requirement-help{
+          padding: 10px;
+          background-color: $background-color-primary;
+          font-size: 12px;
+          color: $text-color-tip;
+          display: block;
+          line-height: 20px;
+          margin-bottom: 25px;
+
+          .title{
+            font-size: 16px;
+            color: $text-color-primary;
+          }
+        }
       }
     }
 
@@ -111,9 +126,7 @@
 
 
 
-    .file-upload{
-      display: inline-block;
-    }
+
 
     .form-group{
       margin-bottom: 15px;
@@ -140,6 +153,46 @@
         font-size: 16px;
       }
 
+      input.form-control[readonly]{
+        background-color: #fff;
+
+        &:focus{
+          border-color: $border-color-primary;
+          box-shadow: none;
+        }
+      }
+
+      input.file-upload{
+        display: inline-block;
+        width: 670px;
+      }
+
+      input[hidden]{
+        display: none;
+      }
+
+
+      button.chose-file{
+        float: right;
+      }
+
+      .file-name{
+        line-height: 30px;
+        font-size: 16px;
+
+        .fa-file-text{
+          margin-right: 10px;
+          color: $color-secondary;
+        }
+
+        .fa-times-circle{
+          margin-left: 10px;
+          color: $color-secondary;
+          cursor: pointer;
+        }
+
+      }
+
       textarea.form-control{
         resize: none;
         min-height: 115px;
@@ -147,6 +200,7 @@
 
       .help-block{
         height: 14px;
+        color: $text-color-error;
       }
 
 
@@ -183,6 +237,14 @@
 
   }
 }
+
+
+
+
+
+
+
+
 
 .form-close {
   cursor: pointer;

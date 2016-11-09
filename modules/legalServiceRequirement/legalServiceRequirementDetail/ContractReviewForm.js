@@ -5,30 +5,36 @@ import React from 'react'
 import Workflow from './components/Workflow'
 import SponsorInfo from './components/SponsorInfo'
 import RequirementForm from './components/RequirementForm'
+import FileUpload from './components/FileUpload'
 import SubmitBox from './components/SubmitBox'
 import { browserHistory } from 'react-router'
 import {FormGroup, ControlLabel, FormControl, HelpBlock, Button} from 'react-bootstrap'
 import Validator from './components/Validator'
-
 
 class ContractReviewForm extends React.Component{
     constructor(props){
         super(props)
         this.handleSponsorInfoChange = this.handleSponsorInfoChange.bind(this)
         this.handleOtherRequirementChange = this.handleOtherRequirementChange.bind(this)
+        this.handleFileChange = this.handleFileChange.bind(this)
 
 
         this.validateFormData = this.validateFormData.bind(this)
-        this.handleSubmitButtonClick = this.handleSubmitButtonClick.bind(this)
+        this.handleFormSubmit = this.handleFormSubmit.bind(this)
 
         this.state = {
             agreeProtocol: true,//是否同意用户协议
             sponsorName: '于永雨',
             phoneName: '13020072525',
+
             otherRequirement: '',//其他要求
             otherRequirementValidationState: 'success',
             otherRequirementValidationFailedInfo: '',
-            validattionFailedInfo: ''
+
+            selectedFile: null,//上传的附件
+
+
+            validattionFailedInfo: ''//提交前校验的错误信息
         }
     }
 
@@ -46,8 +52,47 @@ class ContractReviewForm extends React.Component{
         }
     }
 
+    validateFile(file){
+        if(!file){
+            return '必须上传附件！'
+        }else if(Validator.validateUploadedFile(file)){
+            return Validator.validateUploadedFile(file)
+        }else{
+            return null
+        }
+    }
 
 
+    validateFormData(){
+        let validattionFailedInfo = ''
+        const sponsorNameValidattionFailedInfo = Validator.validateSponsorName(this.state.sponsorName)
+        const phoneNameValidattionFailedInfo = Validator.validatePhoneNumber(this.state.phoneName)
+        const otherRequirementValidattionFailedInfo = this.validateOtherRequirement(this.state.otherRequirement)
+        const fileValidattionFailedInfo = this.validateFile(this.state.selectedFile)
+
+        if(sponsorNameValidattionFailedInfo){
+            validattionFailedInfo = sponsorNameValidattionFailedInfo
+        }else if(phoneNameValidattionFailedInfo){
+            validattionFailedInfo = phoneNameValidattionFailedInfo
+        }else if(otherRequirementValidattionFailedInfo){
+            validattionFailedInfo = otherRequirementValidattionFailedInfo
+        }else if(fileValidattionFailedInfo){
+            validattionFailedInfo = fileValidattionFailedInfo
+        }
+
+        if(validattionFailedInfo && validattionFailedInfo.length > 0){
+            this.handleStateChange('validattionFailedInfo', validattionFailedInfo)
+            return false
+        }else {
+            this.handleStateChange('validattionFailedInfo', '')
+            return true
+        }
+    }
+
+
+    handleSponsorInfoChange(infoName, value){
+        this.handleStateChange(infoName, value)
+    }
 
     handleOtherRequirementChange(e){
         const otherRequirement = e.target.value
@@ -61,40 +106,23 @@ class ContractReviewForm extends React.Component{
         }
     }
 
-
-    handleSponsorInfoChange(infoName, value){
-        this.handleStateChange(infoName, value)
+    handleFileChange(selectedFile){
+        this.handleStateChange('selectedFile', selectedFile)
     }
+    
 
-
-
-
-    validateFormData(){
-        let validattionFailedInfo = ''
-        const sponsorNameValidattionFailedInfo = Validator.validateSponsorName(this.state.sponsorName)
-        const phoneNameValidattionFailedInfo = Validator.validatePhoneNumber(this.state.phoneName)
-        const otherRequirementValidattionFailedInfo = this.validateOtherRequirement(this.state.otherRequirement)
-        if(sponsorNameValidattionFailedInfo){
-            validattionFailedInfo = sponsorNameValidattionFailedInfo
-        }else if(phoneNameValidattionFailedInfo){
-            validattionFailedInfo = phoneNameValidattionFailedInfo
-        }else if(otherRequirementValidattionFailedInfo){
-            validattionFailedInfo = otherRequirementValidattionFailedInfo
-        }
-
-        if(validattionFailedInfo && validattionFailedInfo.length > 0){
-            this.handleStateChange('validattionFailedInfo', validattionFailedInfo)
-            return false
-        }else {
-            this.handleStateChange('validattionFailedInfo', '')
-            return true
-        }
-    }
-
-    handleSubmitButtonClick(){
+    handleFormSubmit(){
         this.handleStateChange('agreeProtocol', false)
 
-        alert("提交数据："+ JSON.stringify(this.state) + this.state.agreeProtocol)
+        let submitData = {
+            agreeProtocol: true,
+            sponsorName: this.state.sponsorName,
+            phoneName: this.state.phoneName,
+            selectedFile: this.state.selectedFile,//上传的附件
+            otherRequirement: this.state.otherRequirement,//其他要求
+        }
+
+        console.log(this.state)
         setTimeout(function () {
             () => this.handleStateChange('agreeProtocol', true) //箭头函数将this指向引用函数的上下文
             browserHistory.push('/orders')
@@ -113,22 +141,18 @@ class ContractReviewForm extends React.Component{
 
                 {/**需求表单**/}
                 <RequirementForm>
-                    <FormGroup controlId="formBasicText">
-                        <ControlLabel>
-                            <span className="required">*</span>上传附件<span className="tip">请上传需要审查的合同文档。</span>
-                        </ControlLabel>
-                        <FormControl
-                            className="file-upload"
-                            readOnly
-                            type="text"
-                            value={this.state.value}
-                            placeholder="目前仅支持word格式"
-                            onChange={this.handleChange}
-                        />
-                        <Button inline type="submit">点击上传</Button>
+                    <FileUpload
+                        required={true}
+                        labelTitle="上传附件"
+                        labelDesc="请上传需要审查的合同文档。"
+                        onFileChange={(selectedFile) => this.handleFileChange(selectedFile)}
+                    />
 
-                        <HelpBlock>文件格式仅支持word</HelpBlock>
-                    </FormGroup>
+                    <HelpBlock bsClass="requirement-help">
+                        <div className="title">预计合同审查完成时间：2个工作日</div>
+                        <div>为保证合同审查质量，一份合同需要2个工作日完成，遇有节假日则会顺延。如您有特别加急需求，请在其他要求处填写。</div>
+                    </HelpBlock>
+
                     <FormGroup controlId="formControlsTextarea" validationState={this.state.otherRequirementValidationState}>
                         <ControlLabel>其他要求</ControlLabel>
                         <FormControl
@@ -138,10 +162,11 @@ class ContractReviewForm extends React.Component{
                         />
                         <HelpBlock>{this.state.otherRequirementValidationFailedInfo}</HelpBlock>
                     </FormGroup>
+
                 </RequirementForm>
 
                 {/**提交区域**/}
-                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onValidateFormData={this.validateFormData} onSubmitButtonClick={() => this.handleSubmitButtonClick()}/>
+                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onValidateFormData={this.validateFormData} onSubmitButtonClick={() => this.handleFormSubmit()}/>
             </div>
         )
     }
