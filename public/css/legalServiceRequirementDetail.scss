@@ -14,16 +14,14 @@
   }
 
   .requirement-detail{
-    min-width: 800px;
-    max-width: 1000px;
+    min-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 30px 0;
 
 
-
     .workflow{
-      margin: 30px auto 0 auto;
-      width: 880px;
+      margin: 30px 50px 0 50px;
       border-top: 1px $border-color-primary solid;
       text-align: center;
 
@@ -42,47 +40,17 @@
 
       .edit{
         float: left;
-        margin-left: -43px;
+        margin-left: -50px;
       }
 
       .complete{
         float: right;
-        margin-right: -43px;
+        margin-right: -50px;
       }
     }
 
     .sponsor-info{
       margin-top: 50px;
-
-      .form-group{
-        margin-bottom: 25px;
-
-        .control-label{
-          font-size: 16px;
-          color: $text-color-primary;
-          margin-bottom: 10px;
-
-          .required{
-            color: red;
-          }
-
-          .tip{
-            font-size: 12px;
-            color: $text-color-tip;
-            margin-left: 10px;
-          }
-        }
-
-        .form-control{
-          height: auto;
-          line-height: 1.65;
-          font-size: 16px;
-        }
-      }
-
-      .has-success .form-control{
-        border-color: #ccc;
-      }
     }
 
     .requirement-form{
@@ -107,13 +75,11 @@
       }
 
       .form-detail{
-        padding: 25px 0;
+        margin-top: 25px;
       }
     }
 
     .submit-box{
-      //border: 1px red solid;
-
       .checkbox-inline{
         margin: 25px 0;
         font-size: 16px;
@@ -133,35 +99,85 @@
       }
 
       .btn-toolbar{
-        margin: 25px 0;
+        margin: 15px 0;
         text-align: center;
 
-        .btn{
-          min-width: 100px;
-          line-height: 1.9;
-          border: none;
-          font-size: 16px;
-          float: none;
+        .help-block{
+          height: 14px;
+          color: $text-color-error;
+        }
+      }
+    }
+
+
+
+    .file-upload{
+      display: inline-block;
+    }
+
+    .form-group{
+      margin-bottom: 15px;
+
+      .control-label{
+        font-size: 16px;
+        color: $text-color-primary;
+        margin-bottom: 10px;
+
+        .required{
+          color: red;
         }
 
-        button[type=button]{
-          color: $button-color-primary;
-          background-color: $button-color-cancle;
-          margin-right: 70px;
-          &:hover{
-            background-color: $button-color-cancle-hover;
-          }
+        .tip{
+          font-size: 12px;
+          color: $text-color-tip;
+          margin-left: 10px;
         }
+      }
 
-        button[type=submit]{
-          color: #fff;
-          background-color: $button-color-primary;
-          &:hover{
-            background-color: $button-color-primary-hover;
-          }
-        }
+      input.form-control{
+        height: auto;
+        line-height: 1.65;
+        font-size: 16px;
+      }
+
+      textarea.form-control{
+        resize: none;
+        min-height: 115px;
+      }
+
+      .help-block{
+        height: 14px;
+      }
 
 
+    }
+
+    .has-success .form-control{
+      border-color: #ccc;
+    }
+
+    .btn{
+      min-width: 100px;
+      line-height: 1.8;
+      border: none;
+      font-size: 16px;
+      float: none;
+    }
+
+    button[type=button]{
+      color: $button-color-primary;
+      background-color: $button-color-cancle;
+      margin-right: 70px;
+      &:hover{
+        background-color: $button-color-cancle-hover;
+      }
+    }
+
+    button[type=submit]{
+      color: #fff;
+      background-color: $button-color-primary;
+      &:hover{
+        background-color: $button-color-primary-hover;
       }
     }
 

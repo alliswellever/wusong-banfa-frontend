@@ -26740,7 +26740,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.service-requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .service-requirement-detail .requirement-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n  .service-requirement-detail .requirement-detail {\n    min-width: 800px;\n    max-width: 1000px;\n    margin: 0 auto;\n    padding: 30px 0; }\n    .service-requirement-detail .requirement-detail .workflow {\n      margin: 30px auto 0 auto;\n      width: 880px;\n      border-top: 1px #edeef2 solid;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .workflow .node {\n        display: inline-block;\n        font-size: 16px;\n        color: #808080;\n        margin-top: -17px; }\n        .service-requirement-detail .requirement-detail .workflow .node img {\n          width: 34px;\n          height: 34px;\n          margin-bottom: 15px; }\n      .service-requirement-detail .requirement-detail .workflow .edit {\n        float: left;\n        margin-left: -43px; }\n      .service-requirement-detail .requirement-detail .workflow .complete {\n        float: right;\n        margin-right: -43px; }\n    .service-requirement-detail .requirement-detail .sponsor-info {\n      margin-top: 50px; }\n      .service-requirement-detail .requirement-detail .sponsor-info .form-group {\n        margin-bottom: 25px; }\n        .service-requirement-detail .requirement-detail .sponsor-info .form-group .control-label {\n          font-size: 16px;\n          color: #222;\n          margin-bottom: 10px; }\n          .service-requirement-detail .requirement-detail .sponsor-info .form-group .control-label .required {\n            color: red; }\n          .service-requirement-detail .requirement-detail .sponsor-info .form-group .control-label .tip {\n            font-size: 12px;\n            color: #808080;\n            margin-left: 10px; }\n        .service-requirement-detail .requirement-detail .sponsor-info .form-group .form-control {\n          height: auto;\n          line-height: 1.65;\n          font-size: 16px; }\n      .service-requirement-detail .requirement-detail .sponsor-info .has-success .form-control {\n        border-color: #ccc; }\n    .service-requirement-detail .requirement-detail .requirement-form {\n      margin-top: 30px;\n      padding-top: 25px; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-header {\n        border-top: 1px #edeef2 solid; }\n        .service-requirement-detail .requirement-detail .requirement-form .form-header .title {\n          font-size: 16px;\n          color: #333;\n          text-align: center;\n          line-height: 30px;\n          width: 150px;\n          border: 1px #edeef2 solid;\n          border-radius: 20px;\n          background-color: #fff;\n          position: relative;\n          top: -17px;\n          margin: 0 auto; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-detail {\n        padding: 25px 0; }\n    .service-requirement-detail .requirement-detail .submit-box .checkbox-inline {\n      margin: 25px 0;\n      font-size: 16px;\n      color: #808080; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline input[type=checkbox] {\n        margin-top: 0; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a {\n        color: #4f6584; }\n        .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a:hover {\n          color: #01c5e8; }\n    .service-requirement-detail .requirement-detail .submit-box .btn-toolbar {\n      margin: 25px 0;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar .btn {\n        min-width: 100px;\n        line-height: 1.9;\n        border: none;\n        font-size: 16px;\n        float: none; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button[type=button] {\n        color: #4f6584;\n        background-color: #edeef2;\n        margin-right: 70px; }\n        .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button[type=button]:hover {\n          background-color: #e0e3ed; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button[type=submit] {\n        color: #fff;\n        background-color: #4f6584; }\n        .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button[type=submit]:hover {\n          background-color: #505666; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.service-requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .service-requirement-detail .requirement-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n  .service-requirement-detail .requirement-detail {\n    min-width: 600px;\n    max-width: 800px;\n    margin: 0 auto;\n    padding: 30px 0; }\n    .service-requirement-detail .requirement-detail .workflow {\n      margin: 30px 50px 0 50px;\n      border-top: 1px #edeef2 solid;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .workflow .node {\n        display: inline-block;\n        font-size: 16px;\n        color: #808080;\n        margin-top: -17px; }\n        .service-requirement-detail .requirement-detail .workflow .node img {\n          width: 34px;\n          height: 34px;\n          margin-bottom: 15px; }\n      .service-requirement-detail .requirement-detail .workflow .edit {\n        float: left;\n        margin-left: -50px; }\n      .service-requirement-detail .requirement-detail .workflow .complete {\n        float: right;\n        margin-right: -50px; }\n    .service-requirement-detail .requirement-detail .sponsor-info {\n      margin-top: 50px; }\n    .service-requirement-detail .requirement-detail .requirement-form {\n      margin-top: 30px;\n      padding-top: 25px; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-header {\n        border-top: 1px #edeef2 solid; }\n        .service-requirement-detail .requirement-detail .requirement-form .form-header .title {\n          font-size: 16px;\n          color: #333;\n          text-align: center;\n          line-height: 30px;\n          width: 150px;\n          border: 1px #edeef2 solid;\n          border-radius: 20px;\n          background-color: #fff;\n          position: relative;\n          top: -17px;\n          margin: 0 auto; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-detail {\n        margin-top: 25px; }\n    .service-requirement-detail .requirement-detail .submit-box .checkbox-inline {\n      margin: 25px 0;\n      font-size: 16px;\n      color: #808080; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline input[type=checkbox] {\n        margin-top: 0; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a {\n        color: #4f6584; }\n        .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a:hover {\n          color: #01c5e8; }\n    .service-requirement-detail .requirement-detail .submit-box .btn-toolbar {\n      margin: 15px 0;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar .help-block {\n        height: 14px;\n        color: #ff3333; }\n    .service-requirement-detail .requirement-detail .file-upload {\n      display: inline-block; }\n    .service-requirement-detail .requirement-detail .form-group {\n      margin-bottom: 15px; }\n      .service-requirement-detail .requirement-detail .form-group .control-label {\n        font-size: 16px;\n        color: #222;\n        margin-bottom: 10px; }\n        .service-requirement-detail .requirement-detail .form-group .control-label .required {\n          color: red; }\n        .service-requirement-detail .requirement-detail .form-group .control-label .tip {\n          font-size: 12px;\n          color: #808080;\n          margin-left: 10px; }\n      .service-requirement-detail .requirement-detail .form-group input.form-control {\n        height: auto;\n        line-height: 1.65;\n        font-size: 16px; }\n      .service-requirement-detail .requirement-detail .form-group textarea.form-control {\n        resize: none;\n        min-height: 115px; }\n      .service-requirement-detail .requirement-detail .form-group .help-block {\n        height: 14px; }\n    .service-requirement-detail .requirement-detail .has-success .form-control {\n      border-color: #ccc; }\n    .service-requirement-detail .requirement-detail .btn {\n      min-width: 100px;\n      line-height: 1.8;\n      border: none;\n      font-size: 16px;\n      float: none; }\n    .service-requirement-detail .requirement-detail button[type=button] {\n      color: #4f6584;\n      background-color: #edeef2;\n      margin-right: 70px; }\n      .service-requirement-detail .requirement-detail button[type=button]:hover {\n        background-color: #e0e3ed; }\n    .service-requirement-detail .requirement-detail button[type=submit] {\n      color: #fff;\n      background-color: #4f6584; }\n      .service-requirement-detail .requirement-detail button[type=submit]:hover {\n        background-color: #505666; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
 
 	// exports
 
@@ -26780,6 +26780,12 @@
 
 	var _reactRouter = __webpack_require__(163);
 
+	var _reactBootstrap = __webpack_require__(266);
+
+	var _Validator = __webpack_require__(516);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -26802,12 +26808,19 @@
 	        var _this = _possibleConstructorReturn(this, (ContractReviewForm.__proto__ || Object.getPrototypeOf(ContractReviewForm)).call(this, props));
 
 	        _this.handleSponsorInfoChange = _this.handleSponsorInfoChange.bind(_this);
+	        _this.handleOtherRequirementChange = _this.handleOtherRequirementChange.bind(_this);
+
+	        _this.validateFormData = _this.validateFormData.bind(_this);
 	        _this.handleSubmitButtonClick = _this.handleSubmitButtonClick.bind(_this);
 
 	        _this.state = {
-	            agreeProtocol: true,
+	            agreeProtocol: true, //是否同意用户协议
 	            sponsorName: '于永雨',
-	            phoneName: '13020072525'
+	            phoneName: '13020072525',
+	            otherRequirement: '', //其他要求
+	            otherRequirementValidationState: 'success',
+	            otherRequirementValidationFailedInfo: '',
+	            validattionFailedInfo: ''
 	        };
 	        return _this;
 	    }
@@ -26818,9 +26831,54 @@
 	            this.setState(_defineProperty({}, key, value));
 	        }
 	    }, {
+	        key: 'validateOtherRequirement',
+	        value: function validateOtherRequirement(otherRequirement) {
+	            if (otherRequirement && otherRequirement.length >= 5) {
+	                return '不得超过500个字！';
+	            } else {
+	                return null;
+	            }
+	        }
+	    }, {
+	        key: 'handleOtherRequirementChange',
+	        value: function handleOtherRequirementChange(e) {
+	            var otherRequirement = e.target.value;
+
+	            this.handleStateChange('otherRequirement', otherRequirement);
+
+	            if (this.validateOtherRequirement(otherRequirement)) {
+	                this.handleStateChange('otherRequirementValidationState', 'error');
+	            } else {
+	                this.handleStateChange('otherRequirementValidationState', 'success');
+	            }
+	        }
+	    }, {
 	        key: 'handleSponsorInfoChange',
 	        value: function handleSponsorInfoChange(infoName, value) {
 	            this.handleStateChange(infoName, value);
+	        }
+	    }, {
+	        key: 'validateFormData',
+	        value: function validateFormData() {
+	            var validattionFailedInfo = '';
+	            var sponsorNameValidattionFailedInfo = _Validator2.default.validateSponsorName(this.state.sponsorName);
+	            var phoneNameValidattionFailedInfo = _Validator2.default.validatePhoneNumber(this.state.phoneName);
+	            var otherRequirementValidattionFailedInfo = this.validateOtherRequirement(this.state.otherRequirement);
+	            if (sponsorNameValidattionFailedInfo) {
+	                validattionFailedInfo = sponsorNameValidattionFailedInfo;
+	            } else if (phoneNameValidattionFailedInfo) {
+	                validattionFailedInfo = phoneNameValidattionFailedInfo;
+	            } else if (otherRequirementValidattionFailedInfo) {
+	                validattionFailedInfo = otherRequirementValidattionFailedInfo;
+	            }
+
+	            if (validattionFailedInfo && validattionFailedInfo.length > 0) {
+	                this.handleStateChange('validattionFailedInfo', validattionFailedInfo);
+	                return false;
+	            } else {
+	                this.handleStateChange('validattionFailedInfo', '');
+	                return true;
+	            }
 	        }
 	    }, {
 	        key: 'handleSubmitButtonClick',
@@ -26852,9 +26910,64 @@
 	                _react2.default.createElement(
 	                    _RequirementForm2.default,
 	                    null,
-	                    '\u5408\u540C\u5BA1\u67E5'
+	                    _react2.default.createElement(
+	                        _reactBootstrap.FormGroup,
+	                        { controlId: 'formBasicText' },
+	                        _react2.default.createElement(
+	                            _reactBootstrap.ControlLabel,
+	                            null,
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'required' },
+	                                '*'
+	                            ),
+	                            '\u4E0A\u4F20\u9644\u4EF6',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'tip' },
+	                                '\u8BF7\u4E0A\u4F20\u9700\u8981\u5BA1\u67E5\u7684\u5408\u540C\u6587\u6863\u3002'
+	                            )
+	                        ),
+	                        _react2.default.createElement(_reactBootstrap.FormControl, {
+	                            className: 'file-upload',
+	                            readOnly: true,
+	                            type: 'text',
+	                            value: this.state.value,
+	                            placeholder: '\u76EE\u524D\u4EC5\u652F\u6301word\u683C\u5F0F',
+	                            onChange: this.handleChange
+	                        }),
+	                        _react2.default.createElement(
+	                            _reactBootstrap.Button,
+	                            { inline: true, type: 'submit' },
+	                            '\u70B9\u51FB\u4E0A\u4F20'
+	                        ),
+	                        _react2.default.createElement(
+	                            _reactBootstrap.HelpBlock,
+	                            null,
+	                            '\u6587\u4EF6\u683C\u5F0F\u4EC5\u652F\u6301word'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.FormGroup,
+	                        { controlId: 'formControlsTextarea', validationState: this.state.otherRequirementValidationState },
+	                        _react2.default.createElement(
+	                            _reactBootstrap.ControlLabel,
+	                            null,
+	                            '\u5176\u4ED6\u8981\u6C42'
+	                        ),
+	                        _react2.default.createElement(_reactBootstrap.FormControl, {
+	                            componentClass: 'textarea',
+	                            placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u5BA1\u67E5\u5408\u540C\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u5173\u4E8E\u672C\u5408\u540C\u7684\u7B7E\u8BA2\u80CC\u666F\u3001\u60A8\u6240\u5E0C\u671B\u91CD\u70B9\u5173\u6CE8\u7684\u5408\u540C\u6761\u6B3E\uFF0C\u6216\u8005\u5176\u4ED6\u60A8\u5BF9\u672C\u6B21\u5BA1\u67E5\u7684\u7279\u6B8A\u9700\u6C42\uFF0C\u52A0\u6025\u5B8C\u6210\u7B49',
+	                            onChange: this.handleOtherRequirementChange
+	                        }),
+	                        _react2.default.createElement(
+	                            _reactBootstrap.HelpBlock,
+	                            null,
+	                            this.state.otherRequirementValidationFailedInfo
+	                        )
+	                    )
 	                ),
-	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, onSubmitButtonClick: function onSubmitButtonClick() {
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onValidateFormData: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
 	                        return _this3.handleSubmitButtonClick();
 	                    } })
 	            );
@@ -27343,6 +27456,10 @@
 
 	var _reactBootstrap = __webpack_require__(266);
 
+	var _Validator = __webpack_require__(516);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27367,7 +27484,9 @@
 
 	        _this.state = {
 	            sponsorNameValidationState: 'success',
-	            phoneNumberValidationState: 'success'
+	            sponsorNameValidationFailedInfo: '',
+	            phoneNumberValidationState: 'success',
+	            phoneNumberValidationFailedInfo: ''
 	        };
 
 	        return _this;
@@ -27377,14 +27496,15 @@
 	        key: 'handleSponsorNameChange',
 	        value: function handleSponsorNameChange(e) {
 	            var newSponsorName = e.target.value;
-	            var length = newSponsorName.length;
-	            if (1 < length && length <= 20) {
+	            var validationFailedInfo = _Validator2.default.validateSponsorName(newSponsorName);
+	            if (!validationFailedInfo) {
 	                this.setState({
 	                    sponsorNameValidationState: 'success'
 	                });
 	            } else {
 	                this.setState({
-	                    sponsorNameValidationState: 'error'
+	                    sponsorNameValidationState: 'error',
+	                    sponsorNameValidationFailedInfo: validationFailedInfo
 	                });
 	            }
 
@@ -27394,14 +27514,16 @@
 	        key: 'handlePhoneNumberChange',
 	        value: function handlePhoneNumberChange(e) {
 	            var newPhoneNumber = e.target.value;
-	            var reg = /^1[3|4|5|8][0-9]\d{8}$/;
-	            if (reg.test(newPhoneNumber)) {
+
+	            var validationFailedInfo = _Validator2.default.validatePhoneNumber(newPhoneNumber);
+	            if (!validationFailedInfo) {
 	                this.setState({
 	                    phoneNumberValidationState: 'success'
 	                });
 	            } else {
 	                this.setState({
-	                    phoneNumberValidationState: 'error'
+	                    phoneNumberValidationState: 'error',
+	                    phoneNumberValidationFailedInfo: validationFailedInfo
 	                });
 	            }
 
@@ -27440,7 +27562,7 @@
 	                    _react2.default.createElement(
 	                        _reactBootstrap.HelpBlock,
 	                        null,
-	                        this.state.sponsorNameValidationState === 'error' ? '联系人姓名为必填项，且长度不超过20位！' : ''
+	                        this.state.sponsorNameValidationFailedInfo
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -27470,7 +27592,7 @@
 	                    _react2.default.createElement(
 	                        _reactBootstrap.HelpBlock,
 	                        null,
-	                        this.state.phoneNumberValidationState === 'error' ? '手机号必须为11位数字！' : ''
+	                        this.state.phoneNumberValidationFailedInfo
 	                    )
 	                )
 	            );
@@ -27617,9 +27739,17 @@
 	    }, {
 	        key: 'toggleShowSubmitModel',
 	        value: function toggleShowSubmitModel(show) {
-	            this.setState({
-	                showSubmitModal: show
-	            });
+	            if (show) {
+	                if (this.props.onValidateFormData()) {
+	                    this.setState({
+	                        showSubmitModal: true
+	                    });
+	                }
+	            } else {
+	                this.setState({
+	                    showSubmitModal: false
+	                });
+	            }
 	        }
 	    }, {
 	        key: 'cancle',
@@ -27654,6 +27784,11 @@
 	                _react2.default.createElement(
 	                    _reactBootstrap.ButtonToolbar,
 	                    null,
+	                    _react2.default.createElement(
+	                        _reactBootstrap.HelpBlock,
+	                        null,
+	                        this.props.validattionFailedInfo
+	                    ),
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Button,
 	                        { onClick: function onClick() {
@@ -46380,6 +46515,55 @@
 	exports.bootstrapUtils = _bootstrapUtils;
 	exports.createChainedFunction = _createChainedFunction3['default'];
 	exports.ValidComponentChildren = _ValidComponentChildren3['default'];
+
+/***/ },
+/* 516 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/**
+	 * Created by yuyongyu on 2016/11/9.
+	 */
+
+	var Validator = function () {
+	    function Validator() {
+	        _classCallCheck(this, Validator);
+	    }
+
+	    _createClass(Validator, [{
+	        key: 'validateSponsorName',
+	        value: function validateSponsorName(sponsorName) {
+	            if (sponsorName && 0 < sponsorName.length && sponsorName.length <= 20) {
+	                return null;
+	            } else {
+	                return '联系人姓名为必填项，且长度不超过20位！';
+	            }
+	        }
+	    }, {
+	        key: 'validatePhoneNumber',
+	        value: function validatePhoneNumber(phoneNumber) {
+	            var reg = /^1[3|4|5|8][0-9]\d{8}$/;
+	            if (phoneNumber && reg.test(phoneNumber)) {
+	                return null;
+	            } else {
+	                return '手机号必须为11位数字！';
+	            }
+	        }
+	    }]);
+
+	    return Validator;
+	}();
+
+	exports.default = new Validator();
 
 /***/ }
 /******/ ]);

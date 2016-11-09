@@ -3,6 +3,7 @@
  */
 import React from 'react'
 import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'
+import Validator from './Validator'
 
 class SponsorInfo extends React.Component{
     constructor(props){
@@ -12,21 +13,24 @@ class SponsorInfo extends React.Component{
 
         this.state = {
             sponsorNameValidationState: 'success',
-            phoneNumberValidationState: 'success'
+            sponsorNameValidationFailedInfo: '',
+            phoneNumberValidationState: 'success',
+            phoneNumberValidationFailedInfo: ''
         }
 
     }
 
     handleSponsorNameChange(e) {
         const newSponsorName = e.target.value
-        const length = newSponsorName.length;
-        if(1 < length && length <= 20 ){
+        const validationFailedInfo = Validator.validateSponsorName(newSponsorName)
+        if(!validationFailedInfo){
             this.setState({
                 sponsorNameValidationState: 'success'
             });
         }else{
             this.setState({
-                sponsorNameValidationState: 'error'
+                sponsorNameValidationState: 'error',
+                sponsorNameValidationFailedInfo: validationFailedInfo
             });
         }
 
@@ -35,14 +39,16 @@ class SponsorInfo extends React.Component{
 
     handlePhoneNumberChange(e) {
         const newPhoneNumber = e.target.value
-        const reg = /^1[3|4|5|8][0-9]\d{8}$/;
-        if(reg.test(newPhoneNumber)){
+
+        const validationFailedInfo = Validator.validatePhoneNumber(newPhoneNumber)
+        if(!validationFailedInfo){
             this.setState({
                 phoneNumberValidationState: 'success'
             });
         }else {
             this.setState({
-                phoneNumberValidationState: 'error'
+                phoneNumberValidationState: 'error',
+                phoneNumberValidationFailedInfo: validationFailedInfo
             });
         }
 
@@ -63,7 +69,7 @@ class SponsorInfo extends React.Component{
                         placeholder="请输入联系人姓名"
                         onChange={this.handleSponsorNameChange}
                     />
-                    <HelpBlock >{this.state.sponsorNameValidationState === 'error' ? '联系人姓名为必填项，且长度不超过20位！' : ''}</HelpBlock>
+                    <HelpBlock >{this.state.sponsorNameValidationFailedInfo}</HelpBlock>
                 </FormGroup>
                 <FormGroup controlId="phoneNumber" validationState={this.state.phoneNumberValidationState}>
                     <ControlLabel>
@@ -75,7 +81,7 @@ class SponsorInfo extends React.Component{
                         placeholder="请输入联系人手机号"
                         onChange={this.handlePhoneNumberChange}
                     />
-                    <HelpBlock >{this.state.phoneNumberValidationState === 'error' ? '手机号必须为11位数字！' : ''}</HelpBlock>
+                    <HelpBlock >{this.state.phoneNumberValidationFailedInfo}</HelpBlock>
                 </FormGroup>
             </div>
         )
