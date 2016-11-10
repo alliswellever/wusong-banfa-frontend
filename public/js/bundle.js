@@ -26726,18 +26726,19 @@
 	      var serviceForm = void 0;
 	      var serviceName = serviceTypeNameMap[this.props.params.requirementType];
 
-	      if (this.props.params.requirementType === '101') {
-	        serviceForm = _react2.default.createElement(_ContractReviewForm2.default, null);
-	      } else if (this.props.params.requirementType === '102') {
-	        serviceForm = _react2.default.createElement(_ContractCreationForm2.default, null);
-	      } else if (this.props.params.requirementType === '103') {
-	        serviceForm = _react2.default.createElement(_LegalConsultationForm2.default, null);
-	      } else if (this.props.params.requirementType === '104') {
-	        serviceForm = _react2.default.createElement(_CollectionLetterForm2.default, null);
-	      } else if (this.props.params.requirementType === '105') {
-	        serviceForm = _react2.default.createElement(_LawyerLetterForm2.default, null);
-	      } else if (offlineServiceTypes.indexOf(this.props.params.requirementType) !== -1) {
-	        serviceForm = _react2.default.createElement(_OfflineServiceForm2.default, null);
+	      var requirementType = this.props.params.requirementType;
+	      if (requirementType === '101') {
+	        serviceForm = _react2.default.createElement(_ContractReviewForm2.default, { requirementType: requirementType });
+	      } else if (requirementType === '102') {
+	        serviceForm = _react2.default.createElement(_ContractCreationForm2.default, { requirementType: requirementType });
+	      } else if (requirementType === '103') {
+	        serviceForm = _react2.default.createElement(_LegalConsultationForm2.default, { requirementType: requirementType });
+	      } else if (requirementType === '104') {
+	        serviceForm = _react2.default.createElement(_CollectionLetterForm2.default, { requirementType: requirementType });
+	      } else if (requirementType === '105') {
+	        serviceForm = _react2.default.createElement(_LawyerLetterForm2.default, { requirementType: requirementType });
+	      } else if (offlineServiceTypes.indexOf(requirementType) !== -1) {
+	        serviceForm = _react2.default.createElement(_OfflineServiceForm2.default, { requirementType: requirementType });
 	      } else {
 	        //TODO 判断requirementType非法的情况！！！
 
@@ -26883,15 +26884,9 @@
 	        _this.state = {
 	            agreeProtocol: true, //是否同意用户协议
 	            sponsorName: '于永雨',
-	            phoneName: '13020072525',
-
+	            phoneNumber: '13020072525',
 	            otherRequirement: '', //其他要求
-	            otherRequirementValidationState: 'success',
-	            otherRequirementValidationFailedInfo: '',
-
 	            selectedFile: null, //上传的附件
-
-
 	            validattionFailedInfo: '' //提交前校验的错误信息
 	        };
 	        return _this;
@@ -26918,7 +26913,7 @@
 	        value: function validateFormData() {
 	            var validattionFailedInfo = '';
 	            var sponsorNameValidattionFailedInfo = _Validator2.default.validateSponsorName(this.state.sponsorName);
-	            var phoneNameValidattionFailedInfo = _Validator2.default.validatePhoneNumber(this.state.phoneName);
+	            var phoneNameValidattionFailedInfo = _Validator2.default.validatePhoneNumber(this.state.phoneNumber);
 	            var otherRequirementValidattionFailedInfo = _Validator2.default.validateTextareaValue(this.state.otherRequirement);
 	            var fileValidattionFailedInfo = this.validateFile(this.state.selectedFile);
 
@@ -26961,13 +26956,14 @@
 	            this.handleStateChange('agreeProtocol', false);
 
 	            var submitData = {
-	                agreeProtocol: true,
-	                sponsorName: this.state.sponsorName,
-	                phoneName: this.state.phoneName,
-	                selectedFile: this.state.selectedFile, //上传的附件
-	                otherRequirement: this.state.otherRequirement };
+	                requirementType: this.props.requirementType,
+	                contactsName: this.state.sponsorName,
+	                contactsMobileNumber: this.state.phoneNumber,
+	                orderSource: 1,
+	                contractFiles: this.state.selectedFile, //上传的附件
+	                userComment: this.state.otherRequirement };
 
-	            console.log(this.state);
+	            console.log(submitData);
 	            setTimeout(function () {
 	                var _this2 = this;
 
@@ -26986,7 +26982,7 @@
 	                'div',
 	                { className: 'requirement-detail' },
 	                _react2.default.createElement(_Workflow2.default, null),
-	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneName, onSponsorInfoChange: function onSponsorInfoChange(infoName, value) {
+	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneNumber, onSponsorInfoChange: function onSponsorInfoChange(infoName, value) {
 	                        return _this3.handleSponsorInfoChange(infoName, value);
 	                    } }),
 	                _react2.default.createElement(
@@ -26996,6 +26992,7 @@
 	                        required: true,
 	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
 	                        labelDesc: '\u8BF7\u4E0A\u4F20\u9700\u8981\u5BA1\u67E5\u7684\u5408\u540C\u6587\u6863\u3002',
+	                        placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09',
 	                        onFileChange: function onFileChange(selectedFile) {
 	                            return _this3.handleFileChange(selectedFile);
 	                        }
@@ -27018,12 +27015,13 @@
 	                        required: false,
 	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
 	                        labelDesc: '\u8BF7\u4E0A\u4F20\u9700\u8981\u5BA1\u67E5\u7684\u5408\u540C\u6587\u6863\u3002',
+	                        placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u5BA1\u67E5\u5408\u540C\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u5173\u4E8E\u672C\u5408\u540C\u7684\u7B7E\u8BA2\u80CC\u666F\u3001\u60A8\u6240\u5E0C\u671B\u91CD\u70B9\u5173\u6CE8\u7684\u5408\u540C\u6761\u6B3E\uFF0C\u6216\u8005\u5176\u4ED6\u60A8\u5BF9\u672C\u6B21\u5BA1\u67E5\u7684\u7279\u6B8A\u9700\u6C42\uFF0C\u52A0\u6025\u5B8C\u6210\u7B49',
 	                        onTextareaValueChange: function onTextareaValueChange(otherRequirement) {
 	                            return _this3.handleOtherRequirementChange(otherRequirement);
 	                        }
 	                    })
 	                ),
-	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onValidateFormData: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onFormDataValidate: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
 	                        return _this3.handleFormSubmit();
 	                    } })
 	            );
@@ -27149,6 +27147,13 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 
+	/**
+	 *     props
+	 * 1.sponsorName string （required）
+	 * 2.phoneNumber string （required）
+	 * 3.onSponsorInfoChange function (required)
+	 *
+	 * */
 	var SponsorInfo = function (_React$Component) {
 	    _inherits(SponsorInfo, _React$Component);
 
@@ -27207,7 +27212,7 @@
 	                });
 	            }
 
-	            this.props.onSponsorInfoChange('phoneName', newPhoneNumber);
+	            this.props.onSponsorInfoChange('phoneNumber', newPhoneNumber);
 	        }
 	    }, {
 	        key: 'render',
@@ -45925,6 +45930,8 @@
 	    value: true
 	});
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -45962,10 +45969,14 @@
 	        value: function validateUploadedFile(file) {
 	            var supportedFileType = ['application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/pdf', 'application/x-iwork-pages-sffpages', 'application/zip', 'application/x-rar'];
 
-	            if (!supportedFileType.includes(file.type)) {
-	                return '文件仅支持文本格式（.doc、.docx、.page、.pdf）和压缩格式（.zip、.rar）';
-	            } else if (file.size > 8 * 1024 * 1024) {
-	                return '文件大小不得超过8M';
+	            if (file && (typeof file === 'undefined' ? 'undefined' : _typeof(file)) === 'object') {
+	                if (!supportedFileType.includes(file.type)) {
+	                    return '文件仅支持文本格式（.doc、.docx、.page、.pdf）和压缩格式（.zip、.rar）';
+	                } else if (file.size > 8 * 1024 * 1024) {
+	                    return '文件大小不得超过8M';
+	                } else {
+	                    return null;
+	                }
 	            } else {
 	                return null;
 	            }
@@ -45973,7 +45984,7 @@
 	    }, {
 	        key: 'validateTextareaValue',
 	        value: function validateTextareaValue(textareaValue) {
-	            if (textareaValue && textareaValue.length >= 5) {
+	            if (textareaValue && textareaValue.length >= 500) {
 	                return '不得超过500个字！';
 	            } else {
 	                return null;
@@ -46084,6 +46095,16 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 
+	/**
+	 *     props
+	 * 1.required boolean (required)
+	 * 2.labelName string （required）
+	 * 3.labelDesc string (optional)
+	 * 4.placeholder string (optional)
+	 * 5.onFileChange function (required)
+	 *
+	 * */
+
 	var FileUploadField = function (_React$Component) {
 	    _inherits(FileUploadField, _React$Component);
 
@@ -46163,7 +46184,7 @@
 	                    readOnly: true,
 	                    type: 'text',
 	                    value: this.state.value,
-	                    placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09'
+	                    placeholder: this.props.placeholder
 	                }),
 	                _react2.default.createElement(
 	                    _reactBootstrap.Button,
@@ -46227,11 +46248,11 @@
 
 	/**
 	 *     props
-	 * required boolean (required)
-	 * labelName string （required）
-	 * labelDesc string (optional)
-	 * placeholder string (optional)
-	 * onTextareaValueChange function (required)
+	 * 1.required boolean (required)
+	 * 2.labelName string （required）
+	 * 3.labelDesc string (optional)
+	 * 4.placeholder string (optional)
+	 * 5.onTextareaValueChange function (required)
 	 * */
 
 	var TextareaField = function (_React$Component) {
@@ -46305,7 +46326,7 @@
 	                ),
 	                _react2.default.createElement(_reactBootstrap.FormControl, {
 	                    componentClass: 'textarea',
-	                    placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u5BA1\u67E5\u5408\u540C\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u5173\u4E8E\u672C\u5408\u540C\u7684\u7B7E\u8BA2\u80CC\u666F\u3001\u60A8\u6240\u5E0C\u671B\u91CD\u70B9\u5173\u6CE8\u7684\u5408\u540C\u6761\u6B3E\uFF0C\u6216\u8005\u5176\u4ED6\u60A8\u5BF9\u672C\u6B21\u5BA1\u67E5\u7684\u7279\u6B8A\u9700\u6C42\uFF0C\u52A0\u6025\u5B8C\u6210\u7B49',
+	                    placeholder: this.props.placeholder,
 	                    onChange: this.handleTextareaValueChange
 	                }),
 	                _react2.default.createElement(
@@ -46353,6 +46374,14 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 
+	/**
+	 *     props
+	 * 1.agreeProtocol boolean (required)
+	 * 2.validattionFailedInfo string （required）
+	 * 3.onFormDataValidate function (required)
+	 * 4.onSubmitButtonClick function (required)
+	 *
+	 * */
 	var SubmitBox = function (_React$Component) {
 	    _inherits(SubmitBox, _React$Component);
 
@@ -46393,7 +46422,7 @@
 	        key: 'toggleShowSubmitModel',
 	        value: function toggleShowSubmitModel(show) {
 	            if (show) {
-	                if (this.props.onValidateFormData()) {
+	                if (this.props.onFormDataValidate()) {
 	                    this.setState({
 	                        showSubmitModal: true
 	                    });
@@ -46766,7 +46795,7 @@
 /* 508 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -46778,7 +46807,39 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Workflow = __webpack_require__(247);
+
+	var _Workflow2 = _interopRequireDefault(_Workflow);
+
+	var _SponsorInfo = __webpack_require__(248);
+
+	var _SponsorInfo2 = _interopRequireDefault(_SponsorInfo);
+
+	var _RequirementForm = __webpack_require__(500);
+
+	var _RequirementForm2 = _interopRequireDefault(_RequirementForm);
+
+	var _FileUploadField = __webpack_require__(501);
+
+	var _FileUploadField2 = _interopRequireDefault(_FileUploadField);
+
+	var _TextareaField = __webpack_require__(502);
+
+	var _TextareaField2 = _interopRequireDefault(_TextareaField);
+
+	var _SubmitBox = __webpack_require__(503);
+
+	var _SubmitBox2 = _interopRequireDefault(_SubmitBox);
+
+	var _Validator = __webpack_require__(499);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
+
+	var _reactRouter = __webpack_require__(159);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -46792,23 +46853,147 @@
 	var OfflineService = function (_React$Component) {
 	    _inherits(OfflineService, _React$Component);
 
-	    function OfflineService() {
+	    function OfflineService(props) {
 	        _classCallCheck(this, OfflineService);
 
-	        return _possibleConstructorReturn(this, (OfflineService.__proto__ || Object.getPrototypeOf(OfflineService)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (OfflineService.__proto__ || Object.getPrototypeOf(OfflineService)).call(this, props));
+
+	        _this.handleSponsorInfoChange = _this.handleSponsorInfoChange.bind(_this);
+	        _this.handleRequirementDescriptionChange = _this.handleRequirementDescriptionChange.bind(_this);
+	        _this.handleFileChange = _this.handleFileChange.bind(_this);
+
+	        _this.validateFormData = _this.validateFormData.bind(_this);
+	        _this.handleFormSubmit = _this.handleFormSubmit.bind(_this);
+
+	        _this.state = {
+	            agreeProtocol: true, //是否同意用户协议
+	            sponsorName: '于永雨',
+	            phoneNumber: '13020072525',
+	            requirementDescription: '', //需求描述
+	            selectedFile: null, //上传的附件
+	            validattionFailedInfo: '' //提交前校验的错误信息
+	        };
+	        return _this;
 	    }
 
 	    _createClass(OfflineService, [{
-	        key: "render",
+	        key: 'validateRequirementDescription',
+	        value: function validateRequirementDescription(requirementDescription) {
+	            if (!requirementDescription || requirementDescription.length < 1) {
+	                return '必须填写您遇到的问题！';
+	            } else if (_Validator2.default.validateTextareaValue(requirementDescription)) {
+	                return _Validator2.default.validateTextareaValue(requirementDescription);
+	            } else {
+	                return null;
+	            }
+	        }
+	    }, {
+	        key: 'validateFormData',
+	        value: function validateFormData() {
+	            var validattionFailedInfo = '';
+	            var sponsorNameValidattionFailedInfo = _Validator2.default.validateSponsorName(this.state.sponsorName);
+	            var phoneNameValidattionFailedInfo = _Validator2.default.validatePhoneNumber(this.state.phoneNumber);
+	            var requirementDescriptionValidattionFailedInfo = this.validateRequirementDescription(this.state.requirementDescription);
+	            var fileValidattionFailedInfo = _Validator2.default.validateUploadedFile(this.state.selectedFile);
+
+	            if (sponsorNameValidattionFailedInfo) {
+	                validattionFailedInfo = sponsorNameValidattionFailedInfo;
+	            } else if (phoneNameValidattionFailedInfo) {
+	                validattionFailedInfo = phoneNameValidattionFailedInfo;
+	            } else if (requirementDescriptionValidattionFailedInfo) {
+	                validattionFailedInfo = requirementDescriptionValidattionFailedInfo;
+	            } else if (fileValidattionFailedInfo) {
+	                validattionFailedInfo = fileValidattionFailedInfo;
+	            }
+
+	            if (validattionFailedInfo && validattionFailedInfo.length > 0) {
+	                this.handleStateChange('validattionFailedInfo', validattionFailedInfo);
+	                return false;
+	            } else {
+	                this.handleStateChange('validattionFailedInfo', '');
+	                return true;
+	            }
+	        }
+	    }, {
+	        key: 'handleStateChange',
+	        value: function handleStateChange(key, value) {
+	            this.setState(_defineProperty({}, key, value));
+	        }
+	    }, {
+	        key: 'handleSponsorInfoChange',
+	        value: function handleSponsorInfoChange(infoName, value) {
+	            this.handleStateChange(infoName, value);
+	        }
+	    }, {
+	        key: 'handleRequirementDescriptionChange',
+	        value: function handleRequirementDescriptionChange(requirementDescription) {
+	            this.handleStateChange('requirementDescription', requirementDescription);
+	        }
+	    }, {
+	        key: 'handleFileChange',
+	        value: function handleFileChange(selectedFile) {
+	            this.handleStateChange('selectedFile', selectedFile);
+	        }
+	    }, {
+	        key: 'handleFormSubmit',
+	        value: function handleFormSubmit() {
+	            this.handleStateChange('agreeProtocol', false);
+
+	            var submitData = {
+	                requirementType: this.props.requirementType,
+	                contactsName: this.state.sponsorName,
+	                contactsMobileNumber: this.state.phoneNumber,
+	                orderSource: 1,
+	                contractFiles: this.state.selectedFile, //上传的附件
+	                problemDescription: this.state.requirementDescription };
+
+	            console.log(submitData);
+	            setTimeout(function () {
+	                var _this2 = this;
+
+	                (function () {
+	                    return _this2.handleStateChange('agreeProtocol', true);
+	                }); //箭头函数将this指向引用函数的上下文
+	                _reactRouter.browserHistory.push('/orders');
+	            }, 3000);
+	        }
+	    }, {
+	        key: 'render',
 	        value: function render() {
+	            var _this3 = this;
+
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "legal-service-row" },
+	                'div',
+	                { className: 'requirement-detail' },
+	                _react2.default.createElement(_Workflow2.default, null),
+	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneNumber, onSponsorInfoChange: function onSponsorInfoChange(infoName, value) {
+	                        return _this3.handleSponsorInfoChange(infoName, value);
+	                    } }),
 	                _react2.default.createElement(
-	                    "h1",
+	                    _RequirementForm2.default,
 	                    null,
-	                    "\u7EBF\u4E0B\u670D\u52A1\u8868\u5355"
-	                )
+	                    _react2.default.createElement(_TextareaField2.default, {
+	                        required: true,
+	                        labelTitle: '\u7B80\u5355\u63CF\u8FF0\u60A8\u9047\u5230\u7684\u95EE\u9898',
+	                        labelDesc: '\u987E\u95EE\u4F1A\u6839\u636E\u60A8\u63CF\u8FF0\u7684\u95EE\u9898\u5E2E\u4F60\u7406\u6E05\u9700\u6C42\uFF0C\u4E3A\u60A8\u627E\u5230\u5408\u9002\u7684\u5F8B\u5E08\u89E3\u51B3\u95EE\u9898\u3002',
+	                        placeholder: '\u95EE\u9898\u63CF\u8FF0',
+	                        onTextareaValueChange: function onTextareaValueChange(requirementDescription) {
+	                            return _this3.handleRequirementDescriptionChange(requirementDescription);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_FileUploadField2.default, {
+	                        required: false,
+	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
+	                        labelDesc: '\u8BF7\u4E0A\u4F20\u60A8\u8BA4\u4E3A\u6709\u52A9\u4E8E\u987E\u95EE\u548C\u5F8B\u5E08\u4E86\u89E3\u95EE\u9898\u7684\u6750\u6599\u3002',
+	                        placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09',
+	                        onFileChange: function onFileChange(selectedFile) {
+	                            return _this3.handleFileChange(selectedFile);
+	                        }
+	                    })
+	                ),
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onFormDataValidate: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
+	                        return _this3.handleFormSubmit();
+	                    } })
 	            );
 	        }
 	    }]);

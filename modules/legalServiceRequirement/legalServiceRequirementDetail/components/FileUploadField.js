@@ -5,6 +5,17 @@ import React from 'react'
 import {FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap'
 import Validator from './Validator'
 
+
+/**
+ *     props
+ * 1.required boolean (required)
+ * 2.labelName string （required）
+ * 3.labelDesc string (optional)
+ * 4.placeholder string (optional)
+ * 5.onFileChange function (required)
+ *
+ * */
+
 class FileUploadField extends React.Component{
     constructor(props){
         super(props)
@@ -64,7 +75,7 @@ class FileUploadField extends React.Component{
                     readOnly
                     type="text"
                     value={this.state.value}
-                    placeholder="目前仅支持文本格式（.doc、.docx、.page、.pdf）和压缩格式（.zip、.rar）"
+                    placeholder={this.props.placeholder}
                 />
                 {/***由于目前仅支持上传一个附件，所以通过已选的附件名是否存在来决定上传按钮是否可继续点击***/}
                 <Button className="chose-file" type="submit" disabled={this.state.selectedFileName.length > 0} onClick={this.handleFileChoose}>点击上传</Button>

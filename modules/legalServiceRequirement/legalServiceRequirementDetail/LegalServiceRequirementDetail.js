@@ -38,18 +38,19 @@ class LegalServiceRequirementDetail extends React.Component{
     let serviceForm
     const serviceName = serviceTypeNameMap[this.props.params.requirementType]
 
-    if(this.props.params.requirementType === '101'){
-      serviceForm = <ContractReviewForm/>
-    }else if(this.props.params.requirementType === '102'){
-      serviceForm = <ContractCreationForm/>
-    }else if(this.props.params.requirementType === '103'){
-      serviceForm = <LegalConsultationForm/>
-    }else if(this.props.params.requirementType === '104'){
-      serviceForm = <CollectionLetterForm/>
-    }else if(this.props.params.requirementType === '105'){
-      serviceForm = <LawyerLetterForm/>
-    }else if(offlineServiceTypes.indexOf(this.props.params.requirementType) !== -1){
-      serviceForm = <OfflineServiceForm/>
+    const requirementType = this.props.params.requirementType
+    if(requirementType === '101'){
+      serviceForm = <ContractReviewForm requirementType={requirementType}/>
+    }else if(requirementType === '102'){
+      serviceForm = <ContractCreationForm requirementType={requirementType}/>
+    }else if(requirementType === '103'){
+      serviceForm = <LegalConsultationForm requirementType={requirementType}/>
+    }else if(requirementType === '104'){
+      serviceForm = <CollectionLetterForm requirementType={requirementType}/>
+    }else if(requirementType === '105'){
+      serviceForm = <LawyerLetterForm requirementType={requirementType}/>
+    }else if(offlineServiceTypes.indexOf(requirementType) !== -1){
+      serviceForm = <OfflineServiceForm requirementType={requirementType}/>
     }else{
       //TODO 判断requirementType非法的情况！！！
 

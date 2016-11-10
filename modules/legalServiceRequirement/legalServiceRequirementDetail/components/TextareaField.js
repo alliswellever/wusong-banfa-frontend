@@ -7,11 +7,11 @@ import Validator from './Validator'
 
 /**
  *     props
- * required boolean (required)
- * labelName string （required）
- * labelDesc string (optional)
- * placeholder string (optional)
- * onTextareaValueChange function (required)
+ * 1.required boolean (required)
+ * 2.labelName string （required）
+ * 3.labelDesc string (optional)
+ * 4.placeholder string (optional)
+ * 5.onTextareaValueChange function (required)
  * */
 
 class TextareaField extends React.Component{
@@ -67,7 +67,7 @@ class TextareaField extends React.Component{
                 </ControlLabel>
                 <FormControl
                     componentClass="textarea"
-                    placeholder="请在此输入您对审查合同的要求，例如：关于本合同的签订背景、您所希望重点关注的合同条款，或者其他您对本次审查的特殊需求，加急完成等"
+                    placeholder={this.props.placeholder}
                     onChange={this.handleTextareaValueChange}
                 />
                 <HelpBlock>{this.state.textareaValueValidationFailedInfo}</HelpBlock>

@@ -30,17 +30,21 @@ class Validator{
             'application/x-rar'
         ]
 
-        if(!supportedFileType.includes(file.type)){
-            return '文件仅支持文本格式（.doc、.docx、.page、.pdf）和压缩格式（.zip、.rar）'
-        }else if(file.size > 8*1024*1024){
-            return '文件大小不得超过8M'
+        if(file && typeof file === 'object'){
+            if(!supportedFileType.includes(file.type)){
+                return '文件仅支持文本格式（.doc、.docx、.page、.pdf）和压缩格式（.zip、.rar）'
+            }else if(file.size > 8*1024*1024){
+                return '文件大小不得超过8M'
+            }else{
+                return null
+            }
         }else{
             return null
         }
     }
 
     validateTextareaValue(textareaValue){
-        if(textareaValue && textareaValue.length >= 5){
+        if(textareaValue && textareaValue.length >= 500){
             return '不得超过500个字！'
         }else{
             return null

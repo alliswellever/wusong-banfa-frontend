@@ -5,6 +5,13 @@ import React from 'react'
 import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'
 import Validator from './Validator'
 
+/**
+ *     props
+ * 1.sponsorName string （required）
+ * 2.phoneNumber string （required）
+ * 3.onSponsorInfoChange function (required)
+ *
+ * */
 class SponsorInfo extends React.Component{
     constructor(props){
         super(props)
@@ -54,7 +61,7 @@ class SponsorInfo extends React.Component{
             });
         }
 
-        this.props.onSponsorInfoChange('phoneName', newPhoneNumber);
+        this.props.onSponsorInfoChange('phoneNumber', newPhoneNumber);
     }
 
 

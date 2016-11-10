@@ -5,6 +5,14 @@ import React from 'react'
 import {Button, ButtonToolbar, Checkbox, Modal, HelpBlock} from 'react-bootstrap'
 import { browserHistory } from 'react-router'
 
+/**
+ *     props
+ * 1.agreeProtocol boolean (required)
+ * 2.validattionFailedInfo string （required）
+ * 3.onFormDataValidate function (required)
+ * 4.onSubmitButtonClick function (required)
+ *
+ * */
 class SubmitBox extends React.Component{
     constructor(props){
         super(props)
@@ -35,7 +43,7 @@ class SubmitBox extends React.Component{
 
     toggleShowSubmitModel(show){
         if(show){
-            if(this.props.onValidateFormData()){
+            if(this.props.onFormDataValidate()){
                 this.setState({
                     showSubmitModal: true
                 })
