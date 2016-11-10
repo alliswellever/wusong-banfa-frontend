@@ -26901,7 +26901,7 @@
 	        key: 'validateFile',
 	        value: function validateFile(file) {
 	            if (!file) {
-	                return '必须上传附件！';
+	                return '请上传附件！';
 	            } else if (_Validator2.default.validateUploadedFile(file)) {
 	                return _Validator2.default.validateUploadedFile(file);
 	            } else {
@@ -47099,7 +47099,7 @@
 	        key: 'validateRequirementDescription',
 	        value: function validateRequirementDescription(requirementDescription) {
 	            if (!requirementDescription || requirementDescription.length < 1) {
-	                return '必须填写您遇到的问题！';
+	                return '请填写您遇到的问题！';
 	            } else if (_Validator2.default.validateTextareaValue(requirementDescription)) {
 	                return _Validator2.default.validateTextareaValue(requirementDescription);
 	            } else {

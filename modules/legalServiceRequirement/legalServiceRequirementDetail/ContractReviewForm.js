@@ -42,7 +42,7 @@ class ContractReviewForm extends React.Component{
 
     validateFile(file){
         if(!file){
-            return '必须上传附件！'
+            return '请上传附件！'
         }else if(Validator.validateUploadedFile(file)){
             return Validator.validateUploadedFile(file)
         }else{

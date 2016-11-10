@@ -34,7 +34,7 @@ class OfflineService extends React.Component{
 
     validateRequirementDescription(requirementDescription){
         if(!requirementDescription || requirementDescription.length < 1){
-            return '必须填写您遇到的问题！'
+            return '请填写您遇到的问题！'
         }else if(Validator.validateTextareaValue(requirementDescription)){
             return Validator.validateTextareaValue(requirementDescription)
         }else{
