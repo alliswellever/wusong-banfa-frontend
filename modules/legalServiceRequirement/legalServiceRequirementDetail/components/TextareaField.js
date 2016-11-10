@@ -59,7 +59,7 @@ class TextareaField extends React.Component{
 
     render(){
         return(
-            <FormGroup controlId="formControlsTextarea" validationState={this.state.textareaValueValidationState}>
+            <FormGroup className="textarea-field" controlId="formControlsTextarea" validationState={this.state.textareaValueValidationState}>
                 <ControlLabel>
                     {this.props.required ? <span className="required">*</span> : ''}
                     {this.props.labelTitle}

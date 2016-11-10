@@ -40,17 +40,17 @@ class LegalServiceRequirementDetail extends React.Component{
 
     const requirementType = this.props.params.requirementType
     if(requirementType === '101'){
-      serviceForm = <ContractReviewForm requirementType={requirementType}/>
+      serviceForm = <ContractReviewForm/>
     }else if(requirementType === '102'){
-      serviceForm = <ContractCreationForm requirementType={requirementType}/>
+      serviceForm = <ContractCreationForm/>
     }else if(requirementType === '103'){
-      serviceForm = <LegalConsultationForm requirementType={requirementType}/>
+      serviceForm = <LegalConsultationForm/>
     }else if(requirementType === '104'){
-      serviceForm = <CollectionLetterForm requirementType={requirementType}/>
+      serviceForm = <CollectionLetterForm/>
     }else if(requirementType === '105'){
-      serviceForm = <LawyerLetterForm requirementType={requirementType}/>
+      serviceForm = <LawyerLetterForm/>
     }else if(offlineServiceTypes.indexOf(requirementType) !== -1){
-      serviceForm = <OfflineServiceForm requirementType={requirementType}/>
+      serviceForm = <OfflineServiceForm/>
     }else{
       //TODO 判断requirementType非法的情况！！！
 

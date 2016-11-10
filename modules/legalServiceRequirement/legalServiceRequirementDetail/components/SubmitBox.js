@@ -75,8 +75,8 @@ class SubmitBox extends React.Component{
 
                 <ButtonToolbar>
                     <HelpBlock>{this.props.validattionFailedInfo}</HelpBlock>
-                    <Button onClick={() => this.toggleShowCancleModel(true)}>取消</Button>
-                    <Button type="submit" disabled={!this.props.agreeProtocol || !this.state.agreeProtocol} onClick={() => this.toggleShowSubmitModel(true)}>{this.props.agreeProtocol ? '提交' : '提交中...'}</Button>
+                    <Button className="cancle" onClick={() => this.toggleShowCancleModel(true)}>取消</Button>
+                    <Button className="submit" disabled={!this.props.agreeProtocol || !this.state.agreeProtocol} onClick={() => this.toggleShowSubmitModel(true)}>{this.props.agreeProtocol ? '提交' : '提交中...'}</Button>
                 </ButtonToolbar>
 
                 {/*取消弹框*/}

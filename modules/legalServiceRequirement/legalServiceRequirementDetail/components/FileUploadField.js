@@ -64,7 +64,7 @@ class FileUploadField extends React.Component{
 
     render(){
         return (
-            <FormGroup controlId="formBasicText">
+            <FormGroup className="file-upload-field" controlId="formBasicText">
                 <ControlLabel>
                     {this.props.required ? <span className="required">*</span> : ''}
                     {this.props.labelTitle}
@@ -78,7 +78,7 @@ class FileUploadField extends React.Component{
                     placeholder={this.props.placeholder}
                 />
                 {/***由于目前仅支持上传一个附件，所以通过已选的附件名是否存在来决定上传按钮是否可继续点击***/}
-                <Button className="chose-file" type="submit" disabled={this.state.selectedFileName.length > 0} onClick={this.handleFileChoose}>点击上传</Button>
+                <Button className="chose-file" disabled={this.state.selectedFileName.length > 0} onClick={this.handleFileChoose}>点击上传</Button>
                 <input type="file" name="uploadFile" hidden ref="fileInput" onChange={this.handleFileChange}/>
                 {this.state.selectedFileName ? <div className="file-name"><span className="fa fa-file-text fa-lg"></span>{this.state.selectedFileName}<span className="fa fa-times-circle" aria-hidden="true" onClick={this.handleFileRemove}></span></div> : ''}
                 <HelpBlock>{this.state.selectedFileNameValidationFailedInfo}</HelpBlock>

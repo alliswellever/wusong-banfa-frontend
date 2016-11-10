@@ -134,8 +134,7 @@ class ContractReviewForm extends React.Component{
                     </HelpBlock>
                     <TextareaField
                         required={false}
-                        labelTitle="上传附件"
-                        labelDesc="请上传需要审查的合同文档。"
+                        labelTitle="其他要求"
                         placeholder="请在此输入您对审查合同的要求，例如：关于本合同的签订背景、您所希望重点关注的合同条款，或者其他您对本次审查的特殊需求，加急完成等"
                         onTextareaValueChange={(otherRequirement) => this.handleOtherRequirementChange(otherRequirement)}
                     />

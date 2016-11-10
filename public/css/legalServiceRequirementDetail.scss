@@ -121,12 +121,27 @@
           height: 14px;
           color: $text-color-error;
         }
+
+        button.cancle{
+          color: $button-color-primary;
+          background-color: $button-color-cancle;
+          float: none;
+          margin-right: 70px;
+          &:hover{
+            background-color: $button-color-cancle-hover;
+          }
+        }
+
+        button.submit{
+          color: #fff;
+          background-color: $button-color-primary;
+          float: none;
+          &:hover{
+            background-color: $button-color-primary-hover;
+          }
+        }
       }
     }
-
-
-
-
 
     .form-group{
       margin-bottom: 15px;
@@ -153,6 +168,19 @@
         font-size: 16px;
       }
 
+      .help-block{
+        height: 14px;
+        color: $text-color-error;
+      }
+    }
+
+    .form-group.has-success{
+      .form-control{
+        border-color: #ccc;
+      }
+    }
+
+    .form-group.file-upload-field{
       input.form-control[readonly]{
         background-color: #fff;
 
@@ -171,9 +199,13 @@
         display: none;
       }
 
-
-      button.chose-file{
+      button{
+        color: #fff;
+        background-color: $button-color-primary;
         float: right;
+        &:hover{
+          background-color: $button-color-primary-hover;
+        }
       }
 
       .file-name{
@@ -192,53 +224,72 @@
         }
 
       }
+    }
 
+    .form-group.textarea-field{
       textarea.form-control{
         resize: none;
         min-height: 115px;
       }
+    }
 
-      .help-block{
-        height: 14px;
-        color: $text-color-error;
+    .form-group.dropdown-field{
+      line-height: 40px;
+
+      .dropdown{
+        float: right;
+        width: 600px;
+
+        .dropdown-toggle{
+          float:none;
+          position: relative;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+          text-align: left;
+          color: $text-color-tip;
+          width: 100%;
+
+          &:hover{
+            background-color: #fff;
+          }
+
+          .caret{
+            position: absolute;
+            right: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
+        }
+
+        .dropdown-menu{
+          width: 100%;
+        }
+
       }
 
+      .dropdown.open{
+        .dropdown-toggle{
+          &:hover,&:focus{
+            background-color: #fff;
+          }
 
-    }
-
-    .has-success .form-control{
-      border-color: #ccc;
-    }
-
-    .btn{
-      min-width: 100px;
-      line-height: 1.8;
-      border: none;
-      font-size: 16px;
-      float: none;
-    }
-
-    button[type=button]{
-      color: $button-color-primary;
-      background-color: $button-color-cancle;
-      margin-right: 70px;
-      &:hover{
-        background-color: $button-color-cancle-hover;
+          .caret{
+            border-top: none;
+            border-bottom: 4px dashed;
+          }
+        }
       }
+
     }
 
-    button[type=submit]{
-      color: #fff;
-      background-color: $button-color-primary;
-      &:hover{
-        background-color: $button-color-primary-hover;
-      }
-    }
+
+
 
   }
 }
-
-
 
 
 

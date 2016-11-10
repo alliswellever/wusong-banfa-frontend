@@ -25587,7 +25587,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.nav-link.active {\n  color: #fff;\n  background-color: #505666;\n  border-left: 4px #01c5e8 solid;\n  padding-left: 36px; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.adviser {\n  display: inline-block;\n  border-radius: 4px;\n  height: 40px;\n  background-color: #505666;\n  cursor: pointer; }\n  .adviser .avatar {\n    height: 100%;\n    width: 40px;\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px; }\n  .adviser .name {\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px; }\n  .adviser:hover {\n    background-color: #282b33; }\n\n.modal-dialog {\n  margin: 10% auto; }\n  .modal-dialog .modal-header {\n    border-bottom: none;\n    text-align: center; }\n  .modal-dialog .modal-body {\n    text-align: center;\n    font-size: 16px; }\n  .modal-dialog .modal-footer {\n    border-top: none;\n    text-align: center; }\n    .modal-dialog .modal-footer .btn {\n      min-width: 100px;\n      line-height: 1.5;\n      border: none;\n      font-size: 16px;\n      float: none; }\n    .modal-dialog .modal-footer button[type=button] {\n      color: #4f6584;\n      background-color: #edeef2;\n      margin-right: 70px; }\n      .modal-dialog .modal-footer button[type=button]:hover {\n        background-color: #e0e3ed; }\n    .modal-dialog .modal-footer button[type=submit] {\n      color: #fff;\n      background-color: #4f6584; }\n      .modal-dialog .modal-footer button[type=submit]:hover {\n        background-color: #505666; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  min-width: 100px;\n  line-height: 1.8;\n  border: none;\n  font-size: 16px;\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.nav-link.active {\n  color: #fff;\n  background-color: #505666;\n  border-left: 4px #01c5e8 solid;\n  padding-left: 36px; }\n\n.button-link {\n  display: inline-block;\n  line-height: 40px;\n  min-width: 120px;\n  padding: 0 10px;\n  text-align: center;\n  color: #fff;\n  font-size: 16px;\n  border-radius: 4px;\n  cursor: pointer; }\n  .button-link:hover {\n    color: #fff;\n    text-decoration: none; }\n\n.adviser {\n  display: inline-block;\n  border-radius: 4px;\n  height: 40px;\n  background-color: #505666;\n  cursor: pointer; }\n  .adviser .avatar {\n    height: 100%;\n    width: 40px;\n    border-top-left-radius: 4px;\n    border-bottom-left-radius: 4px; }\n  .adviser .name {\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px; }\n  .adviser:hover {\n    background-color: #282b33; }\n\n.modal-dialog {\n  margin: 10% auto; }\n  .modal-dialog .modal-header {\n    border-bottom: none;\n    text-align: center; }\n  .modal-dialog .modal-body {\n    text-align: center;\n    font-size: 16px; }\n  .modal-dialog .modal-footer {\n    border-top: none;\n    text-align: center; }\n    .modal-dialog .modal-footer .btn {\n      min-width: 100px;\n      line-height: 1.5;\n      border: none;\n      font-size: 16px;\n      float: none; }\n    .modal-dialog .modal-footer button[type=button] {\n      color: #4f6584;\n      background-color: #edeef2;\n      margin-right: 70px; }\n      .modal-dialog .modal-footer button[type=button]:hover {\n        background-color: #e0e3ed; }\n    .modal-dialog .modal-footer button[type=submit] {\n      color: #fff;\n      background-color: #4f6584; }\n      .modal-dialog .modal-footer button[type=submit]:hover {\n        background-color: #505666; }\n", ""]);
 
 	// exports
 
@@ -25935,7 +25935,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\nheader {\n  position: relative;\n  height: 80px;\n  min-width: 1380px;\n  overflow-x: scroll;\n  font-size: 20px;\n  color: white;\n  background-color: #343843; }\n  header .vertical-middile, header .logo img, header .logo .slogan, header .balance, header .adviser, header .login-out {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    margin-top: auto;\n    margin-bottom: auto; }\n  header .logo {\n    display: inline-block;\n    height: 100%;\n    width: 180px;\n    background-color: #01c5e8;\n    font-size: 14px; }\n    header .logo img {\n      display: inline-block;\n      height: 60px;\n      width: 60px;\n      vertical-align: middle;\n      margin-left: 10px;\n      box-shadow: 0 0 5px #166270;\n      border-radius: 8px; }\n    header .logo .slogan {\n      display: inline-block;\n      margin-left: 10px;\n      line-height: 20px;\n      height: 40px;\n      left: 70px; }\n  header .balance {\n    display: inline-block;\n    margin-left: 30px;\n    line-height: 40px;\n    height: 40px;\n    background-color: #282b33;\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px; }\n  header .adviser {\n    right: 210px; }\n  header .button {\n    display: inline-block;\n    line-height: 40px;\n    height: 40px;\n    font-size: 16px;\n    color: #fff;\n    background-color: #505666;\n    cursor: pointer; }\n    header .button:hover {\n      background-color: #282b33; }\n  header .login-out {\n    right: 100px;\n    padding: 0 10px;\n    border-radius: 4px; }\n\n.body {\n  min-width: 1380px;\n  overflow-x: scroll;\n  position: relative; }\n\n.main {\n  display: inline-block;\n  height: calc(100vh - 80px);\n  width: calc(100vw - 180px);\n  min-width: 1200px;\n  overflow-y: scroll;\n  margin-left: 180px; }\n  .main .main-inner {\n    margin-right: 10%; }\n\n.navigator {\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: inline-block;\n  height: calc(100vh - 80px);\n  width: 180px;\n  background-color: #343843;\n  font-size: 16px;\n  color: #fff;\n  padding-top: 10px; }\n  .navigator ul {\n    padding-left: 0; }\n    .navigator ul li a {\n      display: inline-block;\n      line-height: 50px;\n      color: #aaacb2;\n      width: 100%;\n      text-decoration: none;\n      padding-left: 40px; }\n  .navigator .button {\n    position: absolute;\n    bottom: 50px;\n    text-align: center;\n    width: 180px; }\n    .navigator .button a {\n      background-color: #505666; }\n      .navigator .button a:hover {\n        background-color: #4f6584; }\n      .navigator .button a:focus {\n        color: #fff;\n        text-decoration: none; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  min-width: 100px;\n  line-height: 1.8;\n  border: none;\n  font-size: 16px;\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\nheader {\n  position: relative;\n  height: 80px;\n  min-width: 1380px;\n  overflow-x: scroll;\n  font-size: 20px;\n  color: white;\n  background-color: #343843; }\n  header .vertical-middile, header .logo img, header .logo .slogan, header .balance, header .adviser, header .login-out {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    margin-top: auto;\n    margin-bottom: auto; }\n  header .logo {\n    display: inline-block;\n    height: 100%;\n    width: 180px;\n    background-color: #01c5e8;\n    font-size: 14px; }\n    header .logo img {\n      display: inline-block;\n      height: 60px;\n      width: 60px;\n      vertical-align: middle;\n      margin-left: 10px;\n      box-shadow: 0 0 5px #166270;\n      border-radius: 8px; }\n    header .logo .slogan {\n      display: inline-block;\n      margin-left: 10px;\n      line-height: 20px;\n      height: 40px;\n      left: 70px; }\n  header .balance {\n    display: inline-block;\n    margin-left: 30px;\n    line-height: 40px;\n    height: 40px;\n    background-color: #282b33;\n    font-size: 16px;\n    color: #fff;\n    padding: 0 10px; }\n  header .adviser {\n    right: 210px; }\n  header .button {\n    display: inline-block;\n    line-height: 40px;\n    height: 40px;\n    font-size: 16px;\n    color: #fff;\n    background-color: #505666;\n    cursor: pointer; }\n    header .button:hover {\n      background-color: #282b33; }\n  header .login-out {\n    right: 100px;\n    padding: 0 10px;\n    border-radius: 4px; }\n\n.body {\n  min-width: 1380px;\n  overflow-x: scroll;\n  position: relative; }\n\n.main {\n  display: inline-block;\n  height: calc(100vh - 80px);\n  width: calc(100vw - 180px);\n  min-width: 1200px;\n  overflow-y: scroll;\n  margin-left: 180px; }\n  .main .main-inner {\n    margin-right: 10%; }\n\n.navigator {\n  position: absolute;\n  top: 0;\n  left: 0;\n  display: inline-block;\n  height: calc(100vh - 80px);\n  width: 180px;\n  background-color: #343843;\n  font-size: 16px;\n  color: #fff;\n  padding-top: 10px; }\n  .navigator ul {\n    padding-left: 0; }\n    .navigator ul li a {\n      display: inline-block;\n      line-height: 50px;\n      color: #aaacb2;\n      width: 100%;\n      text-decoration: none;\n      padding-left: 40px; }\n  .navigator .button {\n    position: absolute;\n    bottom: 50px;\n    text-align: center;\n    width: 180px; }\n    .navigator .button a {\n      background-color: #505666; }\n      .navigator .button a:hover {\n        background-color: #4f6584; }\n      .navigator .button a:focus {\n        color: #fff;\n        text-decoration: none; }\n", ""]);
 
 	// exports
 
@@ -26326,7 +26326,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.requirements {\n  padding: 20px 0 0 30px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  min-width: 100px;\n  line-height: 1.8;\n  border: none;\n  font-size: 16px;\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.requirements {\n  padding: 20px 0 0 30px; }\n", ""]);
 
 	// exports
 
@@ -26501,7 +26501,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.legal-service-category {\n  background-color: #e0e3ed;\n  border-left: 4px #4f6584 solid;\n  padding: 10px 10px 10px 16px;\n  margin-top: 20px;\n  margin-bottom: 25px; }\n  .legal-service-category .category-name {\n    font-size: 20px;\n    color: #222;\n    line-height: 30px; }\n  .legal-service-category .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 24px; }\n\n.legal-service-table {\n  margin-bottom: 25px; }\n  .legal-service-table .box-title {\n    font-size: 20px;\n    color: #222;\n    margin-bottom: 13px; }\n    .legal-service-table .box-title .balance {\n      font-size: 14px;\n      color: #4f6584;\n      margin-left: 15px; }\n\n.legal-service-rows {\n  background-color: #fff;\n  padding: 10px;\n  border-radius: 4px; }\n  .legal-service-rows .legal-service-row {\n    border-bottom: 1px #edeef2 solid; }\n    .legal-service-rows .legal-service-row:last-of-type {\n      border: none; }\n    .legal-service-rows .legal-service-row:hover {\n      background-color: #edeef2; }\n\n.legal-service-row {\n  padding: 20px 10px;\n  position: relative; }\n  .legal-service-row .title {\n    font-size: 18px;\n    color: #222; }\n    .legal-service-row .title .icon {\n      display: inline-block;\n      height: 5px;\n      width: 5px;\n      background-color: #4f6584;\n      transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      /* Internet Explorer */\n      -moz-transform: rotate(45deg);\n      /* Firefox */\n      -webkit-transform: rotate(45deg);\n      /* Safari 和 Chrome */\n      -o-transform: rotate(45deg);\n      /* Opera */\n      margin-right: 5px;\n      margin-bottom: 4px; }\n  .legal-service-row .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 22px;\n    margin-top: 5px;\n    margin-right: 200px; }\n  .legal-service-row .button {\n    position: absolute;\n    top: 20px;\n    right: 10px;\n    background-color: #4f6584; }\n    .legal-service-row .button:hover {\n      background-color: #505666; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  min-width: 100px;\n  line-height: 1.8;\n  border: none;\n  font-size: 16px;\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.legal-service-category {\n  background-color: #e0e3ed;\n  border-left: 4px #4f6584 solid;\n  padding: 10px 10px 10px 16px;\n  margin-top: 20px;\n  margin-bottom: 25px; }\n  .legal-service-category .category-name {\n    font-size: 20px;\n    color: #222;\n    line-height: 30px; }\n  .legal-service-category .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 24px; }\n\n.legal-service-table {\n  margin-bottom: 25px; }\n  .legal-service-table .box-title {\n    font-size: 20px;\n    color: #222;\n    margin-bottom: 13px; }\n    .legal-service-table .box-title .balance {\n      font-size: 14px;\n      color: #4f6584;\n      margin-left: 15px; }\n\n.legal-service-rows {\n  background-color: #fff;\n  padding: 10px;\n  border-radius: 4px; }\n  .legal-service-rows .legal-service-row {\n    border-bottom: 1px #edeef2 solid; }\n    .legal-service-rows .legal-service-row:last-of-type {\n      border: none; }\n    .legal-service-rows .legal-service-row:hover {\n      background-color: #edeef2; }\n\n.legal-service-row {\n  padding: 20px 10px;\n  position: relative; }\n  .legal-service-row .title {\n    font-size: 18px;\n    color: #222; }\n    .legal-service-row .title .icon {\n      display: inline-block;\n      height: 5px;\n      width: 5px;\n      background-color: #4f6584;\n      transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      /* Internet Explorer */\n      -moz-transform: rotate(45deg);\n      /* Firefox */\n      -webkit-transform: rotate(45deg);\n      /* Safari 和 Chrome */\n      -o-transform: rotate(45deg);\n      /* Opera */\n      margin-right: 5px;\n      margin-bottom: 4px; }\n  .legal-service-row .desc {\n    font-size: 14px;\n    color: #808080;\n    line-height: 22px;\n    margin-top: 5px;\n    margin-right: 200px; }\n  .legal-service-row .button {\n    position: absolute;\n    top: 20px;\n    right: 10px;\n    background-color: #4f6584; }\n    .legal-service-row .button:hover {\n      background-color: #505666; }\n", ""]);
 
 	// exports
 
@@ -26728,17 +26728,17 @@
 
 	      var requirementType = this.props.params.requirementType;
 	      if (requirementType === '101') {
-	        serviceForm = _react2.default.createElement(_ContractReviewForm2.default, { requirementType: requirementType });
+	        serviceForm = _react2.default.createElement(_ContractReviewForm2.default, null);
 	      } else if (requirementType === '102') {
-	        serviceForm = _react2.default.createElement(_ContractCreationForm2.default, { requirementType: requirementType });
+	        serviceForm = _react2.default.createElement(_ContractCreationForm2.default, null);
 	      } else if (requirementType === '103') {
-	        serviceForm = _react2.default.createElement(_LegalConsultationForm2.default, { requirementType: requirementType });
+	        serviceForm = _react2.default.createElement(_LegalConsultationForm2.default, null);
 	      } else if (requirementType === '104') {
-	        serviceForm = _react2.default.createElement(_CollectionLetterForm2.default, { requirementType: requirementType });
+	        serviceForm = _react2.default.createElement(_CollectionLetterForm2.default, null);
 	      } else if (requirementType === '105') {
-	        serviceForm = _react2.default.createElement(_LawyerLetterForm2.default, { requirementType: requirementType });
+	        serviceForm = _react2.default.createElement(_LawyerLetterForm2.default, null);
 	      } else if (offlineServiceTypes.indexOf(requirementType) !== -1) {
-	        serviceForm = _react2.default.createElement(_OfflineServiceForm2.default, { requirementType: requirementType });
+	        serviceForm = _react2.default.createElement(_OfflineServiceForm2.default, null);
 	      } else {
 	        //TODO 判断requirementType非法的情况！！！
 
@@ -26800,7 +26800,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.service-requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .service-requirement-detail .requirement-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n  .service-requirement-detail .requirement-detail {\n    min-width: 600px;\n    max-width: 800px;\n    margin: 0 auto;\n    padding: 30px 0; }\n    .service-requirement-detail .requirement-detail .workflow {\n      margin: 30px 50px 0 50px;\n      border-top: 1px #edeef2 solid;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .workflow .node {\n        display: inline-block;\n        font-size: 16px;\n        color: #808080;\n        margin-top: -17px; }\n        .service-requirement-detail .requirement-detail .workflow .node img {\n          width: 34px;\n          height: 34px;\n          margin-bottom: 15px; }\n      .service-requirement-detail .requirement-detail .workflow .edit {\n        float: left;\n        margin-left: -50px; }\n      .service-requirement-detail .requirement-detail .workflow .complete {\n        float: right;\n        margin-right: -50px; }\n    .service-requirement-detail .requirement-detail .sponsor-info {\n      margin-top: 50px; }\n    .service-requirement-detail .requirement-detail .requirement-form {\n      margin-top: 30px;\n      padding-top: 25px; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-header {\n        border-top: 1px #edeef2 solid; }\n        .service-requirement-detail .requirement-detail .requirement-form .form-header .title {\n          font-size: 16px;\n          color: #333;\n          text-align: center;\n          line-height: 30px;\n          width: 150px;\n          border: 1px #edeef2 solid;\n          border-radius: 20px;\n          background-color: #fff;\n          position: relative;\n          top: -17px;\n          margin: 0 auto; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-detail {\n        margin-top: 25px; }\n        .service-requirement-detail .requirement-detail .requirement-form .form-detail .requirement-help {\n          padding: 10px;\n          background-color: #edeef2;\n          font-size: 12px;\n          color: #808080;\n          display: block;\n          line-height: 20px;\n          margin-bottom: 25px; }\n          .service-requirement-detail .requirement-detail .requirement-form .form-detail .requirement-help .title {\n            font-size: 16px;\n            color: #222; }\n    .service-requirement-detail .requirement-detail .submit-box .checkbox-inline {\n      margin: 25px 0;\n      font-size: 16px;\n      color: #808080; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline input[type=checkbox] {\n        margin-top: 0; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a {\n        color: #4f6584; }\n        .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a:hover {\n          color: #01c5e8; }\n    .service-requirement-detail .requirement-detail .submit-box .btn-toolbar {\n      margin: 15px 0;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar .help-block {\n        height: 14px;\n        color: #ff3333; }\n    .service-requirement-detail .requirement-detail .form-group {\n      margin-bottom: 15px; }\n      .service-requirement-detail .requirement-detail .form-group .control-label {\n        font-size: 16px;\n        color: #222;\n        margin-bottom: 10px; }\n        .service-requirement-detail .requirement-detail .form-group .control-label .required {\n          color: red; }\n        .service-requirement-detail .requirement-detail .form-group .control-label .tip {\n          font-size: 12px;\n          color: #808080;\n          margin-left: 10px; }\n      .service-requirement-detail .requirement-detail .form-group input.form-control {\n        height: auto;\n        line-height: 1.65;\n        font-size: 16px; }\n      .service-requirement-detail .requirement-detail .form-group input.form-control[readonly] {\n        background-color: #fff; }\n        .service-requirement-detail .requirement-detail .form-group input.form-control[readonly]:focus {\n          border-color: #edeef2;\n          box-shadow: none; }\n      .service-requirement-detail .requirement-detail .form-group input.file-upload {\n        display: inline-block;\n        width: 670px; }\n      .service-requirement-detail .requirement-detail .form-group input[hidden] {\n        display: none; }\n      .service-requirement-detail .requirement-detail .form-group button.chose-file {\n        float: right; }\n      .service-requirement-detail .requirement-detail .form-group .file-name {\n        line-height: 30px;\n        font-size: 16px; }\n        .service-requirement-detail .requirement-detail .form-group .file-name .fa-file-text {\n          margin-right: 10px;\n          color: #4f6584; }\n        .service-requirement-detail .requirement-detail .form-group .file-name .fa-times-circle {\n          margin-left: 10px;\n          color: #4f6584;\n          cursor: pointer; }\n      .service-requirement-detail .requirement-detail .form-group textarea.form-control {\n        resize: none;\n        min-height: 115px; }\n      .service-requirement-detail .requirement-detail .form-group .help-block {\n        height: 14px;\n        color: #ff3333; }\n    .service-requirement-detail .requirement-detail .has-success .form-control {\n      border-color: #ccc; }\n    .service-requirement-detail .requirement-detail .btn {\n      min-width: 100px;\n      line-height: 1.8;\n      border: none;\n      font-size: 16px;\n      float: none; }\n    .service-requirement-detail .requirement-detail button[type=button] {\n      color: #4f6584;\n      background-color: #edeef2;\n      margin-right: 70px; }\n      .service-requirement-detail .requirement-detail button[type=button]:hover {\n        background-color: #e0e3ed; }\n    .service-requirement-detail .requirement-detail button[type=submit] {\n      color: #fff;\n      background-color: #4f6584; }\n      .service-requirement-detail .requirement-detail button[type=submit]:hover {\n        background-color: #505666; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* Variables */\n/* Styles */\nbody {\n  margin: 0;\n  font: 14px \"Heiti SC\", \"Helvetica  Neue\", Arial, \"Microsoft YaHei\", \"\\5FAE\\8F6F\\96C5\\9ED1\", \"STHeiti\", SimSun, sans-serif;\n  color: #222;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  background-color: #edeef2; }\n\nul {\n  list-style: none; }\n\na {\n  text-decoration: none; }\n  a:hover, a:visited, a a:focus {\n    text-decoration: none; }\n\n.btn {\n  min-width: 100px;\n  line-height: 1.8;\n  border: none;\n  font-size: 16px;\n  outline: none; }\n  .btn:focus {\n    outline: none; }\n\n.service-requirement-detail {\n  margin: 30px 0 0 30px;\n  background-color: #fff;\n  border-radius: 4px; }\n  .service-requirement-detail .requirement-header {\n    padding: 20px;\n    font-size: 20px;\n    color: #222;\n    border-bottom: 1px #edeef2 solid; }\n  .service-requirement-detail .requirement-detail {\n    min-width: 600px;\n    max-width: 800px;\n    margin: 0 auto;\n    padding: 30px 0; }\n    .service-requirement-detail .requirement-detail .workflow {\n      margin: 30px 50px 0 50px;\n      border-top: 1px #edeef2 solid;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .workflow .node {\n        display: inline-block;\n        font-size: 16px;\n        color: #808080;\n        margin-top: -17px; }\n        .service-requirement-detail .requirement-detail .workflow .node img {\n          width: 34px;\n          height: 34px;\n          margin-bottom: 15px; }\n      .service-requirement-detail .requirement-detail .workflow .edit {\n        float: left;\n        margin-left: -50px; }\n      .service-requirement-detail .requirement-detail .workflow .complete {\n        float: right;\n        margin-right: -50px; }\n    .service-requirement-detail .requirement-detail .sponsor-info {\n      margin-top: 50px; }\n    .service-requirement-detail .requirement-detail .requirement-form {\n      margin-top: 30px;\n      padding-top: 25px; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-header {\n        border-top: 1px #edeef2 solid; }\n        .service-requirement-detail .requirement-detail .requirement-form .form-header .title {\n          font-size: 16px;\n          color: #333;\n          text-align: center;\n          line-height: 30px;\n          width: 150px;\n          border: 1px #edeef2 solid;\n          border-radius: 20px;\n          background-color: #fff;\n          position: relative;\n          top: -17px;\n          margin: 0 auto; }\n      .service-requirement-detail .requirement-detail .requirement-form .form-detail {\n        margin-top: 25px; }\n        .service-requirement-detail .requirement-detail .requirement-form .form-detail .requirement-help {\n          padding: 10px;\n          background-color: #edeef2;\n          font-size: 12px;\n          color: #808080;\n          display: block;\n          line-height: 20px;\n          margin-bottom: 25px; }\n          .service-requirement-detail .requirement-detail .requirement-form .form-detail .requirement-help .title {\n            font-size: 16px;\n            color: #222; }\n    .service-requirement-detail .requirement-detail .submit-box .checkbox-inline {\n      margin: 25px 0;\n      font-size: 16px;\n      color: #808080; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline input[type=checkbox] {\n        margin-top: 0; }\n      .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a {\n        color: #4f6584; }\n        .service-requirement-detail .requirement-detail .submit-box .checkbox-inline a:hover {\n          color: #01c5e8; }\n    .service-requirement-detail .requirement-detail .submit-box .btn-toolbar {\n      margin: 15px 0;\n      text-align: center; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar .help-block {\n        height: 14px;\n        color: #ff3333; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button.cancle {\n        color: #4f6584;\n        background-color: #edeef2;\n        float: none;\n        margin-right: 70px; }\n        .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button.cancle:hover {\n          background-color: #e0e3ed; }\n      .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button.submit {\n        color: #fff;\n        background-color: #4f6584;\n        float: none; }\n        .service-requirement-detail .requirement-detail .submit-box .btn-toolbar button.submit:hover {\n          background-color: #505666; }\n    .service-requirement-detail .requirement-detail .form-group {\n      margin-bottom: 15px; }\n      .service-requirement-detail .requirement-detail .form-group .control-label {\n        font-size: 16px;\n        color: #222;\n        margin-bottom: 10px; }\n        .service-requirement-detail .requirement-detail .form-group .control-label .required {\n          color: red; }\n        .service-requirement-detail .requirement-detail .form-group .control-label .tip {\n          font-size: 12px;\n          color: #808080;\n          margin-left: 10px; }\n      .service-requirement-detail .requirement-detail .form-group input.form-control {\n        height: auto;\n        line-height: 1.65;\n        font-size: 16px; }\n      .service-requirement-detail .requirement-detail .form-group .help-block {\n        height: 14px;\n        color: #ff3333; }\n    .service-requirement-detail .requirement-detail .form-group.has-success .form-control {\n      border-color: #ccc; }\n    .service-requirement-detail .requirement-detail .form-group.file-upload-field input.form-control[readonly] {\n      background-color: #fff; }\n      .service-requirement-detail .requirement-detail .form-group.file-upload-field input.form-control[readonly]:focus {\n        border-color: #edeef2;\n        box-shadow: none; }\n    .service-requirement-detail .requirement-detail .form-group.file-upload-field input.file-upload {\n      display: inline-block;\n      width: 670px; }\n    .service-requirement-detail .requirement-detail .form-group.file-upload-field input[hidden] {\n      display: none; }\n    .service-requirement-detail .requirement-detail .form-group.file-upload-field button {\n      color: #fff;\n      background-color: #4f6584;\n      float: right; }\n      .service-requirement-detail .requirement-detail .form-group.file-upload-field button:hover {\n        background-color: #505666; }\n    .service-requirement-detail .requirement-detail .form-group.file-upload-field .file-name {\n      line-height: 30px;\n      font-size: 16px; }\n      .service-requirement-detail .requirement-detail .form-group.file-upload-field .file-name .fa-file-text {\n        margin-right: 10px;\n        color: #4f6584; }\n      .service-requirement-detail .requirement-detail .form-group.file-upload-field .file-name .fa-times-circle {\n        margin-left: 10px;\n        color: #4f6584;\n        cursor: pointer; }\n    .service-requirement-detail .requirement-detail .form-group.textarea-field textarea.form-control {\n      resize: none;\n      min-height: 115px; }\n    .service-requirement-detail .requirement-detail .form-group.dropdown-field {\n      line-height: 40px; }\n      .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown {\n        float: right;\n        width: 600px; }\n        .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown .dropdown-toggle {\n          float: none;\n          position: relative;\n          border: 1px solid #ccc;\n          border-radius: 4px;\n          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n          text-align: left;\n          color: #808080;\n          width: 100%; }\n          .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown .dropdown-toggle:hover {\n            background-color: #fff; }\n          .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown .dropdown-toggle .caret {\n            position: absolute;\n            right: 15px;\n            top: 0;\n            bottom: 0;\n            margin: auto; }\n        .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown .dropdown-menu {\n          width: 100%; }\n      .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown.open .dropdown-toggle:hover, .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown.open .dropdown-toggle:focus {\n        background-color: #fff; }\n      .service-requirement-detail .requirement-detail .form-group.dropdown-field .dropdown.open .dropdown-toggle .caret {\n        border-top: none;\n        border-bottom: 4px dashed; }\n\n.form-close {\n  cursor: pointer;\n  float: right;\n  position: relative;\n  display: inline-block;\n  width: 25px;\n  height: 25px;\n  overflow: hidden; }\n  .form-close::before, .form-close::after {\n    content: '';\n    position: absolute;\n    height: 2px;\n    width: 100%;\n    top: 50%;\n    left: 0;\n    margin-top: -1px;\n    background: #4f6584;\n    border-radius: 5px; }\n  .form-close::before {\n    transform: rotate(45deg); }\n  .form-close::after {\n    transform: rotate(-45deg); }\n  .form-close:hover::before, .form-close:hover::after {\n    background-color: #01c5e8; }\n", ""]);
 
 	// exports
 
@@ -27013,8 +27013,7 @@
 	                    ),
 	                    _react2.default.createElement(_TextareaField2.default, {
 	                        required: false,
-	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
-	                        labelDesc: '\u8BF7\u4E0A\u4F20\u9700\u8981\u5BA1\u67E5\u7684\u5408\u540C\u6587\u6863\u3002',
+	                        labelTitle: '\u5176\u4ED6\u8981\u6C42',
 	                        placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u5BA1\u67E5\u5408\u540C\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u5173\u4E8E\u672C\u5408\u540C\u7684\u7B7E\u8BA2\u80CC\u666F\u3001\u60A8\u6240\u5E0C\u671B\u91CD\u70B9\u5173\u6CE8\u7684\u5408\u540C\u6761\u6B3E\uFF0C\u6216\u8005\u5176\u4ED6\u60A8\u5BF9\u672C\u6B21\u5BA1\u67E5\u7684\u7279\u6B8A\u9700\u6C42\uFF0C\u52A0\u6025\u5B8C\u6210\u7B49',
 	                        onTextareaValueChange: function onTextareaValueChange(otherRequirement) {
 	                            return _this3.handleOtherRequirementChange(otherRequirement);
@@ -46163,7 +46162,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _reactBootstrap.FormGroup,
-	                { controlId: 'formBasicText' },
+	                { className: 'file-upload-field', controlId: 'formBasicText' },
 	                _react2.default.createElement(
 	                    _reactBootstrap.ControlLabel,
 	                    null,
@@ -46188,7 +46187,7 @@
 	                }),
 	                _react2.default.createElement(
 	                    _reactBootstrap.Button,
-	                    { className: 'chose-file', type: 'submit', disabled: this.state.selectedFileName.length > 0, onClick: this.handleFileChoose },
+	                    { className: 'chose-file', disabled: this.state.selectedFileName.length > 0, onClick: this.handleFileChoose },
 	                    '\u70B9\u51FB\u4E0A\u4F20'
 	                ),
 	                _react2.default.createElement('input', { type: 'file', name: 'uploadFile', hidden: true, ref: 'fileInput', onChange: this.handleFileChange }),
@@ -46308,7 +46307,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                _reactBootstrap.FormGroup,
-	                { controlId: 'formControlsTextarea', validationState: this.state.textareaValueValidationState },
+	                { className: 'textarea-field', controlId: 'formControlsTextarea', validationState: this.state.textareaValueValidationState },
 	                _react2.default.createElement(
 	                    _reactBootstrap.ControlLabel,
 	                    null,
@@ -46473,14 +46472,14 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Button,
-	                        { onClick: function onClick() {
+	                        { className: 'cancle', onClick: function onClick() {
 	                                return _this2.toggleShowCancleModel(true);
 	                            } },
 	                        '\u53D6\u6D88'
 	                    ),
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Button,
-	                        { type: 'submit', disabled: !this.props.agreeProtocol || !this.state.agreeProtocol, onClick: function onClick() {
+	                        { className: 'submit', disabled: !this.props.agreeProtocol || !this.state.agreeProtocol, onClick: function onClick() {
 	                                return _this2.toggleShowSubmitModel(true);
 	                            } },
 	                        this.props.agreeProtocol ? '提交' : '提交中...'
@@ -46571,7 +46570,7 @@
 /* 504 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -46583,7 +46582,45 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Workflow = __webpack_require__(247);
+
+	var _Workflow2 = _interopRequireDefault(_Workflow);
+
+	var _SponsorInfo = __webpack_require__(248);
+
+	var _SponsorInfo2 = _interopRequireDefault(_SponsorInfo);
+
+	var _RequirementForm = __webpack_require__(500);
+
+	var _RequirementForm2 = _interopRequireDefault(_RequirementForm);
+
+	var _DropdownField = __webpack_require__(510);
+
+	var _DropdownField2 = _interopRequireDefault(_DropdownField);
+
+	var _FileUploadField = __webpack_require__(501);
+
+	var _FileUploadField2 = _interopRequireDefault(_FileUploadField);
+
+	var _TextareaField = __webpack_require__(502);
+
+	var _TextareaField2 = _interopRequireDefault(_TextareaField);
+
+	var _SubmitBox = __webpack_require__(503);
+
+	var _SubmitBox2 = _interopRequireDefault(_SubmitBox);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _reactBootstrap = __webpack_require__(249);
+
+	var _Validator = __webpack_require__(499);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -46597,23 +46634,205 @@
 	var ContractCreationForm = function (_React$Component) {
 	    _inherits(ContractCreationForm, _React$Component);
 
-	    function ContractCreationForm() {
+	    function ContractCreationForm(props) {
 	        _classCallCheck(this, ContractCreationForm);
 
-	        return _possibleConstructorReturn(this, (ContractCreationForm.__proto__ || Object.getPrototypeOf(ContractCreationForm)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (ContractCreationForm.__proto__ || Object.getPrototypeOf(ContractCreationForm)).call(this, props));
+
+	        _this.handleSponsorInfoChange = _this.handleSponsorInfoChange.bind(_this);
+	        _this.handleContractTypeChange = _this.handleContractTypeChange.bind(_this);
+	        _this.handleFileChange = _this.handleFileChange.bind(_this);
+	        _this.handleOtherRequirementChange = _this.handleOtherRequirementChange.bind(_this);
+
+	        _this.validateFormData = _this.validateFormData.bind(_this);
+	        _this.handleContractTypeChange = _this.handleContractTypeChange.bind(_this);
+
+	        var contractTypes = [{
+	            value: 1,
+	            name: '日常经营合同（如买卖合同、合同协议等）'
+	        }, {
+	            value: 2,
+	            name: '劳动人事合同（如劳动合同、实习协议等）'
+	        }, {
+	            value: 3,
+	            name: '租赁合同（如房屋、柜台、车辆租赁等）'
+	        }, {
+	            value: 4,
+	            name: '规章制度（员工手册、公司章程等）'
+	        }, {
+	            value: 5,
+	            name: '互联网有关合同（如用户协议、网站转让协议等）'
+	        }, {
+	            value: 6,
+	            name: '知识产权合同（如商标、肖像权、专利转让等）'
+	        }, {
+	            value: 7,
+	            name: '其他'
+	        }];
+
+	        _this.state = {
+	            agreeProtocol: true, //是否同意用户协议
+	            sponsorName: '于永雨',
+	            phoneNumber: '13020072525',
+	            selectedContractType: {
+	                value: null,
+	                name: '---请选择---'
+	            },
+	            contractTypes: contractTypes,
+	            otherRequirement: '', //其他要求
+	            attachments: null, //上传的附件
+	            validattionFailedInfo: '' //提交前校验的错误信息
+	        };
+	        return _this;
 	    }
 
 	    _createClass(ContractCreationForm, [{
-	        key: "render",
+	        key: 'validateContractType',
+	        value: function validateContractType(contractType) {
+	            if (!contractType) {
+	                return '请选择您要起草的合同类型！';
+	            } else {
+	                return null;
+	            }
+	        }
+	    }, {
+	        key: 'validateFormData',
+	        value: function validateFormData() {
+	            var validattionFailedInfo = '';
+	            var sponsorNameValidattionFailedInfo = _Validator2.default.validateSponsorName(this.state.sponsorName);
+	            var phoneNameValidattionFailedInfo = _Validator2.default.validatePhoneNumber(this.state.phoneNumber);
+	            var contractTypeValidattionFailedInfo = this.validateContractType(this.state.selectedContractType.value);
+	            var fileValidattionFailedInfo = _Validator2.default.validateUploadedFile(this.state.selectedFile);
+	            var otherRequirementValidattionFailedInfo = _Validator2.default.validateTextareaValue(this.state.otherRequirement);
+
+	            if (sponsorNameValidattionFailedInfo) {
+	                validattionFailedInfo = sponsorNameValidattionFailedInfo;
+	            } else if (phoneNameValidattionFailedInfo) {
+	                validattionFailedInfo = phoneNameValidattionFailedInfo;
+	            } else if (contractTypeValidattionFailedInfo) {
+	                validattionFailedInfo = contractTypeValidattionFailedInfo;
+	            } else if (fileValidattionFailedInfo) {
+	                validattionFailedInfo = fileValidattionFailedInfo;
+	            } else if (otherRequirementValidattionFailedInfo) {
+	                validattionFailedInfo = otherRequirementValidattionFailedInfo;
+	            }
+
+	            if (validattionFailedInfo && validattionFailedInfo.length > 0) {
+	                this.handleStateChange('validattionFailedInfo', validattionFailedInfo);
+	                return false;
+	            } else {
+	                this.handleStateChange('validattionFailedInfo', '');
+	                return true;
+	            }
+	        }
+	    }, {
+	        key: 'handleStateChange',
+	        value: function handleStateChange(key, value) {
+	            this.setState(_defineProperty({}, key, value));
+	        }
+	    }, {
+	        key: 'handleSponsorInfoChange',
+	        value: function handleSponsorInfoChange(infoName, value) {
+	            this.handleStateChange(infoName, value);
+	        }
+	    }, {
+	        key: 'handleContractTypeChange',
+	        value: function handleContractTypeChange(selectedContractType) {
+	            this.handleStateChange('selectedContractType', selectedContractType);
+	        }
+	    }, {
+	        key: 'handleOtherRequirementChange',
+	        value: function handleOtherRequirementChange(otherRequirement) {
+	            this.handleStateChange('otherRequirement', otherRequirement);
+	        }
+	    }, {
+	        key: 'handleFileChange',
+	        value: function handleFileChange(selectedFile) {
+	            this.handleStateChange('selectedFile', selectedFile);
+	        }
+	    }, {
+	        key: 'handleFormSubmit',
+	        value: function handleFormSubmit() {
+	            this.handleStateChange('agreeProtocol', false);
+
+	            var submitData = {
+	                orderSource: 1,
+	                contactsName: this.state.sponsorName,
+	                contactsMobileNumber: this.state.phoneNumber,
+	                contractDraftType: this.state.selectedContractType.value,
+	                attachments: this.state.selectedFile, //上传的附件
+	                userComment: this.state.otherRequirement };
+
+	            console.log(submitData);
+	            setTimeout(function () {
+	                var _this2 = this;
+
+	                (function () {
+	                    return _this2.handleStateChange('agreeProtocol', true);
+	                }); //箭头函数将this指向引用函数的上下文
+	                _reactRouter.browserHistory.push('/orders');
+	            }, 3000);
+	        }
+	    }, {
+	        key: 'render',
 	        value: function render() {
+	            var _this3 = this;
+
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "legal-service-row" },
+	                'div',
+	                { className: 'requirement-detail' },
+	                _react2.default.createElement(_Workflow2.default, null),
+	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneNumber, onSponsorInfoChange: function onSponsorInfoChange(infoName, value) {
+	                        return _this3.handleSponsorInfoChange(infoName, value);
+	                    } }),
 	                _react2.default.createElement(
-	                    "h1",
+	                    _RequirementForm2.default,
 	                    null,
-	                    "\u5408\u540C\u8D77\u8349\u8868\u5355"
-	                )
+	                    _react2.default.createElement(_DropdownField2.default, {
+	                        id: 'contract-type-dropdown',
+	                        required: true,
+	                        labelTitle: '\u60A8\u8981\u8D77\u8349\u4EC0\u4E48\u5408\u540C\uFF1F',
+	                        selectedItem: this.state.selectedContractType,
+	                        dropdownMenu: this.state.contractTypes,
+	                        onSelectedItemChange: function onSelectedItemChange(selectedContractType) {
+	                            return _this3.handleContractTypeChange(selectedContractType);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_FileUploadField2.default, {
+	                        required: false,
+	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
+	                        labelDesc: '\u8BF7\u4E0A\u4F20\u60A8\u8BA4\u4E3A\u6709\u52A9\u4E8E\u987E\u95EE\u548C\u5F8B\u5E08\u4E86\u89E3\u95EE\u9898\u7684\u6750\u6599\u3002',
+	                        placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09',
+	                        onFileChange: function onFileChange(selectedFile) {
+	                            return _this3.handleFileChange(selectedFile);
+	                        }
+	                    }),
+	                    _react2.default.createElement(
+	                        _reactBootstrap.HelpBlock,
+	                        { bsClass: 'requirement-help' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'title' },
+	                            '\u9884\u8BA1\u5408\u540C\u8D77\u8349\u5B8C\u6210\u65F6\u95F4\uFF1A3\u4E2A\u5DE5\u4F5C\u65E5'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            '\u4E3A\u4FDD\u8BC1\u5408\u540C\u8D77\u8349\u8D28\u91CF\uFF0C\u4E00\u4EFD\u5408\u540C\u9700\u89813\u4E2A\u5DE5\u4F5C\u65E5\u5B8C\u6210\uFF0C\u9047\u6709\u8282\u5047\u65E5\u5219\u4F1A\u987A\u5EF6\u3002\u5982\u60A8\u6709\u7279\u522B\u52A0\u6025\u9700\u6C42\uFF0C\u8BF7\u5728\u5176\u4ED6\u8981\u6C42\u5904\u586B\u5199\u3002'
+	                        )
+	                    ),
+	                    _react2.default.createElement(_TextareaField2.default, {
+	                        required: false,
+	                        labelTitle: '\u5176\u4ED6\u8981\u6C42',
+	                        placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u8D77\u8349\u5408\u540C\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u5173\u4E8E\u672C\u5408\u540C\u7684\u7B7E\u8BA2\u80CC\u666F\u3001\u60A8\u6240\u5E0C\u671B\u91CD\u70B9\u5173\u6CE8\u7684\u5408\u540C\u6761\u6B3E\uFF0C\u6216\u8005\u5176\u4ED6\u60A8\u5BF9\u672C\u6B21\u8D77\u8349\u7684\u7279\u6B8A\u9700\u6C42\uFF0C\u52A0\u6025\u5B8C\u6210\u7B49',
+	                        onTextareaValueChange: function onTextareaValueChange(otherRequirement) {
+	                            return _this3.handleOtherRequirementChange(otherRequirement);
+	                        }
+	                    })
+	                ),
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onFormDataValidate: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
+	                        return _this3.handleFormSubmit();
+	                    } })
 	            );
 	        }
 	    }]);
@@ -47033,6 +47252,144 @@
 	    );
 	  }
 	});
+
+/***/ },
+/* 510 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(249);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/10.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	/**
+	 *     props
+	 * 1.id string (required)
+	 * 2.required boolean (required)
+	 * 3.labelName string （required）
+	 * 4.selectedItem{
+	 *      value(int),
+	 *      name(string)
+	 * } object (required)
+	 *
+	 * 5.dropdownMenu[
+	 *      {
+	 *         value(int),
+	 *          name(string)
+	 *      }
+	 * ] (required)
+	 * 5.onSelectedItemChange function (required)
+	 *
+	 * */
+
+	var DropdownField = function (_React$Component) {
+	    _inherits(DropdownField, _React$Component);
+
+	    function DropdownField(props) {
+	        _classCallCheck(this, DropdownField);
+
+	        var _this = _possibleConstructorReturn(this, (DropdownField.__proto__ || Object.getPrototypeOf(DropdownField)).call(this, props));
+
+	        _this.handleMenuItemSelect = _this.handleMenuItemSelect.bind(_this);
+
+	        return _this;
+	    }
+
+	    _createClass(DropdownField, [{
+	        key: 'handleMenuItemSelect',
+	        value: function handleMenuItemSelect(itemValue) {
+	            var selectedItem = null;
+	            var _iteratorNormalCompletion = true;
+	            var _didIteratorError = false;
+	            var _iteratorError = undefined;
+
+	            try {
+	                for (var _iterator = this.props.dropdownMenu[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	                    var menuItem = _step.value;
+
+	                    if (menuItem.value === itemValue) {
+	                        selectedItem = menuItem;
+	                        break;
+	                    }
+	                }
+	            } catch (err) {
+	                _didIteratorError = true;
+	                _iteratorError = err;
+	            } finally {
+	                try {
+	                    if (!_iteratorNormalCompletion && _iterator.return) {
+	                        _iterator.return();
+	                    }
+	                } finally {
+	                    if (_didIteratorError) {
+	                        throw _iteratorError;
+	                    }
+	                }
+	            }
+
+	            if (selectedItem) {
+	                this.props.onSelectedItemChange(selectedItem);
+	            }
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+
+	            return _react2.default.createElement(
+	                _reactBootstrap.FormGroup,
+	                { className: 'dropdown-field' },
+	                _react2.default.createElement(
+	                    _reactBootstrap.ControlLabel,
+	                    null,
+	                    this.props.required ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'required' },
+	                        '*'
+	                    ) : '',
+	                    this.props.labelTitle
+	                ),
+	                _react2.default.createElement(
+	                    _reactBootstrap.DropdownButton,
+	                    { title: this.props.selectedItem.name, id: this.props.id, onSelect: function onSelect(itemValue) {
+	                            return _this2.handleMenuItemSelect(itemValue);
+	                        } },
+	                    this.props.dropdownMenu.map(function (menuItem, index) {
+	                        return _react2.default.createElement(
+	                            _reactBootstrap.MenuItem,
+	                            { eventKey: menuItem.value, key: index },
+	                            menuItem.name
+	                        );
+	                    })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return DropdownField;
+	}(_react2.default.Component);
+
+	exports.default = DropdownField;
 
 /***/ }
 /******/ ]);
