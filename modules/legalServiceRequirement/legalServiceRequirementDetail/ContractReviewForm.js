@@ -5,10 +5,11 @@ import React from 'react'
 import Workflow from './components/Workflow'
 import SponsorInfo from './components/SponsorInfo'
 import RequirementForm from './components/RequirementForm'
-import FileUpload from './components/FileUpload'
+import FileUploadField from './components/FileUploadField'
+import TextareaField from './components/TextareaField'
 import SubmitBox from './components/SubmitBox'
 import { browserHistory } from 'react-router'
-import {FormGroup, ControlLabel, FormControl, HelpBlock, Button} from 'react-bootstrap'
+import {HelpBlock} from 'react-bootstrap'
 import Validator from './components/Validator'
 
 class ContractReviewForm extends React.Component{
@@ -44,13 +45,7 @@ class ContractReviewForm extends React.Component{
         });
     }
 
-    validateOtherRequirement(otherRequirement){
-        if(otherRequirement && otherRequirement.length >= 5){
-            return '不得超过500个字！'
-        }else{
-            return null
-        }
-    }
+
 
     validateFile(file){
         if(!file){
@@ -67,7 +62,7 @@ class ContractReviewForm extends React.Component{
         let validattionFailedInfo = ''
         const sponsorNameValidattionFailedInfo = Validator.validateSponsorName(this.state.sponsorName)
         const phoneNameValidattionFailedInfo = Validator.validatePhoneNumber(this.state.phoneName)
-        const otherRequirementValidattionFailedInfo = this.validateOtherRequirement(this.state.otherRequirement)
+        const otherRequirementValidattionFailedInfo = Validator.validateTextareaValue(this.state.otherRequirement)
         const fileValidattionFailedInfo = this.validateFile(this.state.selectedFile)
 
         if(sponsorNameValidattionFailedInfo){
@@ -94,22 +89,13 @@ class ContractReviewForm extends React.Component{
         this.handleStateChange(infoName, value)
     }
 
-    handleOtherRequirementChange(e){
-        const otherRequirement = e.target.value
-
+    handleOtherRequirementChange(otherRequirement){
         this.handleStateChange('otherRequirement', otherRequirement)
-
-        if(this.validateOtherRequirement(otherRequirement)){
-            this.handleStateChange('otherRequirementValidationState', 'error')
-        }else{
-            this.handleStateChange('otherRequirementValidationState', 'success')
-        }
     }
 
     handleFileChange(selectedFile){
         this.handleStateChange('selectedFile', selectedFile)
     }
-    
 
     handleFormSubmit(){
         this.handleStateChange('agreeProtocol', false)
@@ -141,28 +127,22 @@ class ContractReviewForm extends React.Component{
 
                 {/**需求表单**/}
                 <RequirementForm>
-                    <FileUpload
+                    <FileUploadField
                         required={true}
                         labelTitle="上传附件"
                         labelDesc="请上传需要审查的合同文档。"
                         onFileChange={(selectedFile) => this.handleFileChange(selectedFile)}
                     />
-
                     <HelpBlock bsClass="requirement-help">
                         <div className="title">预计合同审查完成时间：2个工作日</div>
                         <div>为保证合同审查质量，一份合同需要2个工作日完成，遇有节假日则会顺延。如您有特别加急需求，请在其他要求处填写。</div>
                     </HelpBlock>
-
-                    <FormGroup controlId="formControlsTextarea" validationState={this.state.otherRequirementValidationState}>
-                        <ControlLabel>其他要求</ControlLabel>
-                        <FormControl
-                            componentClass="textarea"
-                            placeholder="请在此输入您对审查合同的要求，例如：关于本合同的签订背景、您所希望重点关注的合同条款，或者其他您对本次审查的特殊需求，加急完成等"
-                            onChange={this.handleOtherRequirementChange}
-                        />
-                        <HelpBlock>{this.state.otherRequirementValidationFailedInfo}</HelpBlock>
-                    </FormGroup>
-
+                    <TextareaField
+                        required={false}
+                        labelTitle="上传附件"
+                        labelDesc="请上传需要审查的合同文档。"
+                        onTextareaValueChange={(otherRequirement) => this.handleOtherRequirementChange(otherRequirement)}
+                    />
                 </RequirementForm>
 
                 {/**提交区域**/}

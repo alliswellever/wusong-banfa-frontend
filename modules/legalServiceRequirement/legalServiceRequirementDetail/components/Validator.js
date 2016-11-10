@@ -39,6 +39,14 @@ class Validator{
         }
     }
 
+    validateTextareaValue(textareaValue){
+        if(textareaValue && textareaValue.length >= 5){
+            return '不得超过500个字！'
+        }else{
+            return null
+        }
+    }
+
 }
 
 export default new Validator()

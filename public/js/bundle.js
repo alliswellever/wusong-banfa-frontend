@@ -70,7 +70,7 @@
 
 	var _LegalServiceRequirementDetail2 = _interopRequireDefault(_LegalServiceRequirementDetail);
 
-	var _LegalServiceOrders = __webpack_require__(507);
+	var _LegalServiceOrders = __webpack_require__(509);
 
 	var _LegalServiceOrders2 = _interopRequireDefault(_LegalServiceOrders);
 
@@ -26661,23 +26661,23 @@
 
 	var _ContractReviewForm2 = _interopRequireDefault(_ContractReviewForm);
 
-	var _ContractCreationForm = __webpack_require__(502);
+	var _ContractCreationForm = __webpack_require__(504);
 
 	var _ContractCreationForm2 = _interopRequireDefault(_ContractCreationForm);
 
-	var _LegalConsultationForm = __webpack_require__(503);
+	var _LegalConsultationForm = __webpack_require__(505);
 
 	var _LegalConsultationForm2 = _interopRequireDefault(_LegalConsultationForm);
 
-	var _CollectionLetterForm = __webpack_require__(504);
+	var _CollectionLetterForm = __webpack_require__(506);
 
 	var _CollectionLetterForm2 = _interopRequireDefault(_CollectionLetterForm);
 
-	var _LawyerLetterForm = __webpack_require__(505);
+	var _LawyerLetterForm = __webpack_require__(507);
 
 	var _LawyerLetterForm2 = _interopRequireDefault(_LawyerLetterForm);
 
-	var _OfflineServiceForm = __webpack_require__(506);
+	var _OfflineServiceForm = __webpack_require__(508);
 
 	var _OfflineServiceForm2 = _interopRequireDefault(_OfflineServiceForm);
 
@@ -26832,11 +26832,15 @@
 
 	var _RequirementForm2 = _interopRequireDefault(_RequirementForm);
 
-	var _FileUpload = __webpack_require__(509);
+	var _FileUploadField = __webpack_require__(501);
 
-	var _FileUpload2 = _interopRequireDefault(_FileUpload);
+	var _FileUploadField2 = _interopRequireDefault(_FileUploadField);
 
-	var _SubmitBox = __webpack_require__(501);
+	var _TextareaField = __webpack_require__(502);
+
+	var _TextareaField2 = _interopRequireDefault(_TextareaField);
+
+	var _SubmitBox = __webpack_require__(503);
 
 	var _SubmitBox2 = _interopRequireDefault(_SubmitBox);
 
@@ -26899,15 +26903,6 @@
 	            this.setState(_defineProperty({}, key, value));
 	        }
 	    }, {
-	        key: 'validateOtherRequirement',
-	        value: function validateOtherRequirement(otherRequirement) {
-	            if (otherRequirement && otherRequirement.length >= 5) {
-	                return '不得超过500个字！';
-	            } else {
-	                return null;
-	            }
-	        }
-	    }, {
 	        key: 'validateFile',
 	        value: function validateFile(file) {
 	            if (!file) {
@@ -26924,7 +26919,7 @@
 	            var validattionFailedInfo = '';
 	            var sponsorNameValidattionFailedInfo = _Validator2.default.validateSponsorName(this.state.sponsorName);
 	            var phoneNameValidattionFailedInfo = _Validator2.default.validatePhoneNumber(this.state.phoneName);
-	            var otherRequirementValidattionFailedInfo = this.validateOtherRequirement(this.state.otherRequirement);
+	            var otherRequirementValidattionFailedInfo = _Validator2.default.validateTextareaValue(this.state.otherRequirement);
 	            var fileValidattionFailedInfo = this.validateFile(this.state.selectedFile);
 
 	            if (sponsorNameValidattionFailedInfo) {
@@ -26952,16 +26947,8 @@
 	        }
 	    }, {
 	        key: 'handleOtherRequirementChange',
-	        value: function handleOtherRequirementChange(e) {
-	            var otherRequirement = e.target.value;
-
+	        value: function handleOtherRequirementChange(otherRequirement) {
 	            this.handleStateChange('otherRequirement', otherRequirement);
-
-	            if (this.validateOtherRequirement(otherRequirement)) {
-	                this.handleStateChange('otherRequirementValidationState', 'error');
-	            } else {
-	                this.handleStateChange('otherRequirementValidationState', 'success');
-	            }
 	        }
 	    }, {
 	        key: 'handleFileChange',
@@ -27005,7 +26992,7 @@
 	                _react2.default.createElement(
 	                    _RequirementForm2.default,
 	                    null,
-	                    _react2.default.createElement(_FileUpload2.default, {
+	                    _react2.default.createElement(_FileUploadField2.default, {
 	                        required: true,
 	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
 	                        labelDesc: '\u8BF7\u4E0A\u4F20\u9700\u8981\u5BA1\u67E5\u7684\u5408\u540C\u6587\u6863\u3002',
@@ -27027,25 +27014,14 @@
 	                            '\u4E3A\u4FDD\u8BC1\u5408\u540C\u5BA1\u67E5\u8D28\u91CF\uFF0C\u4E00\u4EFD\u5408\u540C\u9700\u89812\u4E2A\u5DE5\u4F5C\u65E5\u5B8C\u6210\uFF0C\u9047\u6709\u8282\u5047\u65E5\u5219\u4F1A\u987A\u5EF6\u3002\u5982\u60A8\u6709\u7279\u522B\u52A0\u6025\u9700\u6C42\uFF0C\u8BF7\u5728\u5176\u4ED6\u8981\u6C42\u5904\u586B\u5199\u3002'
 	                        )
 	                    ),
-	                    _react2.default.createElement(
-	                        _reactBootstrap.FormGroup,
-	                        { controlId: 'formControlsTextarea', validationState: this.state.otherRequirementValidationState },
-	                        _react2.default.createElement(
-	                            _reactBootstrap.ControlLabel,
-	                            null,
-	                            '\u5176\u4ED6\u8981\u6C42'
-	                        ),
-	                        _react2.default.createElement(_reactBootstrap.FormControl, {
-	                            componentClass: 'textarea',
-	                            placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u5BA1\u67E5\u5408\u540C\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u5173\u4E8E\u672C\u5408\u540C\u7684\u7B7E\u8BA2\u80CC\u666F\u3001\u60A8\u6240\u5E0C\u671B\u91CD\u70B9\u5173\u6CE8\u7684\u5408\u540C\u6761\u6B3E\uFF0C\u6216\u8005\u5176\u4ED6\u60A8\u5BF9\u672C\u6B21\u5BA1\u67E5\u7684\u7279\u6B8A\u9700\u6C42\uFF0C\u52A0\u6025\u5B8C\u6210\u7B49',
-	                            onChange: this.handleOtherRequirementChange
-	                        }),
-	                        _react2.default.createElement(
-	                            _reactBootstrap.HelpBlock,
-	                            null,
-	                            this.state.otherRequirementValidationFailedInfo
-	                        )
-	                    )
+	                    _react2.default.createElement(_TextareaField2.default, {
+	                        required: false,
+	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
+	                        labelDesc: '\u8BF7\u4E0A\u4F20\u9700\u8981\u5BA1\u67E5\u7684\u5408\u540C\u6587\u6863\u3002',
+	                        onTextareaValueChange: function onTextareaValueChange(otherRequirement) {
+	                            return _this3.handleOtherRequirementChange(otherRequirement);
+	                        }
+	                    })
 	                ),
 	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onValidateFormData: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
 	                        return _this3.handleFormSubmit();
@@ -45994,6 +45970,15 @@
 	                return null;
 	            }
 	        }
+	    }, {
+	        key: 'validateTextareaValue',
+	        value: function validateTextareaValue(textareaValue) {
+	            if (textareaValue && textareaValue.length >= 5) {
+	                return '不得超过500个字！';
+	            } else {
+	                return null;
+	            }
+	        }
 	    }]);
 
 	    return Validator;
@@ -46068,6 +46053,277 @@
 
 /***/ },
 /* 501 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(249);
+
+	var _Validator = __webpack_require__(499);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/9.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var FileUploadField = function (_React$Component) {
+	    _inherits(FileUploadField, _React$Component);
+
+	    function FileUploadField(props) {
+	        _classCallCheck(this, FileUploadField);
+
+	        var _this = _possibleConstructorReturn(this, (FileUploadField.__proto__ || Object.getPrototypeOf(FileUploadField)).call(this, props));
+
+	        _this.handleFileChoose = _this.handleFileChoose.bind(_this);
+	        _this.handleFileChange = _this.handleFileChange.bind(_this);
+	        _this.handleFileRemove = _this.handleFileRemove.bind(_this);
+
+	        _this.state = {
+	            selectedFile: null, //上传的附件
+	            selectedFileName: '',
+	            selectedFileNameValidationFailedInfo: ''
+	        };
+	        return _this;
+	    }
+
+	    _createClass(FileUploadField, [{
+	        key: 'handleFileChoose',
+	        value: function handleFileChoose() {
+	            this.refs.fileInput.click();
+	        }
+	    }, {
+	        key: 'handleFileChange',
+	        value: function handleFileChange() {
+	            var selectedFile = this.refs.fileInput.files[0];
+	            console.log(selectedFile);
+
+	            var validationFailedInfo = _Validator2.default.validateUploadedFile(selectedFile);
+	            if (validationFailedInfo && validationFailedInfo.length > 0) {
+	                this.setState({
+	                    selectedFileNameValidationFailedInfo: validationFailedInfo
+	                });
+	            } else {
+	                this.setState({
+	                    selectedFileName: selectedFile.name,
+	                    selectedFileNameValidationFailedInfo: validationFailedInfo
+	                });
+	                this.props.onFileChange(selectedFile);
+	            }
+	        }
+	    }, {
+	        key: 'handleFileRemove',
+	        value: function handleFileRemove() {
+	            this.setState({
+	                selectedFileName: ''
+	            });
+	            this.refs.fileInput.value = '';
+	            this.props.onFileChange(null);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _reactBootstrap.FormGroup,
+	                { controlId: 'formBasicText' },
+	                _react2.default.createElement(
+	                    _reactBootstrap.ControlLabel,
+	                    null,
+	                    this.props.required ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'required' },
+	                        '*'
+	                    ) : '',
+	                    this.props.labelTitle,
+	                    this.props.labelDesc ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'tip' },
+	                        this.props.labelDesc
+	                    ) : ''
+	                ),
+	                _react2.default.createElement(_reactBootstrap.FormControl, {
+	                    className: 'file-upload',
+	                    readOnly: true,
+	                    type: 'text',
+	                    value: this.state.value,
+	                    placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09'
+	                }),
+	                _react2.default.createElement(
+	                    _reactBootstrap.Button,
+	                    { className: 'chose-file', type: 'submit', disabled: this.state.selectedFileName.length > 0, onClick: this.handleFileChoose },
+	                    '\u70B9\u51FB\u4E0A\u4F20'
+	                ),
+	                _react2.default.createElement('input', { type: 'file', name: 'uploadFile', hidden: true, ref: 'fileInput', onChange: this.handleFileChange }),
+	                this.state.selectedFileName ? _react2.default.createElement(
+	                    'div',
+	                    { className: 'file-name' },
+	                    _react2.default.createElement('span', { className: 'fa fa-file-text fa-lg' }),
+	                    this.state.selectedFileName,
+	                    _react2.default.createElement('span', { className: 'fa fa-times-circle', 'aria-hidden': 'true', onClick: this.handleFileRemove })
+	                ) : '',
+	                _react2.default.createElement(
+	                    _reactBootstrap.HelpBlock,
+	                    null,
+	                    this.state.selectedFileNameValidationFailedInfo
+	                )
+	            );
+	        }
+	    }]);
+
+	    return FileUploadField;
+	}(_react2.default.Component);
+
+	exports.default = FileUploadField;
+
+/***/ },
+/* 502 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(249);
+
+	var _Validator = __webpack_require__(499);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/10.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	/**
+	 *     props
+	 * required boolean (required)
+	 * labelName string （required）
+	 * labelDesc string (optional)
+	 * placeholder string (optional)
+	 * onTextareaValueChange function (required)
+	 * */
+
+	var TextareaField = function (_React$Component) {
+	    _inherits(TextareaField, _React$Component);
+
+	    function TextareaField(props) {
+	        _classCallCheck(this, TextareaField);
+
+	        var _this = _possibleConstructorReturn(this, (TextareaField.__proto__ || Object.getPrototypeOf(TextareaField)).call(this, props));
+
+	        _this.handleTextareaValueChange = _this.handleTextareaValueChange.bind(_this);
+
+	        _this.state = {
+	            textareaValueValidationState: 'success',
+	            textareaValueValidationFailedInfo: ''
+	        };
+
+	        return _this;
+	    }
+
+	    _createClass(TextareaField, [{
+	        key: 'handleTextareaValueChange',
+	        value: function handleTextareaValueChange(e) {
+	            var textareaValue = e.target.value;
+
+	            this.props.onTextareaValueChange(textareaValue);
+
+	            /**
+	             * 校验规则：如果此处是必填项，校验所填内容是否为空；其他情况（必填时内容不为空、非必填）直接校验长度即可
+	             * */
+	            if (this.props.required && (!textareaValue || textareaValue.length < 1)) {
+	                this.setState({
+	                    textareaValueValidationState: 'error',
+	                    textareaValueValidationFailedInfo: '此处为必填项，请输入'
+	                });
+	            } else {
+	                var validationFailInfo = _Validator2.default.validateTextareaValue(textareaValue);
+	                if (validationFailInfo) {
+	                    this.setState({
+	                        textareaValueValidationState: 'error',
+	                        textareaValueValidationFailedInfo: validationFailInfo
+	                    });
+	                } else {
+	                    this.setState({
+	                        textareaValueValidationState: 'success',
+	                        textareaValueValidationFailedInfo: ''
+	                    });
+	                }
+	            }
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _reactBootstrap.FormGroup,
+	                { controlId: 'formControlsTextarea', validationState: this.state.textareaValueValidationState },
+	                _react2.default.createElement(
+	                    _reactBootstrap.ControlLabel,
+	                    null,
+	                    this.props.required ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'required' },
+	                        '*'
+	                    ) : '',
+	                    this.props.labelTitle,
+	                    this.props.labelDesc ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'tip' },
+	                        this.props.labelDesc
+	                    ) : ''
+	                ),
+	                _react2.default.createElement(_reactBootstrap.FormControl, {
+	                    componentClass: 'textarea',
+	                    placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u5BA1\u67E5\u5408\u540C\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u5173\u4E8E\u672C\u5408\u540C\u7684\u7B7E\u8BA2\u80CC\u666F\u3001\u60A8\u6240\u5E0C\u671B\u91CD\u70B9\u5173\u6CE8\u7684\u5408\u540C\u6761\u6B3E\uFF0C\u6216\u8005\u5176\u4ED6\u60A8\u5BF9\u672C\u6B21\u5BA1\u67E5\u7684\u7279\u6B8A\u9700\u6C42\uFF0C\u52A0\u6025\u5B8C\u6210\u7B49',
+	                    onChange: this.handleTextareaValueChange
+	                }),
+	                _react2.default.createElement(
+	                    _reactBootstrap.HelpBlock,
+	                    null,
+	                    this.state.textareaValueValidationFailedInfo
+	                )
+	            );
+	        }
+	    }]);
+
+	    return TextareaField;
+	}(_react2.default.Component);
+
+	exports.default = TextareaField;
+
+/***/ },
+/* 503 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46283,7 +46539,7 @@
 	exports.default = SubmitBox;
 
 /***/ },
-/* 502 */
+/* 504 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46339,7 +46595,7 @@
 	exports.default = ContractCreationForm;
 
 /***/ },
-/* 503 */
+/* 505 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46395,7 +46651,7 @@
 	exports.default = LegalConsultation;
 
 /***/ },
-/* 504 */
+/* 506 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46451,7 +46707,7 @@
 	exports.default = CollectionLetter;
 
 /***/ },
-/* 505 */
+/* 507 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46507,7 +46763,7 @@
 	exports.default = LawyerLetter;
 
 /***/ },
-/* 506 */
+/* 508 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46563,7 +46819,7 @@
 	exports.default = OfflineService;
 
 /***/ },
-/* 507 */
+/* 509 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46592,146 +46848,6 @@
 	    );
 	  }
 	});
-
-/***/ },
-/* 508 */,
-/* 509 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactBootstrap = __webpack_require__(249);
-
-	var _Validator = __webpack_require__(499);
-
-	var _Validator2 = _interopRequireDefault(_Validator);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/9.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	var FileUpload = function (_React$Component) {
-	    _inherits(FileUpload, _React$Component);
-
-	    function FileUpload(props) {
-	        _classCallCheck(this, FileUpload);
-
-	        var _this = _possibleConstructorReturn(this, (FileUpload.__proto__ || Object.getPrototypeOf(FileUpload)).call(this, props));
-
-	        _this.handleFileChoose = _this.handleFileChoose.bind(_this);
-	        _this.handleFileChange = _this.handleFileChange.bind(_this);
-	        _this.handleFileRemove = _this.handleFileRemove.bind(_this);
-
-	        _this.state = {
-	            selectedFile: null, //上传的附件
-	            selectedFileName: '',
-	            selectedFileNameValidationFailedInfo: ''
-	        };
-	        return _this;
-	    }
-
-	    _createClass(FileUpload, [{
-	        key: 'handleFileChoose',
-	        value: function handleFileChoose() {
-	            this.refs.fileInput.click();
-	        }
-	    }, {
-	        key: 'handleFileChange',
-	        value: function handleFileChange() {
-	            var selectedFile = this.refs.fileInput.files[0];
-	            console.log(selectedFile);
-
-	            var validationFailedInfo = _Validator2.default.validateUploadedFile(selectedFile);
-	            if (validationFailedInfo && validationFailedInfo.length > 0) {
-	                this.setState({
-	                    selectedFileNameValidationFailedInfo: validationFailedInfo
-	                });
-	            } else {
-	                this.setState({
-	                    selectedFileName: selectedFile.name,
-	                    selectedFileNameValidationFailedInfo: validationFailedInfo
-	                });
-	                this.props.onFileChange(selectedFile);
-	            }
-	        }
-	    }, {
-	        key: 'handleFileRemove',
-	        value: function handleFileRemove() {
-	            this.handleStateChange('selectedFileName', '');
-	            this.refs.fileInput.value = '';
-	            this.props.onFileChange(null);
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                _reactBootstrap.FormGroup,
-	                { controlId: 'formBasicText' },
-	                _react2.default.createElement(
-	                    _reactBootstrap.ControlLabel,
-	                    null,
-	                    this.props.required ? _react2.default.createElement(
-	                        'span',
-	                        { className: 'required' },
-	                        '*'
-	                    ) : '',
-	                    this.props.labelTitle,
-	                    this.props.labelDesc ? _react2.default.createElement(
-	                        'span',
-	                        { className: 'tip' },
-	                        '\u8BF7\u4E0A\u4F20\u9700\u8981\u5BA1\u67E5\u7684\u5408\u540C\u6587\u6863\u3002'
-	                    ) : ''
-	                ),
-	                _react2.default.createElement(_reactBootstrap.FormControl, {
-	                    className: 'file-upload',
-	                    readOnly: true,
-	                    type: 'text',
-	                    value: this.state.value,
-	                    placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09'
-	                }),
-	                _react2.default.createElement(
-	                    _reactBootstrap.Button,
-	                    { className: 'chose-file', type: 'submit', disabled: this.state.selectedFileName.length > 0, onClick: this.handleFileChoose },
-	                    '\u70B9\u51FB\u4E0A\u4F20'
-	                ),
-	                _react2.default.createElement('input', { type: 'file', name: 'uploadFile', hidden: true, ref: 'fileInput', onChange: this.handleFileChange }),
-	                this.state.selectedFileName ? _react2.default.createElement(
-	                    'div',
-	                    { className: 'file-name' },
-	                    _react2.default.createElement('span', { className: 'fa fa-file-text fa-lg' }),
-	                    this.state.selectedFileName,
-	                    _react2.default.createElement('span', { className: 'fa fa-times-circle', 'aria-hidden': 'true', onClick: this.handleFileRemove })
-	                ) : '',
-	                _react2.default.createElement(
-	                    _reactBootstrap.HelpBlock,
-	                    null,
-	                    this.state.selectedFileNameValidationFailedInfo
-	                )
-	            );
-	        }
-	    }]);
-
-	    return FileUpload;
-	}(_react2.default.Component);
-
-	exports.default = FileUpload;
 
 /***/ }
 /******/ ]);

@@ -5,7 +5,7 @@ import React from 'react'
 import {FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap'
 import Validator from './Validator'
 
-class FileUpload extends React.Component{
+class FileUploadField extends React.Component{
     constructor(props){
         super(props)
         this.handleFileChoose = this.handleFileChoose.bind(this)
@@ -30,11 +30,9 @@ class FileUpload extends React.Component{
 
         const validationFailedInfo = Validator.validateUploadedFile(selectedFile)
         if(validationFailedInfo && validationFailedInfo.length > 0){
-            this.setState(
-                {
+            this.setState({
                     selectedFileNameValidationFailedInfo: validationFailedInfo
-                }
-            )
+            })
         }else{
             this.setState({
                 selectedFileName: selectedFile.name,
@@ -45,7 +43,9 @@ class FileUpload extends React.Component{
     }
 
     handleFileRemove() {
-        this.handleStateChange('selectedFileName', '')
+        this.setState({
+            selectedFileName: ''
+        })
         this.refs.fileInput.value = ''
         this.props.onFileChange(null)
     }
@@ -57,7 +57,7 @@ class FileUpload extends React.Component{
                 <ControlLabel>
                     {this.props.required ? <span className="required">*</span> : ''}
                     {this.props.labelTitle}
-                    {this.props.labelDesc ? <span className="tip">请上传需要审查的合同文档。</span> : ''}
+                    {this.props.labelDesc ? <span className="tip">{this.props.labelDesc}</span> : ''}
                 </ControlLabel>
                 <FormControl
                     className="file-upload"
@@ -76,4 +76,4 @@ class FileUpload extends React.Component{
     }
 }
 
-export default FileUpload
+export default FileUploadField
