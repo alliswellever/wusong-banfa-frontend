@@ -144,7 +144,7 @@
     }
 
     .form-group{
-      margin-bottom: 15px;
+      margin-bottom: 25px;
 
       .control-label{
         font-size: 16px;
@@ -285,7 +285,28 @@
 
     }
 
+    .form-group.date-picker-field{
+      position: relative;
 
+      .form-control[readonly],.input-group-addon{
+        background-color: #fff;
+      }
+    }
+
+    .form-group.radio-field{
+
+      .radio-list{
+        padding-left: 10px;
+
+        .radio-inline{
+          margin-right: 50px;
+        }
+
+        input[type=radio]{
+          margin-top: 0;
+        }
+      }
+    }
 
 
   }

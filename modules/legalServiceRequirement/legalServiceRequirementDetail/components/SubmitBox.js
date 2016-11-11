@@ -2,7 +2,7 @@
  * Created by yuyongyu on 2016/11/4.
  */
 import React from 'react'
-import {Button, ButtonToolbar, Checkbox, Modal, HelpBlock} from 'react-bootstrap'
+import {Button, ButtonToolbar, Checkbox, Modal, HelpBlock, Collapse} from 'react-bootstrap'
 import { browserHistory } from 'react-router'
 
 /**
@@ -74,7 +74,9 @@ class SubmitBox extends React.Component{
                 <Checkbox inline defaultChecked={this.state.agreeProtocol} onChange={this.handleChangeCheckbox}>我同意<a href="" target="_blank">《无讼办法法无服务用户协议》</a></Checkbox>
 
                 <ButtonToolbar>
-                    <HelpBlock>{this.props.validattionFailedInfo}</HelpBlock>
+                    <Collapse in={this.props.validattionFailedInfo.length > 0}>
+                        <HelpBlock>{this.props.validattionFailedInfo}</HelpBlock>
+                    </Collapse>
                     <Button className="cancle" onClick={() => this.toggleShowCancleModel(true)}>取消</Button>
                     <Button className="submit" disabled={!this.props.agreeProtocol || !this.state.agreeProtocol} onClick={() => this.toggleShowSubmitModel(true)}>{this.props.agreeProtocol ? '提交' : '提交中...'}</Button>
                 </ButtonToolbar>

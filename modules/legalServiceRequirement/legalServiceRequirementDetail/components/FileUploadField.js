@@ -2,7 +2,7 @@
  * Created by yuyongyu on 2016/11/9.
  */
 import React from 'react'
-import {FormGroup, ControlLabel, FormControl, Button, HelpBlock} from 'react-bootstrap'
+import {FormGroup, ControlLabel, FormControl, Button, HelpBlock, Collapse} from 'react-bootstrap'
 import Validator from './Validator'
 
 
@@ -81,7 +81,9 @@ class FileUploadField extends React.Component{
                 <Button className="chose-file" disabled={this.state.selectedFileName.length > 0} onClick={this.handleFileChoose}>点击上传</Button>
                 <input type="file" name="uploadFile" hidden ref="fileInput" onChange={this.handleFileChange}/>
                 {this.state.selectedFileName ? <div className="file-name"><span className="fa fa-file-text fa-lg"></span>{this.state.selectedFileName}<span className="fa fa-times-circle" aria-hidden="true" onClick={this.handleFileRemove}></span></div> : ''}
-                <HelpBlock>{this.state.selectedFileNameValidationFailedInfo}</HelpBlock>
+                <Collapse in={this.state.selectedFileNameValidationFailedInfo !== null && this.state.selectedFileNameValidationFailedInfo.length > 0}>
+                    <HelpBlock>{this.state.selectedFileNameValidationFailedInfo}</HelpBlock>
+                </Collapse>
             </FormGroup>
         )
     }

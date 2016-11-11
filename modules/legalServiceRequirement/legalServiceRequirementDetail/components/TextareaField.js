@@ -2,7 +2,7 @@
  * Created by yuyongyu on 2016/11/10.
  */
 import React from 'react'
-import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'
+import {FormGroup, ControlLabel, FormControl, HelpBlock, Collapse} from 'react-bootstrap'
 import Validator from './Validator'
 
 /**
@@ -70,7 +70,9 @@ class TextareaField extends React.Component{
                     placeholder={this.props.placeholder}
                     onChange={this.handleTextareaValueChange}
                 />
-                <HelpBlock>{this.state.textareaValueValidationFailedInfo}</HelpBlock>
+                <Collapse in={this.state.textareaValueValidationFailedInfo.length > 0}>
+                    <HelpBlock>{this.state.textareaValueValidationFailedInfo}</HelpBlock>
+                </Collapse>
             </FormGroup>
         )
     }

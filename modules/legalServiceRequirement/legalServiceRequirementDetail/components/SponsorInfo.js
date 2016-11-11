@@ -2,7 +2,7 @@
  * Created by yuyongyu on 2016/11/4.
  */
 import React from 'react'
-import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'
+import {FormGroup, ControlLabel, FormControl, HelpBlock, Collapse} from 'react-bootstrap'
 import Validator from './Validator'
 
 /**
@@ -78,7 +78,9 @@ class SponsorInfo extends React.Component{
                         placeholder="请输入联系人姓名"
                         onChange={this.handleSponsorNameChange}
                     />
-                    <HelpBlock >{this.state.sponsorNameValidationFailedInfo}</HelpBlock>
+                    <Collapse in={this.state.sponsorNameValidationFailedInfo.length > 0}>
+                        <HelpBlock >{this.state.sponsorNameValidationFailedInfo}</HelpBlock>
+                    </Collapse>
                 </FormGroup>
                 <FormGroup controlId="phoneNumber" validationState={this.state.phoneNumberValidationState}>
                     <ControlLabel>
@@ -90,7 +92,9 @@ class SponsorInfo extends React.Component{
                         placeholder="请输入联系人手机号"
                         onChange={this.handlePhoneNumberChange}
                     />
-                    <HelpBlock >{this.state.phoneNumberValidationFailedInfo}</HelpBlock>
+                    <Collapse timeout={5000}  in={this.state.phoneNumberValidationFailedInfo.length > 0}>
+                        <HelpBlock >{this.state.phoneNumberValidationFailedInfo}</HelpBlock>
+                    </Collapse>
                 </FormGroup>
             </div>
         )

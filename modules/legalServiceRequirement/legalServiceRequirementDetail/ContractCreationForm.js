@@ -22,10 +22,8 @@ class ContractCreationForm extends React.Component{
         this.handleFileChange = this.handleFileChange.bind(this)
         this.handleOtherRequirementChange = this.handleOtherRequirementChange.bind(this)
 
-
-
         this.validateFormData = this.validateFormData.bind(this)
-        this.handleContractTypeChange = this.handleContractTypeChange.bind(this)
+        this.handleFormSubmit = this.handleFormSubmit.bind(this)
 
         const contractTypes = [
             {
