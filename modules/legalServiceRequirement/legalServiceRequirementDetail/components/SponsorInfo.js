@@ -78,7 +78,7 @@ class SponsorInfo extends React.Component{
                         placeholder="请输入联系人姓名"
                         onChange={this.handleSponsorNameChange}
                     />
-                    <Collapse in={this.state.sponsorNameValidationFailedInfo.length > 0}>
+                    <Collapse in={this.state.sponsorNameValidationFailedInfo !== null && this.state.sponsorNameValidationFailedInfo.length > 0}>
                         <HelpBlock >{this.state.sponsorNameValidationFailedInfo}</HelpBlock>
                     </Collapse>
                 </FormGroup>
@@ -92,7 +92,7 @@ class SponsorInfo extends React.Component{
                         placeholder="请输入联系人手机号"
                         onChange={this.handlePhoneNumberChange}
                     />
-                    <Collapse timeout={5000}  in={this.state.phoneNumberValidationFailedInfo.length > 0}>
+                    <Collapse in={this.state.phoneNumberValidationFailedInfo !== null && this.state.phoneNumberValidationFailedInfo.length > 0}>
                         <HelpBlock >{this.state.phoneNumberValidationFailedInfo}</HelpBlock>
                     </Collapse>
                 </FormGroup>

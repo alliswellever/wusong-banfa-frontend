@@ -27245,7 +27245,7 @@
 	                    }),
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Collapse,
-	                        { 'in': this.state.sponsorNameValidationFailedInfo.length > 0 },
+	                        { 'in': this.state.sponsorNameValidationFailedInfo !== null && this.state.sponsorNameValidationFailedInfo.length > 0 },
 	                        _react2.default.createElement(
 	                            _reactBootstrap.HelpBlock,
 	                            null,
@@ -27279,7 +27279,7 @@
 	                    }),
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Collapse,
-	                        { timeout: 5000, 'in': this.state.phoneNumberValidationFailedInfo.length > 0 },
+	                        { 'in': this.state.phoneNumberValidationFailedInfo !== null && this.state.phoneNumberValidationFailedInfo.length > 0 },
 	                        _react2.default.createElement(
 	                            _reactBootstrap.HelpBlock,
 	                            null,
@@ -47316,7 +47316,7 @@
 /* 508 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -47327,6 +47327,46 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _Workflow = __webpack_require__(247);
+
+	var _Workflow2 = _interopRequireDefault(_Workflow);
+
+	var _SponsorInfo = __webpack_require__(248);
+
+	var _SponsorInfo2 = _interopRequireDefault(_SponsorInfo);
+
+	var _RequirementForm = __webpack_require__(500);
+
+	var _RequirementForm2 = _interopRequireDefault(_RequirementForm);
+
+	var _InputField = __webpack_require__(517);
+
+	var _InputField2 = _interopRequireDefault(_InputField);
+
+	var _DatePickerField = __webpack_require__(515);
+
+	var _DatePickerField2 = _interopRequireDefault(_DatePickerField);
+
+	var _FileUploadField = __webpack_require__(501);
+
+	var _FileUploadField2 = _interopRequireDefault(_FileUploadField);
+
+	var _TextareaField = __webpack_require__(502);
+
+	var _TextareaField2 = _interopRequireDefault(_TextareaField);
+
+	var _SubmitBox = __webpack_require__(503);
+
+	var _SubmitBox2 = _interopRequireDefault(_SubmitBox);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _reactBootstrap = __webpack_require__(249);
+
+	var _Validator = __webpack_require__(499);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47342,23 +47382,114 @@
 	var CollectionLetter = function (_React$Component) {
 	    _inherits(CollectionLetter, _React$Component);
 
-	    function CollectionLetter() {
+	    function CollectionLetter(props) {
 	        _classCallCheck(this, CollectionLetter);
 
-	        return _possibleConstructorReturn(this, (CollectionLetter.__proto__ || Object.getPrototypeOf(CollectionLetter)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (CollectionLetter.__proto__ || Object.getPrototypeOf(CollectionLetter)).call(this, props));
+
+	        _this.state = {
+	            agreeProtocol: true, //是否同意用户协议
+	            sponsorName: '于永雨',
+	            phoneNumber: '13020072525',
+	            debtorName: '',
+	            otherRequirement: '', //其他要求
+	            attachments: null, //上传的附件
+	            validattionFailedInfo: '' //提交前校验的错误信息
+	        };
+	        return _this;
 	    }
 
 	    _createClass(CollectionLetter, [{
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "legal-service-row" },
+	                'div',
+	                { className: 'requirement-detail' },
+	                _react2.default.createElement(_Workflow2.default, null),
+	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneNumber, onSponsorInfoChange: function onSponsorInfoChange(infoName, value) {
+	                        return _this2.handleSponsorInfoChange(infoName, value);
+	                    } }),
 	                _react2.default.createElement(
-	                    "h1",
+	                    _RequirementForm2.default,
 	                    null,
-	                    "\u50AC\u6536\u51FD\u8868\u5355"
-	                )
+	                    _react2.default.createElement(
+	                        _reactBootstrap.HelpBlock,
+	                        { bsClass: 'requirement-help' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            '\u53D1\u9001\u50AC\u6536\u51FD\u7684\u4E3B\u8981\u76EE\u7684\u5728\u4E8E\u901A\u8FC7\u5F8B\u5E08\u4ECB\u5165\u7684\u65B9\u5F0F\uFF0C\u8981\u6C42\u6B20\u6B3E\u65B9\u53CA\u65F6\u8FD4\u8FD8\u6B3E\u9879\uFF0C\u4EE5\u4E0B\u5185\u5BB9\u4E3A\u5F8B\u5E08\u50AC\u6536\u51FD\u7684\u5FC5\u5907\u5185\u5BB9\uFF0C\u8BF7\u8BA4\u771F\u586B\u5199\u5E76\u6838\u5BF9\u4FE1\u606F\u65E0\u8BEF\u540E\u63D0\u4EA4\u8BF7\u6C42\u3002'
+	                        )
+	                    ),
+	                    _react2.default.createElement(_InputField2.default, {
+	                        required: true,
+	                        labelTitle: '\u88AB\u50AC\u6B3E\u516C\u53F8\u540D\u79F0',
+	                        placeholder: '\u8BF7\u586B\u5199',
+	                        value: this.state.debtorName,
+	                        validateInputValue: this.validateDebtorName,
+	                        onInputChange: function onInputChange(debtorName) {
+	                            return _this2.handleDebtorNameChange(debtorName);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_DatePickerField2.default, {
+	                        required: true,
+	                        labelTitle: '\u539F\u5B9A\u8FD8\u6B3E\u65E5\u671F',
+	                        placeholder: '\u8BF7\u9009\u62E9\u65E5\u671F',
+	                        onSelectedDateChange: function onSelectedDateChange(originalRepaymentDate) {
+	                            return _this2.handleOriginalRepaymentDateChange(originalRepaymentDate);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_InputField2.default, {
+	                        required: true,
+	                        labelTitle: '\u50AC\u6B3E\u516C\u53F8\u540D\u79F0',
+	                        placeholder: '\u8BF7\u586B\u5199',
+	                        value: this.state.creditorName,
+	                        validateInputValue: this.validateDebtorName,
+	                        onInputChange: function onInputChange(creditorName) {
+	                            return _this2.handleCreditorNameChange(creditorName);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_DatePickerField2.default, {
+	                        required: true,
+	                        labelTitle: '\u671F\u671B\u8FD8\u6B3E\u65E5\u671F',
+	                        placeholder: '\u8BF7\u9009\u62E9\u65E5\u671F',
+	                        onSelectedDateChange: function onSelectedDateChange(expectedRepaymentDate) {
+	                            return _this2.handleExpectedRepaymentDateChange(expectedRepaymentDate);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_InputField2.default, {
+	                        required: false,
+	                        labelTitle: '\u5982\u9700\u5F8B\u5E08\u5BC4\u9001\u50AC\u6536\u51FD\uFF0C\u8BF7\u7559\u4E0B\u88AB\u50AC\u6B3E\u516C\u53F8\u5730\u5740\uFF0C\u8054\u7CFB\u4EBA\u53CA\u7535\u8BDD\uFF08\u5199\u5728\u8BE6\u7EC6\u5730\u5740\u5373\u53EF\uFF09',
+	                        placeholder: '\u8BE6\u7EC6\u5730\u5740\u3001\u8054\u7CFB\u4EBA\u3001\u7535\u8BDD',
+	                        value: this.state.debtorAddress,
+	                        validateInputValue: this.validateDebtorName,
+	                        onInputChange: function onInputChange(debtorAddress) {
+	                            return _this2.handleDebtorAddressChange(debtorAddress);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_FileUploadField2.default, {
+	                        required: false,
+	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
+	                        labelDesc: '\u8BF7\u4E0A\u4F20\u60A8\u8BA4\u4E3A\u6709\u52A9\u4E8E\u987E\u95EE\u548C\u5F8B\u5E08\u4E86\u89E3\u95EE\u9898\u7684\u6750\u6599\u3002',
+	                        placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09',
+	                        onFileChange: function onFileChange(selectedFile) {
+	                            return _this2.handleFileChange(selectedFile);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_TextareaField2.default, {
+	                        required: false,
+	                        labelTitle: '\u5176\u4ED6\u8981\u6C42',
+	                        placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u50AC\u6536\u51FD\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u65F6\u95F4\u7D27\u8FEB\uFF0C\u8BF7\u5C3D\u5FEB\u5E2E\u6211\u627E\u5230\u5F8B\u5E08',
+	                        onTextareaValueChange: function onTextareaValueChange(otherRequirement) {
+	                            return _this2.handleOtherRequirementChange(otherRequirement);
+	                        }
+	                    })
+	                ),
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onFormDataValidate: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
+	                        return _this2.handleFormSubmit();
+	                    } })
 	            );
 	        }
 	    }]);
@@ -47372,7 +47503,7 @@
 /* 509 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -47383,6 +47514,46 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _Workflow = __webpack_require__(247);
+
+	var _Workflow2 = _interopRequireDefault(_Workflow);
+
+	var _SponsorInfo = __webpack_require__(248);
+
+	var _SponsorInfo2 = _interopRequireDefault(_SponsorInfo);
+
+	var _RequirementForm = __webpack_require__(500);
+
+	var _RequirementForm2 = _interopRequireDefault(_RequirementForm);
+
+	var _RadioField = __webpack_require__(516);
+
+	var _RadioField2 = _interopRequireDefault(_RadioField);
+
+	var _InputField = __webpack_require__(517);
+
+	var _InputField2 = _interopRequireDefault(_InputField);
+
+	var _FileUploadField = __webpack_require__(501);
+
+	var _FileUploadField2 = _interopRequireDefault(_FileUploadField);
+
+	var _TextareaField = __webpack_require__(502);
+
+	var _TextareaField2 = _interopRequireDefault(_TextareaField);
+
+	var _SubmitBox = __webpack_require__(503);
+
+	var _SubmitBox2 = _interopRequireDefault(_SubmitBox);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _reactBootstrap = __webpack_require__(249);
+
+	var _Validator = __webpack_require__(499);
+
+	var _Validator2 = _interopRequireDefault(_Validator);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47398,23 +47569,95 @@
 	var LawyerLetter = function (_React$Component) {
 	    _inherits(LawyerLetter, _React$Component);
 
-	    function LawyerLetter() {
+	    function LawyerLetter(props) {
 	        _classCallCheck(this, LawyerLetter);
 
-	        return _possibleConstructorReturn(this, (LawyerLetter.__proto__ || Object.getPrototypeOf(LawyerLetter)).apply(this, arguments));
+	        var _this = _possibleConstructorReturn(this, (LawyerLetter.__proto__ || Object.getPrototypeOf(LawyerLetter)).call(this, props));
+
+	        var purposeOptions = [{
+	            value: 1,
+	            name: '督促警告（要求他人做什么或不做什么）',
+	            defaultChecked: false
+	        }, {
+	            value: 2,
+	            name: '询问涵（用于了解、询问有关法律事项）',
+	            defaultChecked: false
+	        }, {
+	            value: 3,
+	            name: '答复涵',
+	            defaultChecked: false
+	        }, {
+	            value: 4,
+	            name: '其他',
+	            defaultChecked: false
+	        }];
+
+	        _this.state = {
+	            agreeProtocol: true, //是否同意用户协议
+	            sponsorName: '于永雨',
+	            phoneNumber: '13020072525',
+	            purposeOptions: purposeOptions,
+	            otherRequirement: '', //其他要求
+	            attachments: null, //上传的附件
+	            validattionFailedInfo: '' //提交前校验的错误信息
+	        };
+	        return _this;
 	    }
 
 	    _createClass(LawyerLetter, [{
-	        key: "render",
+	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
 	            return _react2.default.createElement(
-	                "div",
-	                { className: "legal-service-row" },
+	                'div',
+	                { className: 'requirement-detail' },
+	                _react2.default.createElement(_Workflow2.default, null),
+	                _react2.default.createElement(_SponsorInfo2.default, { sponsorName: this.state.sponsorName, phoneNumber: this.state.phoneNumber, onSponsorInfoChange: function onSponsorInfoChange(infoName, value) {
+	                        return _this2.handleSponsorInfoChange(infoName, value);
+	                    } }),
 	                _react2.default.createElement(
-	                    "h1",
+	                    _RequirementForm2.default,
 	                    null,
-	                    "\u5F8B\u5E08\u51FD\u8868\u5355"
-	                )
+	                    _react2.default.createElement(_RadioField2.default, {
+	                        required: true,
+	                        labelTitle: '\u53D1\u9001\u5F8B\u5E08\u51FD\u7684\u4E3B\u8981\u76EE\u7684',
+	                        radioList: this.state.purposeOptions,
+	                        onRadioChange: function onRadioChange(purpose) {
+	                            return _this2.handlePurposeChange(purpose);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_InputField2.default, {
+	                        required: false,
+	                        labelTitle: '\u5982\u9700\u5F8B\u5E08\u5BC4\u9001\u50AC\u6536\u51FD\uFF0C\u8BF7\u7559\u4E0B\u60A8\u7684\u5730\u5740\uFF0C\u8054\u7CFB\u4EBA\u53CA\u7535\u8BDD\uFF08\u5199\u5728\u8BE6\u7EC6\u5730\u5740\u5373\u53EF\uFF09',
+	                        placeholder: '\u8BE6\u7EC6\u5730\u5740\u3001\u8054\u7CFB\u4EBA\u3001\u7535\u8BDD',
+	                        value: this.state.receiverAddress,
+	                        validateInputValue: this.validateReceiverAddress,
+	                        onInputChange: function onInputChange(receiverAddress) {
+	                            return _this2.handleReceiverAddressChange(receiverAddress);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_FileUploadField2.default, {
+	                        required: false,
+	                        labelTitle: '\u4E0A\u4F20\u9644\u4EF6',
+	                        labelDesc: '\u8BF7\u4E0A\u4F20\u60A8\u8BA4\u4E3A\u6709\u52A9\u4E8E\u987E\u95EE\u548C\u5F8B\u5E08\u4E86\u89E3\u95EE\u9898\u7684\u6750\u6599\u3002',
+	                        placeholder: '\u76EE\u524D\u4EC5\u652F\u6301\u6587\u672C\u683C\u5F0F\uFF08.doc\u3001.docx\u3001.page\u3001.pdf\uFF09\u548C\u538B\u7F29\u683C\u5F0F\uFF08.zip\u3001.rar\uFF09',
+	                        onFileChange: function onFileChange(selectedFile) {
+	                            return _this2.handleFileChange(selectedFile);
+	                        }
+	                    }),
+	                    _react2.default.createElement(_TextareaField2.default, {
+	                        required: false,
+	                        labelTitle: '\u5176\u4ED6\u8981\u6C42',
+	                        placeholder: '\u8BF7\u5728\u6B64\u8F93\u5165\u60A8\u5BF9\u5F8B\u5E08\u7684\u8981\u6C42\uFF0C\u4F8B\u5982\uFF1A\u65F6\u95F4\u7D27\u8FEB\uFF0C\u8BF7\u5C3D\u5FEB\u5E2E\u6211\u627E\u5230\u5F8B\u5E08',
+	                        onTextareaValueChange: function onTextareaValueChange(otherRequirement) {
+	                            return _this2.handleOtherRequirementChange(otherRequirement);
+	                        }
+	                    })
+	                ),
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onFormDataValidate: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
+	                        return _this2.handleFormSubmit();
+	                    } })
 	            );
 	        }
 	    }]);
@@ -47953,6 +48196,128 @@
 	}(_react2.default.Component);
 
 	exports.default = RadioField;
+
+/***/ },
+/* 517 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(249);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by yuyongyu on 2016/11/12.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	/**
+	 *     props
+	 * 1.required boolean (required)
+	 * 2.labelName string （required）
+	 * 3.labelDesc string (optional)
+	 * 4.placeholder string (optional)
+	 * 5.value string (optional)
+	 * 6.validateInputValue function (required)
+	 * 7.onInputChange function (required)
+	 *
+	 * */
+	var InputField = function (_React$Component) {
+	    _inherits(InputField, _React$Component);
+
+	    function InputField(props) {
+	        _classCallCheck(this, InputField);
+
+	        var _this = _possibleConstructorReturn(this, (InputField.__proto__ || Object.getPrototypeOf(InputField)).call(this, props));
+
+	        _this.handleInputValueChange = _this.handleInputValueChange.bind(_this);
+
+	        _this.state = {
+	            inputValueValidationState: 'success',
+	            inputValueValidationFailedInfo: ''
+	        };
+
+	        return _this;
+	    }
+
+	    _createClass(InputField, [{
+	        key: 'handleInputValueChange',
+	        value: function handleInputValueChange(e) {
+	            var newInputValue = e.target.value;
+	            var validationFailedInfo = this.props.validateInputValue(newInputValue);
+	            if (validationFailedInfo && validationFailedInfo.length > 0) {
+	                this.setState({
+	                    inputValueValidationState: 'error',
+	                    inputValueValidationFailedInfo: validationFailedInfo
+	                });
+	            } else {
+	                this.setState({
+	                    inputValueValidationState: 'success',
+	                    inputValueValidationFailedInfo: ''
+	                });
+	            }
+
+	            this.props.onInputChange('inputValue', newInputValue);
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                _reactBootstrap.FormGroup,
+	                { controlId: 'inputField', validationState: this.state.inputValueValidationState },
+	                _react2.default.createElement(
+	                    _reactBootstrap.ControlLabel,
+	                    null,
+	                    this.props.required ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'required' },
+	                        '*'
+	                    ) : '',
+	                    this.props.labelTitle,
+	                    this.props.labelDesc ? _react2.default.createElement(
+	                        'span',
+	                        { className: 'tip' },
+	                        this.props.labelDesc
+	                    ) : ''
+	                ),
+	                _react2.default.createElement(_reactBootstrap.FormControl, {
+	                    type: 'text',
+	                    value: this.props.value,
+	                    placeholder: this.props.placeholder,
+	                    onChange: this.handleInputValueChange
+	                }),
+	                _react2.default.createElement(
+	                    _reactBootstrap.Collapse,
+	                    { 'in': this.state.inputValueValidationFailedInfo !== null && this.state.inputValueValidationFailedInfo.length > 0 },
+	                    _react2.default.createElement(
+	                        _reactBootstrap.HelpBlock,
+	                        null,
+	                        this.state.inputValueValidationFailedInfo
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return InputField;
+	}(_react2.default.Component);
+
+	exports.default = InputField;
 
 /***/ }
 /******/ ]);
