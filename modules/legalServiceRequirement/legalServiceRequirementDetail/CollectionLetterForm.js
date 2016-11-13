@@ -29,6 +29,38 @@ class CollectionLetter extends React.Component{
         }
     }
 
+    handleStateChange(key, value) {
+        this.setState({
+            [key]: value
+        });
+    }
+
+    handleSponsorInfoChange(infoName, value){
+        this.handleStateChange(infoName, value)
+    }
+
+    handleFormSubmit(){
+        this.handleStateChange('agreeProtocol', false)
+
+        let submitData = {
+            orderSource: 1,
+            contactsName: this.state.sponsorName,
+            contactsMobileNumber: this.state.phoneNumber,
+            problemDescription: this.state.consultingDetail,
+            userAcceptedCallTime: this.state.contactDate,
+            provideLegalOption: parseInt(this.state.needLegalAdvice),
+            attachments: this.state.selectedFile,//上传的附件
+            userComment: this.state.otherRequirement,//其他要求
+        }
+
+        console.log(submitData)
+        setTimeout(function () {
+            () => this.handleStateChange('agreeProtocol', true) //箭头函数将this指向引用函数的上下文
+            browserHistory.push('/orders')
+        },3000)
+    }
+
+
     render(){
         return (
             <div className="requirement-detail">

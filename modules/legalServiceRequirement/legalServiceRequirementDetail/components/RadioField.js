@@ -2,7 +2,7 @@
  * Created by yuyongyu on 2016/11/11.
  */
 import React from 'react'
-import {FormGroup, FormControl, ControlLabel, Radio} from 'react-bootstrap'
+import {FormGroup, ControlLabel, Radio} from 'react-bootstrap'
 
 /**
  *     props
@@ -25,8 +25,6 @@ import {FormGroup, FormControl, ControlLabel, Radio} from 'react-bootstrap'
 class RadioField extends React.Component {
     constructor(props) {
         super(props)
-        this.handleRadioClick = this.handleRadioClick.bind(this)
-
     }
 
     handleRadioClick(e){
@@ -44,7 +42,7 @@ class RadioField extends React.Component {
                 <div className="radio-list">
                     {
                         this.props.radioList.map((radio, index) => {
-                            return <Radio inline={this.props.inline} defaultChecked={radio.defaultChecked} value={radio.value} key={index} onClick={(e) => this.handleRadioClick(e)}>{radio.name}</Radio>
+                            return <Radio inline={this.props.inline} name="radio-button" defaultChecked={radio.defaultChecked} value={radio.value} key={index} onClick={(e) => this.handleRadioClick(e)}>{radio.name}</Radio>
                         })
                     }
                 </div>

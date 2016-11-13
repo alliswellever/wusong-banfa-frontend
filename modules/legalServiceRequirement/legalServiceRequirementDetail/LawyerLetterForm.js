@@ -10,8 +10,8 @@ import InputField from './components/InputField'
 import FileUploadField from './components/FileUploadField'
 import TextareaField from './components/TextareaField'
 import SubmitBox from './components/SubmitBox'
+import {FormGroup, FormControl, HelpBlock, Collapse} from 'react-bootstrap'
 import { browserHistory } from 'react-router'
-import {HelpBlock} from 'react-bootstrap'
 import Validator from './components/Validator'
 
 class LawyerLetter extends React.Component{
@@ -45,11 +45,133 @@ class LawyerLetter extends React.Component{
             agreeProtocol: true,//是否同意用户协议
             sponsorName: '于永雨',
             phoneNumber: '13020072525',
+            purposeType: 0,
             purposeOptions: purposeOptions,
-            otherRequirement: '',//其他要求
+            otherPurposeDescription: '',
+            otherPurposeDescriptionValidattionFailedInfo: '',
+            receiverAddress: '',
             attachments: null,//上传的附件
+            otherRequirement: '',//其他要求
             validattionFailedInfo: ''//提交前校验的错误信息
         }
+    }
+
+    validatePurposeType(purposeType){
+        if(!(purposeType === 1 || purposeType === 2 ||  purposeType === 3 || purposeType === 4)){
+            return '请选择发送律师函的主要目的！'
+        }else{
+            return null
+        }
+    }
+    
+    validatePurposeDescription(purposeDescription){
+        if(purposeDescription && purposeDescription.length > 500){
+            return '不得超过500个字！'
+        }else{
+            return null
+        }
+    }
+
+    validateReceiverAddress(receiverAddress){
+        if(receiverAddress && receiverAddress.length > 500){
+            return '不得超过500个字！'
+        }else{
+            return null
+        }
+    }
+
+    validateFormData(){
+        let validattionFailedInfo = ''
+        const sponsorNameValidattionFailedInfo = Validator.validateSponsorName(this.state.sponsorName)
+        const phoneNameValidattionFailedInfo = Validator.validatePhoneNumber(this.state.phoneNumber)
+        const purposeTypeValidattionFailedInfo = this.validatePurposeType(this.state.purposeType)
+        const purposeDescriptionValidattionFailedInfo = this.validatePurposeDescription(this.state.purposeDescription)
+        const receiverAddressValidattionFailedInfo = this.validateReceiverAddress(this.state.receiverAddress)
+        const fileValidattionFailedInfo = Validator.validateUploadedFile(this.state.selectedFile)
+        const otherRequirementValidattionFailedInfo = Validator.validateTextareaValue(this.state.otherRequirement)
+
+
+        if(sponsorNameValidattionFailedInfo){
+            validattionFailedInfo = sponsorNameValidattionFailedInfo
+        }else if(phoneNameValidattionFailedInfo){
+            validattionFailedInfo = phoneNameValidattionFailedInfo
+        }else if(purposeTypeValidattionFailedInfo){
+            validattionFailedInfo = purposeTypeValidattionFailedInfo
+        }else if(purposeDescriptionValidattionFailedInfo){
+            validattionFailedInfo = purposeDescriptionValidattionFailedInfo
+        }else if(receiverAddressValidattionFailedInfo){
+            validattionFailedInfo = receiverAddressValidattionFailedInfo
+        }else if(fileValidattionFailedInfo){
+            validattionFailedInfo = fileValidattionFailedInfo
+        }else if(otherRequirementValidattionFailedInfo){
+            validattionFailedInfo = otherRequirementValidattionFailedInfo
+        }
+
+        if(validattionFailedInfo && validattionFailedInfo.length > 0){
+            this.handleStateChange('validattionFailedInfo', validattionFailedInfo)
+            return false
+        }else {
+            this.handleStateChange('validattionFailedInfo', '')
+            return true
+        }
+    }
+
+    handleStateChange(key, value) {
+        this.setState({
+            [key]: value
+        });
+    }
+
+    handleSponsorInfoChange(infoName, value){
+        this.handleStateChange(infoName, value)
+    }
+
+    handlePurposeTypeChange(purposeType){
+        this.handleStateChange('purposeType', parseInt(purposeType))
+    }
+
+    handleOtherPurposeDescriptionChange(e){
+        const otherPurposeDescription = e.target.value
+        if(this.validatePurposeDescription(otherPurposeDescription)){
+            this.handleStateChange('otherPurposeDescriptionValidattionFailedInfo', this.validatePurposeDescription(otherPurposeDescription))
+        }else {
+            this.handleStateChange('otherPurposeDescriptionValidattionFailedInfo', '')
+        }
+        
+        this.handleStateChange('otherPurposeDescription', otherPurposeDescription)
+    }
+
+    handleReceiverAddressChange(receiverAddress){
+        this.handleStateChange('receiverAddress', receiverAddress)
+    }
+
+    handleFileChange(selectedFile){
+        this.handleStateChange('selectedFile', selectedFile)
+    }
+
+    handleOtherRequirementChange(otherRequirement){
+        this.handleStateChange('otherRequirement', otherRequirement)
+    }
+
+    handleFormSubmit(){
+        this.handleStateChange('agreeProtocol', false)
+
+        let submitData = {
+            orderSource: 1,
+            contactsName: this.state.sponsorName,
+            contactsMobileNumber: this.state.phoneNumber,
+            purposeType: parseInt(this.state.purposeType),
+            purposeDescription: this.state.otherPurposeDescription,
+            sendToAddress: this.state.receiverAddress,
+            attachments: this.state.selectedFile,//上传的附件
+            userComment: this.state.otherRequirement,//其他要求
+        }
+
+        console.log(submitData)
+        setTimeout(function () {
+            () => this.handleStateChange('agreeProtocol', true) //箭头函数将this指向引用函数的上下文
+            browserHistory.push('/orders')
+        },3000)
     }
 
     render(){
@@ -67,15 +189,28 @@ class LawyerLetter extends React.Component{
                         required={true}
                         labelTitle="发送律师函的主要目的"
                         radioList={this.state.purposeOptions}
-                        onRadioChange={(purpose) => this.handlePurposeChange(purpose)}
+                        onRadioChange={(purposeType) => this.handlePurposeTypeChange(purposeType)}
                     />
+                    <Collapse in={this.state.purposeType === 4}>
+                        <FormGroup>
+                            <FormControl
+                                type="text"
+                                value={this.state.otherPurposeDescription}
+                                placeholder="请简要描述发送律师函目的"
+                                onChange={(e) => this.handleOtherPurposeDescriptionChange(e)}
+                            />
+                            <Collapse in={this.state.otherPurposeDescriptionValidattionFailedInfo !== null && this.state.otherPurposeDescriptionValidattionFailedInfo.length > 0}>
+                                <HelpBlock>{this.state.otherPurposeDescriptionValidattionFailedInfo}</HelpBlock>
+                            </Collapse>
+                        </FormGroup>
+                    </Collapse>
 
                     <InputField
                         required={false}
                         labelTitle="如需律师寄送催收函，请留下您的地址，联系人及电话（写在详细地址即可）"
                         placeholder="详细地址、联系人、电话"
                         value={this.state.receiverAddress}
-                        validateInputValue={this.validateReceiverAddress}
+                        validateInputValue={(receiverAddress) => this.validateReceiverAddress(receiverAddress)}
                         onInputChange={(receiverAddress) => this.handleReceiverAddressChange(receiverAddress)}
                     />
                     <FileUploadField
@@ -94,7 +229,7 @@ class LawyerLetter extends React.Component{
                 </RequirementForm>
 
                 {/**提交区域**/}
-                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onFormDataValidate={this.validateFormData} onSubmitButtonClick={() => this.handleFormSubmit()}/>
+                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onFormDataValidate={() => this.validateFormData()} onSubmitButtonClick={() => this.handleFormSubmit()}/>
             </div>
         )
     }

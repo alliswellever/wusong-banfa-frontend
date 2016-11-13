@@ -11,22 +11,11 @@ import FileUploadField from './components/FileUploadField'
 import TextareaField from './components/TextareaField'
 import SubmitBox from './components/SubmitBox'
 import { browserHistory } from 'react-router'
-
 import Validator from './components/Validator'
-
-
-
-
-
 
 class LegalConsultation extends React.Component{
     constructor(props) {
         super(props);
-        this.handleSponsorInfoChange = this.handleSponsorInfoChange.bind(this)
-        this.handleConsultingDetailChange = this.handleConsultingDetailChange.bind(this)
-        this.handleContactDateChange = this.handleContactDateChange.bind(this)
-        this.handleNeedLegalAdviceChange = this.handleNeedLegalAdviceChange.bind(this)
-        this.handleFileChange = this.handleFileChange.bind(this)
         this.validateFormData = this.validateFormData.bind(this)
         this.handleFormSubmit = this.handleFormSubmit.bind(this)
 
@@ -223,7 +212,7 @@ class LegalConsultation extends React.Component{
                 </RequirementForm>
 
                 {/**提交区域**/}
-                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onFormDataValidate={this.validateFormData} onSubmitButtonClick={() => this.handleFormSubmit()}/>
+                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onFormDataValidate={this.validateFormData} onSubmitButtonClick={this.handleFormSubmit}/>
             </div>
         )
     }

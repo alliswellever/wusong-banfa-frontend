@@ -19,7 +19,6 @@ import {FormGroup, ControlLabel, FormControl, HelpBlock, Collapse} from 'react-b
 class InputField extends React.Component{
     constructor(props){
         super(props)
-        this.handleInputValueChange = this.handleInputValueChange.bind(this)
 
         this.state = {
             inputValueValidationState: 'success',
@@ -28,8 +27,8 @@ class InputField extends React.Component{
 
     }
 
-    handleInputValueChange(e) {
-        const newInputValue = e.target.value
+    handleInputValueChange(event) {
+        const newInputValue = event.target.value
         const validationFailedInfo = this.props.validateInputValue(newInputValue)
         if(validationFailedInfo && validationFailedInfo.length > 0){
             this.setState({
@@ -43,7 +42,7 @@ class InputField extends React.Component{
             });
         }
 
-        this.props.onInputChange('inputValue', newInputValue);
+        this.props.onInputChange(newInputValue);
     }
     
     render(){
@@ -58,7 +57,7 @@ class InputField extends React.Component{
                     type="text"
                     value={this.props.value}
                     placeholder={this.props.placeholder}
-                    onChange={this.handleInputValueChange}
+                    onChange={(event) => this.handleInputValueChange(event)}
                 />
                 <Collapse in={this.state.inputValueValidationFailedInfo !== null && this.state.inputValueValidationFailedInfo.length > 0}>
                     <HelpBlock >{this.state.inputValueValidationFailedInfo}</HelpBlock>
