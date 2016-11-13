@@ -46120,10 +46120,6 @@
 
 	        var _this = _possibleConstructorReturn(this, (FileUploadField.__proto__ || Object.getPrototypeOf(FileUploadField)).call(this, props));
 
-	        _this.handleFileChoose = _this.handleFileChoose.bind(_this);
-	        _this.handleFileChange = _this.handleFileChange.bind(_this);
-	        _this.handleFileRemove = _this.handleFileRemove.bind(_this);
-
 	        _this.state = {
 	            selectedFile: null, //上传的附件
 	            selectedFileName: '',
@@ -46168,6 +46164,8 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var _this2 = this;
+
 	            return _react2.default.createElement(
 	                _reactBootstrap.FormGroup,
 	                { className: 'file-upload-field', controlId: 'formBasicText' },
@@ -46195,16 +46193,22 @@
 	                }),
 	                _react2.default.createElement(
 	                    _reactBootstrap.Button,
-	                    { className: 'chose-file', disabled: this.state.selectedFileName.length > 0, onClick: this.handleFileChoose },
+	                    { className: 'chose-file', disabled: this.state.selectedFileName.length > 0, onClick: function onClick() {
+	                            return _this2.handleFileChoose();
+	                        } },
 	                    '\u70B9\u51FB\u4E0A\u4F20'
 	                ),
-	                _react2.default.createElement('input', { type: 'file', name: 'uploadFile', hidden: true, ref: 'fileInput', onChange: this.handleFileChange }),
+	                _react2.default.createElement('input', { type: 'file', name: 'uploadFile', hidden: true, ref: 'fileInput', onChange: function onChange() {
+	                        return _this2.handleFileChange();
+	                    } }),
 	                this.state.selectedFileName ? _react2.default.createElement(
 	                    'div',
 	                    { className: 'file-name' },
 	                    _react2.default.createElement('span', { className: 'fa fa-file-text fa-lg' }),
 	                    this.state.selectedFileName,
-	                    _react2.default.createElement('span', { className: 'fa fa-times-circle', 'aria-hidden': 'true', onClick: this.handleFileRemove })
+	                    _react2.default.createElement('span', { className: 'fa fa-times-circle', 'aria-hidden': 'true', onClick: function onClick() {
+	                            return _this2.handleFileRemove();
+	                        } })
 	                ) : '',
 	                _react2.default.createElement(
 	                    _reactBootstrap.Collapse,
