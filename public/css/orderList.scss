@@ -1,0 +1,233 @@
+@import "./common.scss";
+
+/* Variables */
+// color Variables  状态颜色
+$blue: #60bde3;  //全部状态颜色
+$green: #6ad2d2; //无讼顾问确认中状态颜色
+$yellow: #ecc96b; //服务进行中状态颜色
+$purple: #78a2de; //待确认完成状态颜色
+$red: #ff9998; //已取消状态颜色
+$grey: #b2b2b2; //已完成状态颜色
+
+// shadow Variables tab-button切换阴影
+$blue-shadow: -5px 0 5px rgba(96,189,227,.3), /*左边阴影*/  
+        5px 0 5px rgba(96,189,227,.3), /*右边阴影*/  
+        0 -5px 5px rgba(96,189,227,.3), /*顶部阴影*/  
+        0 5px 5px rgba(96,189,227,.3); /*底边阴影*/
+
+$green-shadow: -5px 0 5px rgba(106,210,210,.3), /*左边阴影*/  
+        5px 0 5px rgba(106,210,210,.3), /*右边阴影*/  
+        0 -5px 5px rgba(106,210,210,.3), /*顶部阴影*/  
+        0 5px 5px rgba(106,210,210,.3); /*底边阴影*/
+
+$yellow-shadow: -5px 0 5px rgba(236,201,107,.3), /*左边阴影*/  
+        5px 0 5px rgba(236,201,107,.3), /*右边阴影*/  
+        0 -5px 5px rgba(236,201,107,.3), /*顶部阴影*/  
+        0 5px 5px rgba(236,201,107,.3); /*底边阴影*/
+
+$purple-shadow: -5px 0 5px rgba(120,162,222,.3), /*左边阴影*/  
+        5px 0 5px rgba(120,162,222,.3), /*右边阴影*/  
+        0 -5px 5px rgba(120,162,222,.3), /*顶部阴影*/  
+        0 5px 5px rgba(120,162,222,.3); /*底边阴影*/
+
+$red-shadow: -5px 0 5px rgba(255,153,152,.3), /*左边阴影*/  
+        5px 0 5px rgba(255,153,152,.3), /*右边阴影*/  
+        0 -5px 5px rgba(255,153,152,.3), /*顶部阴影*/  
+        0 5px 5px rgba(255,153,152,.3); /*底边阴影*/
+
+$grey-shadow: -5px 0 5px rgba(178,178,178,.3), /*左边阴影*/  
+        5px 0 5px rgba(178,178,178,.3), /*右边阴影*/  
+        0 -5px 5px rgba(178,178,178,.3), /*顶部阴影*/  
+        0 5px 5px rgba(178,178,178,.3); /*底边阴影*/
+
+// style 
+//tab-head
+.tab-head{
+    overflow: hidden;
+    padding: 30px 0 25px;
+}     
+.tab-button{
+    float: left;
+    width: 145px;
+    height: 65px;
+    border-radius: $border-radius-primary;
+    color: $text-color-white;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+.tab-button p{
+    margin: 0;
+}
+.tab-button.active{
+    width: 155px;
+    height: 75px;
+    margin-top: 0px;
+}
+.tab-button:last-child{
+    margin-right: 0;
+}
+.tab-button-count{
+    font-size: $font-size-headline;
+    padding: 15px 0 6px;
+}
+.tab-button-title{
+    font-size: $font-size-third;
+}
+.tab-button.button-bgcolor-blue{
+    background-color: $blue;
+}
+.tab-button.button-bgcolor-green{
+    background-color: $green;
+}
+.tab-button.button-bgcolor-yellow{
+    background-color: $yellow;
+}
+.tab-button.button-bgcolor-purple{
+    background-color: $purple;
+}
+.tab-button.button-bgcolor-red{
+    background-color: $red;
+}
+.tab-button.button-bgcolor-grey{
+    background-color: $grey;
+}
+.tab-button.button-bgcolor-blue.active,
+.tab-button.button-bgcolor-blue:hover{
+    box-shadow: $blue-shadow;
+}
+.tab-button.button-bgcolor-green.active,
+.tab-button.button-bgcolor-green:hover{
+    box-shadow: $green-shadow
+}
+.tab-button.button-bgcolor-yellow.active,
+.tab-button.button-bgcolor-yellow:hover{
+    box-shadow: $yellow-shadow
+}
+.tab-button.button-bgcolor-purple.active,
+.tab-button.button-bgcolor-purple:hover{
+    box-shadow: $purple-shadow
+}
+.tab-button.button-bgcolor-red.active,
+.tab-button.button-bgcolor-red:hover{
+    box-shadow: $red-shadow
+}
+.tab-button.button-bgcolor-grey.active,
+.tab-button.button-bgcolor-grey:hover{
+    box-shadow: $grey-shadow
+}
+
+
+// content
+.order-list{
+    padding-left: 30px;
+}
+.list-item{
+    padding: 20px 10px;
+    border-bottom: 1px solid $border-color-primary;
+}
+.list-item:hover{   
+    background-color: $background-color-primary;
+}
+.list-item-right{
+    float: right;
+    width: 75px;
+    line-height: 50px;
+    font-size: $font-size-third;
+    color: $text-color-highlighted;
+}
+.list-item-right span{
+    padding-right: 6px;
+}
+.list-item-left{
+    margin-right: 80px;
+}
+.list-item-left p{
+    margin: 0;
+}
+.order-title{
+    font-size: $font-size-first;
+    overflow: hidden;
+    line-height: 20px;
+    padding-bottom: 10px;
+    color: $text-color-primary;
+}
+.order-title span{
+    float: left;
+}
+.order-title-statu{
+    display: inline-block;
+    width: 6px;
+    height: 20px;
+    border-radius: $border-radius-secondary;
+    margin-right: 8px;
+}
+.order-title-statu.statu-bgcolor-blue{
+    background-color: $blue;
+}
+.order-title-statu.statu-bgcolor-green{
+    background-color: $green;
+}
+.order-title-statu.statu-bgcolor-yellow{
+    background-color: $yellow;
+}
+.order-title-statu.statu-bgcolor-purple{
+    background-color: $purple;
+}
+.order-title-statu.statu-bgcolor-red{
+    background-color: $red;
+}
+.order-title-statu.statu-bgcolor-grey{
+    background-color: $grey;
+}
+.order-content{
+    font-size: $font-size-third;
+    color: $text-color-tip;
+    line-height: 20px;
+}
+.order-date{
+}
+.order-date:after{
+}
+.order-bull{
+    padding: 0 8px;
+}
+.order-content-status.font-color-blue{
+    color: $blue;
+}
+.order-content-status.font-color-green{
+    color: $green;
+}
+.order-content-status.font-color-yellow{
+    color: $yellow;
+}
+.order-content-status.font-color-purple{
+    color: $purple;
+}
+.order-content-status.font-color-red{
+    color: $red;
+}
+.order-content-status.font-color-grey{
+    color: $grey;
+}
+.list-content{
+    background-color: #fff;
+    border-radius: $border-radius-primary;
+    padding: 10px;
+}
+.tab-item{
+    display: none;
+}
+.tab-item.show{
+    display: block;
+}
+.pagination-cell{
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+
+
+

@@ -1,0 +1,195 @@
+@import "common.scss";
+
+
+/* Styles */
+.first-color{
+    color: $text-color-primary;
+}
+.second-color{
+    color: $text-color-tip;
+} 
+.red-tips-color{
+    color: #ff3333;
+}
+.detail-page{
+    border-radius: $border-radius-primary;
+    background-color: #fff;
+    margin: 30px 0 0 30px;
+}
+.detail-header{
+    padding: 0 20px;
+    font-size: $font-size-headline;
+    color:  $text-color-primary;
+    line-height: 60px;
+    border-bottom: 1px solid $border-color-primary;
+}
+.detail-content{
+    padding: 30px 100px;
+    width: 990px;
+    margin: 0 auto;
+}
+.detail-content-header{
+    border-left: 4px solid $text-color-highlighted;
+    background-color: #e0e3ed;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.order-number,
+.order-date,
+.confirm-button{
+   float: left 
+}
+.order-number{
+    width: 434px;
+    line-height: 40px;
+    padding-left: 15px;
+    font-size: $font-size-second;
+}
+.order-date{
+    font-size: $font-size-fourth;
+    padding: 6px 15px 4px 0;
+    line-height: 15px;
+}   
+.order-date p{
+    margin: 0;
+}
+.common-button{
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    background-color: $button-color-primary;
+    border-radius: $border-radius-primary;
+    color: $text-color-white;
+    font-size: $font-size-second;
+}
+
+.detail-content-list{
+    border-top: 1px solid $border-color-primary;
+    overflow: hidden;
+    padding: 0;
+}
+.detail-content-list li{
+    float: left;
+    border-bottom: 1px dashed $border-color-primary;
+    width: 330px;
+    padding: 15px 0;
+    font-size: $font-size-second;
+    color:  $text-color-primary;
+}
+.detail-content-list li:nth-child(odd){
+    margin-right: 130px
+}
+.detail-content-list .list-title{
+    display: inline-block;
+    width: 125px;
+    color: $text-color-tip;
+}
+.detail-content-files{
+    border-bottom: 1px  solid  $border-color-primary;
+}
+.file-title{
+    font-size: $font-size-second;
+    padding-top: 15px;
+}
+.advice-title{
+    padding: 15px 0 10px;
+    font-size: $font-size-second;
+}
+.advice-text{
+    line-height: 24px;
+    font-size: $font-size-second;
+    padding: 0 18px;
+}
+.file-list{
+    padding: 15px;
+    border-bottom: 1px dashed $border-color-primary;
+    overflow: hidden;
+}   
+.file-list:last-child{
+    border-bottom: none;
+}
+.file-url,
+.file-info{
+    float: left;
+}
+.file-info p{
+    margin: 0;
+}
+.file-url{
+    width: 40px;
+    height: 40px;
+    background-color: #b2b2b2; 
+    margin-right: 10px; 
+}
+.file-download{
+    float: right;
+    line-height: 40px;
+}
+.file-download a{
+    font-size: $font-size-second;
+    color: $text-color-highlighted;
+    padding-left: 6px;
+}
+.file-info-name{
+    font-size: $font-size-third;
+    color:  $text-color-primary;
+    line-height: 20px;
+}
+.file-info-detail{
+    font-size: $font-size-fourth;
+    color: $text-color-tip;
+    line-height: 20px;
+}
+.file-info-detail .padding20{
+    padding: 0 20px;
+}
+.form-close {
+  cursor: pointer;
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+
+  &::before,&::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: $button-color-primary;
+    border-radius: 5px;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+
+  &::after{
+    transform: rotate(-45deg);
+  }
+
+  &:hover{
+    &::before,&::after {
+      background-color: $color-ornament;
+    }
+  }
+}
+.close-icon{
+    margin-top: 17px;
+}
+.consultant-name{
+    color: $color-secondary;
+}
+.lawyer-name{
+    color: $color-secondary;
+    padding-right: 15px;
+}
+.download-icon{
+    color: $color-secondary!important;
+}

@@ -1,0 +1,184 @@
+@import "./common.scss";
+
+/* Variables */
+$border-bottom: 1px solid #edeef2;
+$padding15: 15px;
+
+/* Styles */
+.my-list{
+    margin: 30px 0 0 30px;
+    border-radius:$border-radius-primary;
+}
+.help-list-content{
+    padding: $padding15;
+    background-color: $text-color-white;
+    border-bottom-left-radius: $border-radius-primary;
+    border-bottom-right-radius: $border-radius-primary;
+    li{
+        line-height: 45px;
+        border-bottom: $border-bottom;
+        font-size: $font-size-second;
+        color: $text-color-primary;
+        a{
+           color: #222; 
+        }
+        .icon{
+          display: inline-block;
+          height: 5px;
+          width: 5px;
+          background-color: $button-color-primary;
+          transform:rotate(45deg);
+          -ms-transform:rotate(45deg); /* Internet Explorer */
+          -moz-transform:rotate(45deg); /* Firefox */
+          -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+          -o-transform:rotate(45deg); /* Opera */
+          margin:0 8px 3px 10px;
+        }
+    }
+}
+.tab-head-title{
+    float: left;
+    margin-right: 45px;
+    line-height: 60px;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: $font-size-first;
+}
+.tab-head-title.active{
+    color: $text-color-highlighted;
+    border-bottom: 2px solid $text-color-highlighted;
+}
+.myinfo-tab-head{
+    border-bottom: $border-bottom;
+    padding: 0 $padding15;
+    overflow: hidden;
+    position: relative;
+    background:  $text-color-white;
+    border-top-left-radius: $border-radius-primary;
+    border-top-right-radius: $border-radius-primary;
+}
+.my-table{
+    width:90%;
+}
+.my-table tr th,
+.my-table tr td{
+    height: 50px;
+}
+.my-table-th{
+    background-color: $background-color-primary;
+}
+.my-table tr th{
+    text-align: left;
+    font-size: 16px;
+}
+.my-table tr{
+    border-bottom: $border-bottom;
+}
+.my-table tr th:first-child,
+.my-table tr td:first-child{
+    padding-left: 20px;
+}
+.modify-info-header{
+    margin-top: 20px;
+}
+.modify-info-header .modify-name{
+    line-height: 35px;
+    padding-left: $padding15;
+    font-size: $font-size-second;
+}
+.modify-content{
+    padding: 0 10px;
+}
+.modify-text{
+    padding: 0 0 45px $padding15;
+    font-size: $font-size-second;
+}
+.modify-text span:nth-child(2){
+    padding-right: $padding15;
+}
+.modify-button{
+    color: $text-color-highlighted;
+    cursor: pointer;
+}
+.official-number{
+    position: absolute;
+    right: 15px;
+    display: inline-block;
+    line-height: 60px;
+    font-size: $font-size-fourth;
+    color: $text-color-tip;
+}
+.help-detail-page{
+    margin: 30px 0 0 30px;
+    background-color: #fff;
+    border-radius:$border-radius-primary;
+    .help-detail-title{
+        line-height: 60px;
+        padding: 0 20px;
+        border-bottom: $border-bottom;
+        font-size: 20px;
+        color: #222;
+    }
+    .help-detail-content{
+        padding: 20px 45px 0;
+        line-height: 22px;
+        text-indent: 28px;
+    }
+    .paragraph{
+    }
+}
+
+.form-close {
+  cursor: pointer;
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+
+  &::before,&::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: $button-color-primary;
+    border-radius: 5px;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+
+  &::after{
+    transform: rotate(-45deg);
+  }
+
+  &:hover{
+    &::before,&::after {
+      background-color: $color-ornament;
+    }
+  }
+}
+.close-icon{
+    margin-top: 17px;
+}
+.table-item{
+  padding: 30px 0 0 10px;
+  background-color: $text-color-white;
+  border-bottom-left-radius: $border-radius-primary;
+  border-bottom-right-radius: $border-radius-primary;
+}
+.pagination-cell{
+  width: 300px;
+  margin: 0 auto;
+}
+.inform-content{
+  background-color: #fff;
+  padding: 10px;
+  border-bottom-left-radius: $border-radius-primary;
+  border-bottom-right-radius: $border-radius-primary;
+}
