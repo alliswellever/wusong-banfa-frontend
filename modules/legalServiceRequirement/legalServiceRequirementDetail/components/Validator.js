@@ -51,6 +51,14 @@ class Validator{
         }
     }
 
+    validateInputValue(inputValue){
+        if(inputValue && inputValue.length >= 500){
+            return '不得超过500个字！'
+        }else{
+            return null
+        }
+    }
+
 }
 
 export default new Validator()

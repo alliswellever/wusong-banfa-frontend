@@ -22,10 +22,104 @@ class CollectionLetter extends React.Component{
             agreeProtocol: true,//是否同意用户协议
             sponsorName: '于永雨',
             phoneNumber: '13020072525',
-            debtorName: '',
+            debtorName: '',//被催款公司
+            originalRepaymentDate: '',//原定还款日期
+            creditorName: '',//催款公司
+            expectedRepaymentDate: '',//期待还款日期
+            debtorAddress: '',//被催款公司地址
             otherRequirement: '',//其他要求
             attachments: null,//上传的附件
             validattionFailedInfo: ''//提交前校验的错误信息
+        }
+    }
+
+    validateDebtorName(debtorName){
+        if(!debtorName){
+            return '被催款公司名称为必填项！'
+        }else if(Validator.validateInputValue(debtorName)){
+            return Validator.validateInputValue(debtorName)
+        }else{
+            return null
+        }
+    }
+
+    validateOriginalRepaymentDate(originalRepaymentDate){
+        if(!originalRepaymentDate){
+            return '请选择原定还款日期！'
+        }else{
+            return null
+        }
+    }
+
+    validateCreditorName(creditorName){
+        if(!creditorName){
+            return '催款公司名称为必填项！'
+        }else if(Validator.validateInputValue(creditorName)){
+            return Validator.validateInputValue(creditorName)
+        }else{
+            return null
+        }
+    }
+
+    //TODO
+    validateExpectedRepaymentDate(expectedRepaymentDate){
+        if(!expectedRepaymentDate){
+            return '请选择期望还款日期！'
+        }else{
+            return null
+        }
+    }
+
+    validateDebtorAddress(debtorAddress){
+        if(Validator.validateInputValue(debtorAddress)){
+            return Validator.validateInputValue(debtorAddress)
+        }else{
+            return null
+        }
+    }
+
+
+    validateFormData(){
+        let validattionFailedInfo = ''
+        const sponsorNameValidattionFailedInfo = Validator.validateSponsorName(this.state.sponsorName)
+        const phoneNameValidattionFailedInfo = Validator.validatePhoneNumber(this.state.phoneNumber)
+        
+        const debtorNameValidattionFailedInfo = this.validateDebtorName(this.state.debtorName)
+        const originalRepaymentDateValidattionFailedInfo = this.validateOriginalRepaymentDate(this.state.originalRepaymentDate)
+        const creditorNameValidattionFailedInfo = this.validateCreditorName(this.state.creditorName)
+        const expectedRepaymentDateValidattionFailedInfo = this.validateExpectedRepaymentDate(this.state.expectedRepaymentDate)
+        const debtorAddressValidattionFailedInfo = this.validateDebtorAddress(this.state.debtorAddress)
+        
+        const fileValidattionFailedInfo = Validator.validateUploadedFile(this.state.selectedFile)
+        const otherRequirementValidattionFailedInfo = Validator.validateTextareaValue(this.state.otherRequirement)
+
+
+        if(sponsorNameValidattionFailedInfo){
+            validattionFailedInfo = sponsorNameValidattionFailedInfo
+        }else if(phoneNameValidattionFailedInfo){
+            validattionFailedInfo = phoneNameValidattionFailedInfo
+        }else if(debtorNameValidattionFailedInfo){
+            validattionFailedInfo = debtorNameValidattionFailedInfo
+        }else if(originalRepaymentDateValidattionFailedInfo){
+            validattionFailedInfo = originalRepaymentDateValidattionFailedInfo
+        }else if(creditorNameValidattionFailedInfo){
+            validattionFailedInfo = creditorNameValidattionFailedInfo
+        }else if(expectedRepaymentDateValidattionFailedInfo){
+            validattionFailedInfo = expectedRepaymentDateValidattionFailedInfo
+        }else if(debtorAddressValidattionFailedInfo){
+            validattionFailedInfo = debtorAddressValidattionFailedInfo
+        }else if(fileValidattionFailedInfo){
+            validattionFailedInfo = fileValidattionFailedInfo
+        }else if(otherRequirementValidattionFailedInfo){
+            validattionFailedInfo = otherRequirementValidattionFailedInfo
+        }
+
+        if(validattionFailedInfo && validattionFailedInfo.length > 0){
+            this.handleStateChange('validattionFailedInfo', validattionFailedInfo)
+            return false
+        }else {
+            this.handleStateChange('validattionFailedInfo', '')
+            return true
         }
     }
 
@@ -39,6 +133,36 @@ class CollectionLetter extends React.Component{
         this.handleStateChange(infoName, value)
     }
 
+    handleDebtorNameChange(debtorName){
+        this.handleStateChange('debtorName', debtorName)
+    }
+
+    handleOriginalRepaymentDateChange(originalRepaymentDate){
+        this.handleStateChange('originalRepaymentDate', originalRepaymentDate)
+    }
+
+    handleCreditorNameChange(creditorName){
+        this.handleStateChange('creditorName', creditorName)
+    }
+
+    handleExpectedRepaymentDateChange(expectedRepaymentDate){
+        this.handleStateChange('expectedRepaymentDate', expectedRepaymentDate)
+    }
+
+    handleDebtorAddressChange(debtorAddress){
+        this.handleStateChange('debtorAddress', debtorAddress)
+    }
+
+    handleFileChange(selectedFile){
+        this.handleStateChange('selectedFile', selectedFile)
+    }
+
+    handleOtherRequirementChange(otherRequirement){
+        this.handleStateChange('otherRequirement', otherRequirement)
+    }
+
+    
+
     handleFormSubmit(){
         this.handleStateChange('agreeProtocol', false)
 
@@ -46,9 +170,11 @@ class CollectionLetter extends React.Component{
             orderSource: 1,
             contactsName: this.state.sponsorName,
             contactsMobileNumber: this.state.phoneNumber,
-            problemDescription: this.state.consultingDetail,
-            userAcceptedCallTime: this.state.contactDate,
-            provideLegalOption: parseInt(this.state.needLegalAdvice),
+            debtorCompanyName: this.state.debtorName,
+            originalRepaymentDate: this.state.originalRepaymentDate,
+            creditorCompanyName: this.state.creditorName,
+            repaymentDays: this.state.expectedRepaymentDate,
+            sendToAddress: this.state.debtorAddress,
             attachments: this.state.selectedFile,//上传的附件
             userComment: this.state.otherRequirement,//其他要求
         }
@@ -80,7 +206,7 @@ class CollectionLetter extends React.Component{
                         labelTitle="被催款公司名称"
                         placeholder="请填写"
                         value={this.state.debtorName}
-                        validateInputValue={this.validateDebtorName}
+                        validateInputValue={(debtorName) => this.validateDebtorName(debtorName)}
                         onInputChange={(debtorName) => this.handleDebtorNameChange(debtorName)}
                     />
                     <DatePickerField
@@ -94,7 +220,7 @@ class CollectionLetter extends React.Component{
                         labelTitle="催款公司名称"
                         placeholder="请填写"
                         value={this.state.creditorName}
-                        validateInputValue={this.validateDebtorName}
+                        validateInputValue={(creditorName) => this.validateCreditorName(creditorName)}
                         onInputChange={(creditorName) => this.handleCreditorNameChange(creditorName)}
                     />
                     <DatePickerField
@@ -108,7 +234,7 @@ class CollectionLetter extends React.Component{
                         labelTitle="如需律师寄送催收函，请留下被催款公司地址，联系人及电话（写在详细地址即可）"
                         placeholder="详细地址、联系人、电话"
                         value={this.state.debtorAddress}
-                        validateInputValue={this.validateDebtorName}
+                        validateInputValue={(debtorAddress) => this.validateDebtorAddress(debtorAddress)}
                         onInputChange={(debtorAddress) => this.handleDebtorAddressChange(debtorAddress)}
                     />
                     <FileUploadField
@@ -127,7 +253,7 @@ class CollectionLetter extends React.Component{
                 </RequirementForm>
 
                 {/**提交区域**/}
-                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onFormDataValidate={this.validateFormData} onSubmitButtonClick={() => this.handleFormSubmit()}/>
+                <SubmitBox agreeProtocol={this.state.agreeProtocol} validattionFailedInfo={this.state.validattionFailedInfo} onFormDataValidate={() => this.validateFormData()} onSubmitButtonClick={() => this.handleFormSubmit()}/>
             </div>
         )
     }

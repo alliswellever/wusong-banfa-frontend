@@ -207,8 +207,8 @@ class LawyerLetter extends React.Component{
 
                     <InputField
                         required={false}
-                        labelTitle="如需律师寄送催收函，请留下您的地址，联系人及电话（写在详细地址即可）"
-                        placeholder="详细地址、联系人、电话"
+                        labelTitle="如需律师寄送催收函，请留下接收人的地址，联系人姓名及电话（写在详细地址处即可）"
+                        placeholder="详细地址、联系人姓名、电话"
                         value={this.state.receiverAddress}
                         validateInputValue={(receiverAddress) => this.validateReceiverAddress(receiverAddress)}
                         onInputChange={(receiverAddress) => this.handleReceiverAddressChange(receiverAddress)}

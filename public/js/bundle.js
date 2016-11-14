@@ -45997,6 +45997,15 @@
 	                return null;
 	            }
 	        }
+	    }, {
+	        key: 'validateInputValue',
+	        value: function validateInputValue(inputValue) {
+	            if (inputValue && inputValue.length >= 500) {
+	                return '不得超过500个字！';
+	            } else {
+	                return null;
+	            }
+	        }
 	    }]);
 
 	    return Validator;
@@ -47672,7 +47681,11 @@
 	            agreeProtocol: true, //是否同意用户协议
 	            sponsorName: '于永雨',
 	            phoneNumber: '13020072525',
-	            debtorName: '',
+	            debtorName: '', //被催款公司
+	            originalRepaymentDate: '', //原定还款日期
+	            creditorName: '', //催款公司
+	            expectedRepaymentDate: '', //期待还款日期
+	            debtorAddress: '', //被催款公司地址
 	            otherRequirement: '', //其他要求
 	            attachments: null, //上传的附件
 	            validattionFailedInfo: '' //提交前校验的错误信息
@@ -47681,6 +47694,102 @@
 	    }
 
 	    _createClass(CollectionLetter, [{
+	        key: 'validateDebtorName',
+	        value: function validateDebtorName(debtorName) {
+	            if (!debtorName) {
+	                return '被催款公司名称为必填项！';
+	            } else if (_Validator2.default.validateInputValue(debtorName)) {
+	                return _Validator2.default.validateInputValue(debtorName);
+	            } else {
+	                return null;
+	            }
+	        }
+	    }, {
+	        key: 'validateOriginalRepaymentDate',
+	        value: function validateOriginalRepaymentDate(originalRepaymentDate) {
+	            if (!originalRepaymentDate) {
+	                return '请选择原定还款日期！';
+	            } else {
+	                return null;
+	            }
+	        }
+	    }, {
+	        key: 'validateCreditorName',
+	        value: function validateCreditorName(creditorName) {
+	            if (!creditorName) {
+	                return '催款公司名称为必填项！';
+	            } else if (_Validator2.default.validateInputValue(creditorName)) {
+	                return _Validator2.default.validateInputValue(creditorName);
+	            } else {
+	                return null;
+	            }
+	        }
+
+	        //TODO
+
+	    }, {
+	        key: 'validateExpectedRepaymentDate',
+	        value: function validateExpectedRepaymentDate(expectedRepaymentDate) {
+	            if (!expectedRepaymentDate) {
+	                return '请选择期望还款日期！';
+	            } else {
+	                return null;
+	            }
+	        }
+	    }, {
+	        key: 'validateDebtorAddress',
+	        value: function validateDebtorAddress(debtorAddress) {
+	            if (_Validator2.default.validateInputValue(debtorAddress)) {
+	                return _Validator2.default.validateInputValue(debtorAddress);
+	            } else {
+	                return null;
+	            }
+	        }
+	    }, {
+	        key: 'validateFormData',
+	        value: function validateFormData() {
+	            var validattionFailedInfo = '';
+	            var sponsorNameValidattionFailedInfo = _Validator2.default.validateSponsorName(this.state.sponsorName);
+	            var phoneNameValidattionFailedInfo = _Validator2.default.validatePhoneNumber(this.state.phoneNumber);
+
+	            var debtorNameValidattionFailedInfo = this.validateDebtorName(this.state.debtorName);
+	            var originalRepaymentDateValidattionFailedInfo = this.validateOriginalRepaymentDate(this.state.originalRepaymentDate);
+	            var creditorNameValidattionFailedInfo = this.validateCreditorName(this.state.creditorName);
+	            var expectedRepaymentDateValidattionFailedInfo = this.validateExpectedRepaymentDate(this.state.expectedRepaymentDate);
+	            var debtorAddressValidattionFailedInfo = this.validateDebtorAddress(this.state.debtorAddress);
+
+	            var fileValidattionFailedInfo = _Validator2.default.validateUploadedFile(this.state.selectedFile);
+	            var otherRequirementValidattionFailedInfo = _Validator2.default.validateTextareaValue(this.state.otherRequirement);
+
+	            if (sponsorNameValidattionFailedInfo) {
+	                validattionFailedInfo = sponsorNameValidattionFailedInfo;
+	            } else if (phoneNameValidattionFailedInfo) {
+	                validattionFailedInfo = phoneNameValidattionFailedInfo;
+	            } else if (debtorNameValidattionFailedInfo) {
+	                validattionFailedInfo = debtorNameValidattionFailedInfo;
+	            } else if (originalRepaymentDateValidattionFailedInfo) {
+	                validattionFailedInfo = originalRepaymentDateValidattionFailedInfo;
+	            } else if (creditorNameValidattionFailedInfo) {
+	                validattionFailedInfo = creditorNameValidattionFailedInfo;
+	            } else if (expectedRepaymentDateValidattionFailedInfo) {
+	                validattionFailedInfo = expectedRepaymentDateValidattionFailedInfo;
+	            } else if (debtorAddressValidattionFailedInfo) {
+	                validattionFailedInfo = debtorAddressValidattionFailedInfo;
+	            } else if (fileValidattionFailedInfo) {
+	                validattionFailedInfo = fileValidattionFailedInfo;
+	            } else if (otherRequirementValidattionFailedInfo) {
+	                validattionFailedInfo = otherRequirementValidattionFailedInfo;
+	            }
+
+	            if (validattionFailedInfo && validattionFailedInfo.length > 0) {
+	                this.handleStateChange('validattionFailedInfo', validattionFailedInfo);
+	                return false;
+	            } else {
+	                this.handleStateChange('validattionFailedInfo', '');
+	                return true;
+	            }
+	        }
+	    }, {
 	        key: 'handleStateChange',
 	        value: function handleStateChange(key, value) {
 	            this.setState(_defineProperty({}, key, value));
@@ -47691,6 +47800,41 @@
 	            this.handleStateChange(infoName, value);
 	        }
 	    }, {
+	        key: 'handleDebtorNameChange',
+	        value: function handleDebtorNameChange(debtorName) {
+	            this.handleStateChange('debtorName', debtorName);
+	        }
+	    }, {
+	        key: 'handleOriginalRepaymentDateChange',
+	        value: function handleOriginalRepaymentDateChange(originalRepaymentDate) {
+	            this.handleStateChange('originalRepaymentDate', originalRepaymentDate);
+	        }
+	    }, {
+	        key: 'handleCreditorNameChange',
+	        value: function handleCreditorNameChange(creditorName) {
+	            this.handleStateChange('creditorName', creditorName);
+	        }
+	    }, {
+	        key: 'handleExpectedRepaymentDateChange',
+	        value: function handleExpectedRepaymentDateChange(expectedRepaymentDate) {
+	            this.handleStateChange('expectedRepaymentDate', expectedRepaymentDate);
+	        }
+	    }, {
+	        key: 'handleDebtorAddressChange',
+	        value: function handleDebtorAddressChange(debtorAddress) {
+	            this.handleStateChange('debtorAddress', debtorAddress);
+	        }
+	    }, {
+	        key: 'handleFileChange',
+	        value: function handleFileChange(selectedFile) {
+	            this.handleStateChange('selectedFile', selectedFile);
+	        }
+	    }, {
+	        key: 'handleOtherRequirementChange',
+	        value: function handleOtherRequirementChange(otherRequirement) {
+	            this.handleStateChange('otherRequirement', otherRequirement);
+	        }
+	    }, {
 	        key: 'handleFormSubmit',
 	        value: function handleFormSubmit() {
 	            this.handleStateChange('agreeProtocol', false);
@@ -47699,9 +47843,11 @@
 	                orderSource: 1,
 	                contactsName: this.state.sponsorName,
 	                contactsMobileNumber: this.state.phoneNumber,
-	                problemDescription: this.state.consultingDetail,
-	                userAcceptedCallTime: this.state.contactDate,
-	                provideLegalOption: parseInt(this.state.needLegalAdvice),
+	                debtorCompanyName: this.state.debtorName,
+	                originalRepaymentDate: this.state.originalRepaymentDate,
+	                creditorCompanyName: this.state.creditorName,
+	                repaymentDays: this.state.expectedRepaymentDate,
+	                sendToAddress: this.state.debtorAddress,
 	                attachments: this.state.selectedFile, //上传的附件
 	                userComment: this.state.otherRequirement };
 
@@ -47744,7 +47890,9 @@
 	                        labelTitle: '\u88AB\u50AC\u6B3E\u516C\u53F8\u540D\u79F0',
 	                        placeholder: '\u8BF7\u586B\u5199',
 	                        value: this.state.debtorName,
-	                        validateInputValue: this.validateDebtorName,
+	                        validateInputValue: function validateInputValue(debtorName) {
+	                            return _this3.validateDebtorName(debtorName);
+	                        },
 	                        onInputChange: function onInputChange(debtorName) {
 	                            return _this3.handleDebtorNameChange(debtorName);
 	                        }
@@ -47762,7 +47910,9 @@
 	                        labelTitle: '\u50AC\u6B3E\u516C\u53F8\u540D\u79F0',
 	                        placeholder: '\u8BF7\u586B\u5199',
 	                        value: this.state.creditorName,
-	                        validateInputValue: this.validateDebtorName,
+	                        validateInputValue: function validateInputValue(creditorName) {
+	                            return _this3.validateCreditorName(creditorName);
+	                        },
 	                        onInputChange: function onInputChange(creditorName) {
 	                            return _this3.handleCreditorNameChange(creditorName);
 	                        }
@@ -47780,7 +47930,9 @@
 	                        labelTitle: '\u5982\u9700\u5F8B\u5E08\u5BC4\u9001\u50AC\u6536\u51FD\uFF0C\u8BF7\u7559\u4E0B\u88AB\u50AC\u6B3E\u516C\u53F8\u5730\u5740\uFF0C\u8054\u7CFB\u4EBA\u53CA\u7535\u8BDD\uFF08\u5199\u5728\u8BE6\u7EC6\u5730\u5740\u5373\u53EF\uFF09',
 	                        placeholder: '\u8BE6\u7EC6\u5730\u5740\u3001\u8054\u7CFB\u4EBA\u3001\u7535\u8BDD',
 	                        value: this.state.debtorAddress,
-	                        validateInputValue: this.validateDebtorName,
+	                        validateInputValue: function validateInputValue(debtorAddress) {
+	                            return _this3.validateDebtorAddress(debtorAddress);
+	                        },
 	                        onInputChange: function onInputChange(debtorAddress) {
 	                            return _this3.handleDebtorAddressChange(debtorAddress);
 	                        }
@@ -47803,7 +47955,9 @@
 	                        }
 	                    })
 	                ),
-	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onFormDataValidate: this.validateFormData, onSubmitButtonClick: function onSubmitButtonClick() {
+	                _react2.default.createElement(_SubmitBox2.default, { agreeProtocol: this.state.agreeProtocol, validattionFailedInfo: this.state.validattionFailedInfo, onFormDataValidate: function onFormDataValidate() {
+	                        return _this3.validateFormData();
+	                    }, onSubmitButtonClick: function onSubmitButtonClick() {
 	                        return _this3.handleFormSubmit();
 	                    } })
 	            );
@@ -48230,8 +48384,8 @@
 	                    ),
 	                    _react2.default.createElement(_InputField2.default, {
 	                        required: false,
-	                        labelTitle: '\u5982\u9700\u5F8B\u5E08\u5BC4\u9001\u50AC\u6536\u51FD\uFF0C\u8BF7\u7559\u4E0B\u60A8\u7684\u5730\u5740\uFF0C\u8054\u7CFB\u4EBA\u53CA\u7535\u8BDD\uFF08\u5199\u5728\u8BE6\u7EC6\u5730\u5740\u5373\u53EF\uFF09',
-	                        placeholder: '\u8BE6\u7EC6\u5730\u5740\u3001\u8054\u7CFB\u4EBA\u3001\u7535\u8BDD',
+	                        labelTitle: '\u5982\u9700\u5F8B\u5E08\u5BC4\u9001\u50AC\u6536\u51FD\uFF0C\u8BF7\u7559\u4E0B\u63A5\u6536\u4EBA\u7684\u5730\u5740\uFF0C\u8054\u7CFB\u4EBA\u59D3\u540D\u53CA\u7535\u8BDD\uFF08\u5199\u5728\u8BE6\u7EC6\u5730\u5740\u5904\u5373\u53EF\uFF09',
+	                        placeholder: '\u8BE6\u7EC6\u5730\u5740\u3001\u8054\u7CFB\u4EBA\u59D3\u540D\u3001\u7535\u8BDD',
 	                        value: this.state.receiverAddress,
 	                        validateInputValue: function validateInputValue(receiverAddress) {
 	                            return _this3.validateReceiverAddress(receiverAddress);
